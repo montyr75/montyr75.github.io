@@ -1,0 +1,58 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/section_color_menu.jpg" width="124" height="414">
+        <button x="2" y="4" class="hotspot ribbon-button" width="120" height="23" id="blue_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="27" class="hotspot ribbon-button" width="120" height="23" id="yellow_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="51" class="hotspot ribbon-button" width="120" height="23" id="green_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="75" class="hotspot ribbon-button" width="120" height="23" id="red_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="100" class="hotspot ribbon-button" width="120" height="23" id="purple_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="123" class="hotspot ribbon-button" width="120" height="23" id="cyan_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="146" class="hotspot ribbon-button" width="120" height="23" id="orange_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="169" class="hotspot ribbon-button" width="120" height="23" id="magenta_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="195" class="hotspot ribbon-button" width="120" height="23" id="blue_mist_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="219" class="hotspot ribbon-button" width="120" height="23" id="purple_mist_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="243" class="hotspot ribbon-button" width="120" height="23" id="tan_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="266" class="hotspot ribbon-button" width="120" height="23" id="lemon_lime_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="290" class="hotspot ribbon-button" width="120" height="23" id="apple_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="314" class="hotspot ribbon-button" width="120" height="23" id="teal_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="338" class="hotspot ribbon-button" width="120" height="23" id="red_chalk_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="361" class="hotspot ribbon-button" width="120" height="23" id="silver_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="388" class="hotspot ribbon-button" width="120" height="23" id="none_btn">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands></commands>
+</root>

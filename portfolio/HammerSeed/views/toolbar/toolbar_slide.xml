@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root xmlns="http://certiport.com/hammer/sdk/view">
+    <view background-image="assets/images/slide_960x75_black.gif" width="960" height="75">
+        <button id="doc1_btn" x="10" y="15" class="exp-btn" label="$doc1">
+            <events click="dispatch('showDoc1_event')" />
+        </button>
+        <button id="doc2_btn" x="132" y="15" class="exp-btn" label="$doc2">
+            <events click="dispatch('showDoc2_event')" />
+        </button>
+
+        <button id="custom_event_btn" x="750" y="15" width="200" class="exp-btn" label="Dispatch Custom Event">
+            <events click="doCustomEvent" />
+        </button>
+	</view>
+
+    <listeners>
+        <event on="load" handler="onShow"></event>
+    </listeners>
+
+    <functions>
+        <function name="onShow">
+            <growl>{{showMessage}}</growl>
+        </function>
+        <function name="doCustomEvent">
+            <dispatch name="custom_event" />
+        </function>
+    </functions>
+</root>

@@ -1,0 +1,16 @@
+<root xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="doc_math">
+    <view image="#images/documents/doc_math.jpg" width="748" height="406">
+        <button x="0" y="0" class="hotspot" class-model="cursor" width="751" height="404">
+        </button>
+    </view>
+
+    <model persist="true">
+        <cursor></cursor>
+    </model>
+
+    <commands>
+        <command name="onBold">
+            <growl message="I am bold on the doc."/>
+        </command>
+    </commands>
+</root>

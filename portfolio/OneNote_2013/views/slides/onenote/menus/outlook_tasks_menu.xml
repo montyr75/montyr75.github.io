@@ -1,0 +1,59 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/outlook_tasks_menu.jpg" width="193" height="196">
+        <button x="2" y="4" class="hotspot ribbon-button" width="189" height="20" id="today_btn">
+            <events click="show_outlook_tasks1_tag"></events>
+        </button>
+        <button x="2" y="28" class="hotspot ribbon-button" width="189" height="20" id="tomorrow_btn">
+            <events click="show_outlook_tasks2_tag"></events>
+        </button>
+        <button x="2" y="51" class="hotspot ribbon-button" width="189" height="20" id="this_week_btn">
+            <events click="show_outlook_tasks2_tag"></events>
+        </button>
+        <button x="2" y="75" class="hotspot ribbon-button" width="189" height="20" id="next_week_btn">
+            <events click="show_outlook_tasks2_tag"></events>
+        </button>
+        <button x="2" y="99" class="hotspot ribbon-button" width="189" height="20" id="no_date_btn">
+            <events click="show_outlook_tasks2_tag"></events>
+        </button>
+        <button x="2" y="123" class="hotspot ribbon-button" width="189" height="20" id="custom_btn">
+            <events click="show_outlook_tasks1_tag"></events>
+        </button>
+        <button x="2" y="147" class="hotspot ribbon-button" width="189" height="20" id="delete_btn">
+            <events click="delete_outlook_task"></events>
+        </button>
+        <button x="2" y="172" class="hotspot ribbon-button" width="189" height="20" id="outlook_btn">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="show_outlook_tasks1_tag">
+            <model target="math_351">
+                <tag>#views/slides/onenote/symbols/outlook_tasks1.xml</tag>
+                <label_color></label_color>
+            </model>
+            <model target="question">
+                <question_tag></question_tag>
+            </model>
+        </command>
+        <command name="show_outlook_tasks2_tag">
+            <model target="math_351">
+                <tag>#views/slides/onenote/symbols/outlook_tasks2.xml</tag>
+                <label_color></label_color>
+            </model>
+            <model target="question">
+                <question_tag></question_tag>
+            </model>
+        </command>
+        <command name="delete_outlook_task">
+            <model target="math_351">
+                <tag>#views/slides/onenote/symbols/none.xml</tag>
+                <label_color></label_color>
+            </model>
+            <model target="question">
+                <question_tag></question_tag>
+            </model>
+        </command>
+    </commands>
+</root>

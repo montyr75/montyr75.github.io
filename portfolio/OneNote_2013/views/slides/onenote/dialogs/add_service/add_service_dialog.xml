@@ -1,0 +1,12 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="add_service_dialog">
+    <view image="#images/dialogs/add_service/add_service.jpg" width="465" height="570">
+        <slide x="0" y="0" width="465" height="570" src-model="add_service_dialog.sign_in"/>
+    </view>
+    <model persist="true">
+        <sign_in>#views/slides/onenote/dialogs/add_service/add_service.xml</sign_in>
+    </model>
+    <commands>
+
+    </commands>
+</root>

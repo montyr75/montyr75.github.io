@@ -1,0 +1,21 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/backstage/personal_pinned_pic.jpg" width="319" height="111">
+        <button x="-2" y="60" class="hotspot class-notes-button" width="320" height="42" model="question.notebook" value="classnotes" id="classnotes_btn">
+            <events click="backstage.open_class_notes" rclick="open_classnotes_pin_rc_menu"></events>
+        </button>
+        <button x="-2" y="2" class="hotspot personal-button-pinned" width="320" height="42" model="question.notebook" value="personal" id="personal_btn">
+            <events rclick="open_personal_pin_rc_menu"></events>
+        </button>
+        <button x="290" y="75" class="hotspot pin-button" width="14" height="14" toggle="true" model="question.class_pinned" value="false" id="pin_classnotes_btn">
+            <events click="backstage_open.pin_classnotes"></events>
+        </button>
+        <button x="290" y="17" class="hotspot pin-button" width="14" height="14" toggle="true" model="question.personal_pinned" value="true" id="pin_personal_btn">
+            <events click="backstage_open.unpin_personal"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands>
+
+    </commands>
+</root>

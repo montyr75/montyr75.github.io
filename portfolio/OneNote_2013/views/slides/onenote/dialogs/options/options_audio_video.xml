@@ -1,0 +1,27 @@
+<root
+    xmlns="http://certiport.com/hammer/trunk/custom" type="slide">
+    <view image="#images/dialogs/options/options_audio.jpg" width="749" height="568">
+        <button x="448" y="197" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="448" y="220" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="448" y="244" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="448" y="267" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="703" y="132" class="hotspot dialog-button" width="15" height="9">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="703" y="142" class="hotspot dialog-button" width="15" height="9">
+            <events click="not_implemented"></events>
+        </button>
+        <checkbox x="188" y="412" width="15" height="20">
+            <events></events>
+        </checkbox>
+    </view>
+    <model persist="true"></model>
+</root>

@@ -1,0 +1,59 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/mark_as_read_menu.jpg" width="271" height="78">
+        <button x="2" y="3" class="hotspot ribbon-button" width="267" height="23" id="unread_btn">
+            <events click="show_unread_page"></events>
+        </button>
+        <button x="2" y="53" class="hotspot ribbon-button" width="267" height="23" id="show_changes_btn">
+            <events click="disable_unread_changes"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="show_unread_page">
+            <condition>
+                <if property="question.page" eq="biology_notes">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology_paper_notes_unread.xml"/>
+                    <model target="question">
+                        <notes_unread>true</notes_unread>
+                    </model>
+                </if>
+                <elseif property="question.page" eq="exam_review">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology_unread.xml"/>
+                </elseif>
+                <elseif property="question.page" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_unread.xml"/>
+                    <model target="question">
+                        <math_unread>true</math_unread>
+                        <page_unread>math</page_unread>
+                    </model>
+                </elseif>
+                <elseif property="question.page" eq="Anatomy 101">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_unread.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+        </command>
+        <command name="disable_unread_changes">
+            <model target="question">
+                <show_unread_changes>false</show_unread_changes>
+            </model>
+            <condition>
+                <if property="question.page" eq="exam_review">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                </if>
+                <elseif property="question.page" eq="biology_notes">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology_paper_notes.xml"/>
+                </elseif>
+                <elseif property="question.page" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"/>
+                </elseif>
+                <elseif property="question.page" eq="Anatomy 101">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy.xml"/>
+                </elseif>
+            </condition>
+        </command>
+    </commands>
+</root>

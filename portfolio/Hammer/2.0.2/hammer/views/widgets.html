@@ -1,0 +1,236 @@
+<!-- button -->
+<script id="button" type="template/html">
+	<div class="widget button {{widget.class}} {{widget.toggle && 'toggle'}} {{widget.disable  && 'disabled'}} {{(widget.model && widget.model == widget.value) && 'selected'}}"
+	     title="{{widget.title}}"
+	     ui-button value="widget.value" toggle="widget.toggle"
+	     ng-disabled="widget.disabled"
+	     ui-events="widget"
+	     ui-tooltip="widget"
+	     ui-drag="widget"
+	     ui-drop="widget"
+	     style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">{{widget.label}}
+	</div>
+</script>
+
+<!-- split button-->
+<script id="splitbutton" type="template/html">
+	<div class="widget button-split {{widget.class}} {{widget.model && widget.model == widget.value && 'selected'}}"
+	     ng-disabled="widget.disabled"
+	     style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+		<div class="button-push" ui-events="widget" ui-tooltip="widget">{{widget.pushlabel}}</div>
+		<div class="button-toggle {{widget.toggle && 'toggle'}} {{widget.disable  && 'disabled'}} {{(widget.model == widget.value) && 'selected'}}"
+		     title="{{widget.title}}"
+		     ui-button disable="widget.disable" value="widget.value" toggle="true"
+		     ui-tooltip="widget">{{widget.togglelabel}}
+		</div>
+	</div>
+</script>
+
+<!-- image -->
+<script id="image" type="template/html">
+	<img class="widget image {{widget.class}}" ng-src="{{widget.src}}"
+         ui-image="widget"
+	     ui-tooltip="widget"
+	     ui-events="widget" ondragstart="return false"
+	     ui-drag="widget"
+	     ui-drop="widget"
+	     style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px"/>
+</script>
+
+<!-- label -->
+<script id="label" type="template/html">
+	<div class="widget label"
+	     ng-class="widget.class"
+	     ui-events="widget"
+	     ui-tooltip="widget"
+	     ui-drag="widget"
+	     ui-drop="widget"
+	     style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+		{{widget.prefix}}{{widget.value | io:widget.filter}}{{widget.model | io:widget.filter}}{{widget.suffix}}
+	</div>
+</script>
+
+<!-- html -->
+<script id="html" type="template/html">
+	<div class="widget html {{widget.class}}" ui-events="widget" ng-bind-html-unsafe="widget.model"
+	     style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+	</div>
+</script>
+
+<!-- text -->
+<script id="text" type="template/html">
+	<input class="widget text {{widget.class}}"
+	       ng-model="widget.model"
+	       ui-set-focus="widget.focus"
+	       ui-events="widget"
+	       ui-restrict="{{widget.restrict}}"
+	       ui-format="{{widget.format}}"
+           ui-mask="{{widget.mask}}"
+	       ui-tooltip="widget"
+	       placeholder="{{widget.placeholder}}"
+	       ng-disabled="widget.disabled"
+	       style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px"/>
+</script>
+
+<!-- textarea -->
+<script id="textarea" type="template/html">
+	<textarea class="widget text {{widget.class}}"
+	          ng-model="widget.model"
+	          ui-set-focus="widget.focus"
+	          ui-events="widget"
+	          ui-restrict="{{widget.restrict}}"
+	          ui-format="{{widget.format}}"
+	          ui-tooltip="widget"
+	          placeholder="{{widget.placeholder}}"
+	          ng-disabled="widget.disabled"
+	          style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px"></textarea>
+</script>
+
+<!-- password -->
+<script id="password" type="template/html">
+	<input class="widget password {{widget.class}}" type="password"
+	       ng-model="widget.model"
+	       ui-events="widget"
+	       ui-set-focus="widget.focus"
+	       ui-tooltip="widget"
+	       placeholder="{{widget.placeholder}}"
+	       ng-disabled="widget.disabled"
+	       style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px"/>
+</script>
+
+<!-- checkbox -->
+<script id="checkbox" type="template/html">
+	<span class="widget checkbox {{widget.class}}" ui-events="widget" ui-tooltip="widget" style="top:{{widget.y}}px;left:{{widget.x}}px;cursor:default;white-space:nowrap">
+		<label style="cursor:default">
+            <input type="checkbox" style="cursor:default" ng-model="widget.model" ng-true-value="yes" ng-false-value="no" ng-disabled="widget.disabled">
+            <span style="cursor:default" ng-bind="widget.label"></span>
+        </label>
+	</span>
+</script>
+
+<!-- radio -->
+<script id="radio" type="template/html">
+	<span class="widget radio {{widget.class}}" ui-events="widget" style="top:{{widget.y}}px;left:{{widget.x}}px;white-space:nowrap">
+		<label style="cursor:default">
+            <input type="radio" ng-model="widget.model" style="cursor:default" value="{{widget.value}}" ng-disabled="widget.disabled">
+            <span style="cursor:default" ng-bind="widget.label"></span>
+        </label>
+	</span>
+</script>
+
+<!-- dropdown -->
+<script id="dropdown" type="template/html">
+    <select class="widget" ui-list="widget"
+            ui-tooltip="widget"
+            ui-events="widget"
+   	        style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+        <option ng-repeat="o in options" value="{{o.value}}">{{o.label}}</option>
+   	</select>
+</script>
+
+<!-- listbox -->
+<script id="listbox" type="template/html">
+    <select class="widget" ui-list="widget"
+            size="2"
+            ui-tooltip="widget"
+   	        style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+        <option ng-repeat="o in options" value="{{o.value}}">{{o.label}}</option>
+   	</select>
+</script>
+
+<!-- stepper -->
+<script id="stepper" type="template/html">
+	<div ui-stepper class="widget stepper {{widget.class}}" ui-tooltip="widget"
+	     style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+		<input type="text" ng-model="displayValue" class="stepper-text"
+		       ui-set-focus="widget.focus" ui-blur="update(value)"/>
+		<div ng-mousedown="startStep(-1)" ng-mouseup="stopStep()" class="stepper-button prev"><span class="stepper-arrow"></span></div>
+		<div ng-mousedown="startStep(1)" ng-mouseup="stopStep()" class="stepper-button next"><span class="stepper-arrow"></span></div>
+	</div>
+</script>
+
+<!-- slide -->
+<script id="slide" type="template/html">
+	<div ng-controller="SlideCtrl" class="widget slides {{widget.class}}"
+	     style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+		<img ui-image="view" ng-src="{{view.image}}" ondragstart="return false"/>
+		<!--the form and the submit are so if they hit enter it will respond (i.e. in a dialog) -->
+		<form class="content" ui-keyboard>
+			<!-- This hidden submit button allows us to hit enter in a text field, then a submit occurs -->
+			<input type="submit" style="display: none"/>
+			<div ui-widgets="widgets"></div>
+		</form>
+	</div>
+</script>
+
+<!-- menu -->
+<script id="menu" type="template/html">
+	<div ng-controller="SlideCtrl" ui-scrollpane class="widget {{widget.class}}" style="top:{{widget.y}}px;left:{{widget.x}}px;height:{{widget.height}}px">
+		<div class="scroll-up" ng-show="scrollable"></div>
+		<div class="slides scroll-view" style="position:relative;height:100%;overflow:hidden;">
+			<img ui-image="view" class="bg-image" ng-src="{{view.image}}" ondragstart="return false"/>
+
+			<div ui-widgets="widgets"></div>
+		</div>
+		<div class="scroll-down" ng-show="scrollable"></div>
+	</div>
+</script>
+
+<!-- Selected Response -->
+<script id="multichoice" type="template/html">
+    <ul class="widget sr sr-multichoice {{widget.class}}" ui-multichoice
+        style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+        <div ui-widgets="dataProvider"></div>
+    </ul>
+</script>
+
+<script id="matching" type="template/html">
+    <ul class="widget sr sr-multichoice {{widget.class}}" ui-multichoice
+        style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+        <div ui-widgets="dataProvider"></div>
+    </ul>
+</script>
+
+<script id="choiceItemRenderer" type="template/html">
+    <li class="choice {{fontSize}} {{widget.class}} {{widget.selected && 'selected'}}"
+        title="{{widget.title}}" ng-click="select(widget)" ng-bind-html-unsafe="widget.label"
+        style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+    </li>
+</script>
+
+<script id="dragItemRenderer" type="template/html">
+    <li class="choice {{fontSize}} {{widget.class}} {{widget.selected && 'selected'}}"
+        title="{{widget.title}}" ng-bind-html-unsafe="widget.label"
+        ui-drag="widget"
+        style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+    </li>
+</script>
+
+<script id="dropItemRenderer" type="template/html">
+    <li class="choice {{fontSize}} {{widget.class}} {{widget.selected && 'selected'}}"
+        title="{{widget.title}}" ng-bind-html-unsafe="widget.label"
+        ui-drop="widget"
+        style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+    </li>
+</script>
+
+<script id="hotspot" type="template/html">
+    <div class="widget sr sr-hotspot {{widget.class}}" ui-hotspot
+         style="top:{{widget.y}}px;left:{{widget.x}}px;width:{{widget.width}}px;height:{{widget.height}}px">
+        <div class="background"></div>
+        <div class="canvas"></div>
+        <div class="sprite pin" style="position:absolute;top:0;left:0"></div>
+    </div>
+</script>
+
+<script id="sequence" type="template/html">
+    <div class="widget sr sr_sequence {{widget.class}}" ui-sequence>
+        <ul ui-sortable="{connectWith:'.connectedSortable'}" data-model="model.listA" id="sortable1" class="connectedSortable">
+            <li ng-repeat="item in model.listA" class="ui-state-default">{{item.label}}</li>
+        </ul>
+
+        <ul ui-sortable="{connectWith:'.connectedSortable'}" data-model="model.listB" id="sortable2" class="connectedSortable">
+            <li ng-repeat="item in model.listB" class="ui-state-highlight">{{item.label}}</li>
+        </ul>
+    </div>
+</script>

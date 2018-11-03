@@ -1,0 +1,151 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/page_color.jpg" width="180" height="204">
+        <button x="4" y="4" class="hotspot page-color-button" width="39" height="39" id="blue_btn" tooltip="blue" toggle="true" model="page_color" value="blue">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="47" y="4" class="hotspot page-color-button" width="39" height="39" tooltip="teal" id="teal_btn" toggle="true" model="page_color" value="teal">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="91" y="4" class="hotspot page-color-button" width="39" height="39" id="green_btn" tooltip="green" toggle="true" model="page_color" value="green">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="136" y="4" class="hotspot page-color-button" width="39" height="39" id="red_btn" tooltip="red" toggle="true" model="page_color" value="red">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="4" y="49" class="hotspot page-color-button" width="39" height="39" id="blue_mist_btn" tooltip="blue_mist" toggle="true" model="page_color" value="blue_mist">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="47" y="49" class="hotspot page-color-button" width="39" height="39" id="cyan_btn" tooltip="cyan" toggle="true" model="page_color" value="cyan">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="91" y="49" class="hotspot page-color-button" width="39" height="39" id="apple_btn" tooltip="apple" toggle="true" model="page_color" value="apple">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="136" y="49" class="hotspot page-color-button" width="39" height="39" id="red_chalk_btn" tooltip="red_chalk" toggle="true" model="page_color" value="red_chalk">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="4" y="92" class="hotspot page-color-button" width="39" height="39" id="purple_mist_btn" tooltip="purple_mist" toggle="true" model="page_color" value="purple_mist">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="47" y="92" class="hotspot page-color-button" width="39" height="39" id="silver_btn" tooltip="silver" toggle="true" model="page_color" value="silver">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="91" y="92" class="hotspot page-color-button" width="39" height="39" id="lemon_lime_btn" tooltip="lemon_lime" toggle="true" model="page_color" value="lemon_lime">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="136" y="92" class="hotspot page-color-button" width="39" height="39" id="tan_btn" tooltip="tan" toggle="true" model="page_color" value="tan">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="4" y="136" class="hotspot page-color-button" width="39" height="39" id="purple_btn" tooltip="purple" toggle="true" model="page_color" value="purple">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="3" y="177" class="hotspot ribbon-button" width="174" height="25" id="no_color_btn" tooltip="no_color">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="47" y="136" class="hotspot page-color-button" width="39" height="39" id="magenta_btn" tooltip="magenta" toggle="true" model="page_color" value="magenta">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="91" y="136" class="hotspot page-color-button" width="39" height="39" id="yellow_btn" tooltip="yellow" toggle="true" model="page_color" value="yellow">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+        <button x="136" y="136" class="hotspot page-color-button" width="39" height="39" id="orange_btn" tooltip="orange">
+            <events mousedown="not_implemented" click="close_menu"></events>
+        </button>
+    </view>
+    <tooltips>
+        <tooltip name="blue" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/blue_tt.jpg" width="29" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="teal" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/teal_tt.jpg" width="28" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="green" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/green_tt.jpg" width="37" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="red" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/red_tt.jpg" width="26" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="blue_mist" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/blue_mist_tt.jpg" width="59" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="cyan" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/cyan_tt.jpg" width="37" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="apple" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/apple_tt.jpg" width="41" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="red_chalk" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/red_chalk_tt.jpg" width="63" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="purple_mist" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/purple_mist_tt.jpg" width="70" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="silver" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/silver_tt.jpg" width="38" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="lemon_lime" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/lemon_lime_tt.jpg" width="76" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="tan" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/tan_tt.jpg" width="26" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="purple" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/purple_tt.jpg" width="44" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="no_color" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/no_color_tt.jpg" width="56" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="magenta" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/magenta_tt.jpg" width="57" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="yellow" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/yellow_tt.jpg" width="41" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="orange" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/orange_tt.jpg" width="45" height="21" >]]>
+            </html>
+        </tooltip>
+    </tooltips>
+    <model persist="true">
+        <page_color>lemon_lime</page_color>
+    </model>
+    <commands>
+        <command name="close_menu">
+            <close/>
+        </command>
+    </commands>
+</root>

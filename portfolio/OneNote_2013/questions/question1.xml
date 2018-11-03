@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root id="ON13-1A-1.1.1"
+      language="ENU"
+      text_direction="ltr"
+      type="simulation"
+      xmlns="http://certiport.com/hammer/2.x/question"
+      strings="#strings/examples.xml"
+      application="#views/apps/OneNote2013.xml"
+      view="#views/slides/onenote/onenote_slide.xml">
+
+    <content>
+        <stem>
+            <![CDATA[(Actual question content removed to protect copyright.)]]>
+        </stem>
+    </content>
+    <model persist="true">
+        <template_name></template_name>
+        <tab_selected></tab_selected>
+        <default_template></default_template>
+        <page>Anatomy 101</page>
+        <init_page>math</init_page>
+    </model>
+
+
+    <score>
+        <all>
+            <if property="template_name" eq="Class Information" />
+            <!--<if property="tab_selected" eq="anatomy"></if>-->
+            <if property="default_template" eq="no"></if>
+            <if property="page" eq="Anatomy 101"/>
+        </all>
+    </score>
+</root>

@@ -1,0 +1,9 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="notebook_menu">
+    <view image="#images/menus/home_tags.jpg" width="160" height="60">
+    </view>
+   <model persist="true">
+    </model>
+    <commands>
+    </commands>
+</root>

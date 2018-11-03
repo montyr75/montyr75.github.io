@@ -1,0 +1,6 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/page_panel/page_panel_anatomy_biology.jpg" width="210" height="409"></view>
+    <model persist="true"></model>
+    <commands></commands>
+</root>

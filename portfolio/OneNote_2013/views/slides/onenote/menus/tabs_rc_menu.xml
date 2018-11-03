@@ -1,0 +1,52 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/tabs_rc_menu.jpg" width="225" height="250">
+        <button x="0" y="2" class="hotspot ribbon-button" width="223" height="24" id="rename_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="0" y="26" class="hotspot ribbon-button" width="223" height="24" id="export_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="0" y="50" class="hotspot ribbon-button" width="223" height="24" id="delete_btn">
+            <events click="delete_handler"></events>
+        </button>
+        <button x="0" y="74" class="hotspot ribbon-button" width="223" height="24" id="more_copy_btn">
+            <events click="open_move_or_copy_sections"></events>
+        </button>
+        <button x="0" y="98" class="hotspot ribbon-button" width="223" height="24" id="merge_btn">
+            <events click="open_merge_sections"></events>
+        </button>
+        <button x="0" y="122" class="hotspot ribbon-button" width="223" height="24" id="copy_link_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="0" y="150" class="hotspot ribbon-button" width="223" height="24" id="new_secton_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="0" y="175" class="hotspot ribbon-button" width="223" height="24" id="new_group_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="-1" y="199" class="hotspot ribbon-button" width="223" height="24" id="password_btn">
+            <events click="onenote.show_password_protect_pane"></events>
+        </button>
+        <button x="0" y="224" class="hotspot ribbon-button" width="223" height="24" id="color_btn">
+            <events  mouseenter="show_color_section_menu"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="show_color_section_menu">
+            <menu src="#views/slides/onenote/menus/section_color_menu.xml" modal="false" group="menu" direction="right" depth="1"/>
+        </command>
+        <command name="open_merge_sections">
+            <close/>
+            <dialog src="#views/slides/onenote/dialogs/merge_sections/merge_sections.xml" modal="true" top="50" left="300"></dialog>
+        </command>
+        <command name="open_move_or_copy_sections">
+            <close/>
+            <dialog src="#views/slides/onenote/dialogs/move_or_copy_sections/move_or_copy_sections.xml" modal="true" top="50" left="300"></dialog>
+        </command>
+        <command name="delete_handler">
+            <dialog src="#views/slides/onenote/dialogs/delete_warning/delete_warning.xml" modal="true" top="250" left="250"></dialog>
+        </command>
+    </commands>
+</root>

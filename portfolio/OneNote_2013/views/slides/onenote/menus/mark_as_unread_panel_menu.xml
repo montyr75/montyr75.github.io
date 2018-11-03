@@ -1,0 +1,76 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="page_panel_rc_menu">
+    <view image="#images/menus/mark_as_unread_panel_menu.jpg" width="220" height="306">
+        <button x="-1" y="2" class="hotspot ribbon-button" width="217" height="23" id="rename_btn">
+            <events click="close"></events>
+        </button>
+        <button x="-1" y="26" class="hotspot ribbon-button" width="217" height="23">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="-1" y="49" class="hotspot ribbon-button" width="217" height="23">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="-1" y="73" class="hotspot ribbon-button" width="217" height="23" id="rename_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="-1" y="97" class="hotspot ribbon-button" width="217" height="23">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="-1" y="122" class="hotspot ribbon-button" width="217" height="23">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="-1" y="147" class="hotspot ribbon-button" width="217" height="23">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="-1" y="173" class="hotspot ribbon-button" width="217" height="23">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="-1" y="200" class="hotspot ribbon-button" width="217" height="23">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="-1" y="250" class="hotspot ribbon-button" width="217" height="23">
+            <events click="mark_as_unread"></events>
+        </button>
+        <button x="-1" y="276" class="hotspot ribbon-button" width="217" height="23">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="close">
+            <close target="page_panel_rc_menu" />
+        </command>
+        <command name="mark_as_unread">
+            <condition>
+                <if property="question.item" eq="231">
+                    <condition>
+                        <if property="question.page" eq="exam_review">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology_unread.xml"/>
+                            <model target="question">
+                                <exam_unread>true</exam_unread>
+                            </model>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology_paper_notes_unread.xml"/>
+                            <model target="question">
+                                <notes_unread>true</notes_unread>
+                                <page_selected>{question.page}</page_selected>
+                            </model>
+                        </else>
+                    </condition>
+                </if>
+                <elseif property="question.item" eq="231B">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_unread.xml"/>
+                    <model target="question">
+                        <math_unread>true</math_unread>
+                        <page_unread>{question.page}</page_unread>
+                    </model>
+                </elseif>
+                <else>
+                    <events click="not_implemented"></events>
+                </else>
+            </condition>
+
+        </command>
+    </commands>
+</root>

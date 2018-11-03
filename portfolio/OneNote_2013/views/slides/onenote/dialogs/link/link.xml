@@ -1,0 +1,53 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="link_dialog">
+    <view image="#images/dialogs/link/link.jpg" width="420" height="480">
+        <html x="243" y="437" width="71" height="19" model="link_dialog.ok_button"></html>
+        <button x="243" y="437" width="71" height="19" id="ok_btn" class="hotspot">
+            <events click="ok_handler"></events>
+        </button>
+        <button x="327" y="437" class="hotspot dialog-button" width="71" height="19" id="cancel_btn">
+            <events click="close_dialog"></events>
+        </button>
+        <button x="381" y="10" class="hotspot close-button" width="28" height="16" id="close_btn">
+            <events click="close_dialog"></events>
+        </button>
+        <text x="21" y="102" id="link_txt" focus="start" width="307" height="18" model="address">
+            <events change="show_ok_button"></events>
+        </text>
+        <button x="341" y="100" class="hotspot dialog-button" width="22" height="23">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="376" y="100" class="hotspot dialog-button" width="22" height="23">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true">
+        <ok_button></ok_button>
+    </model>
+    <hotkeys>
+        <hotkey combo="ENTER" command="ok_handler"/>
+    </hotkeys>
+    <commands>
+        <command name="close_dialog">
+            <close></close>
+        </command>
+        <command name="ok_handler">
+            <condition>
+                <if property="ok_button" neq="">
+                    <model target="question">
+                        <link>{address}</link>
+                        <image_selected>{question.page}</image_selected>
+                    </model>
+                    <close></close>
+                </if>
+            </condition>
+        </command>
+        <command name="show_ok_button">
+            <model>
+                <ok_button>
+                    <![CDATA[<img align="left" src="#images/buttons/ok_button.jpg">]]>
+                </ok_button>
+            </model>
+        </command>
+    </commands>
+</root>

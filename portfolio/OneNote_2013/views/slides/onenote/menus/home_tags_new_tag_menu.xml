@@ -1,0 +1,21 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="tags_new_tag_menu">
+    <events show="set_tag_label"></events>
+    <view image="#images/menus/home_tags_new_tag.jpg" width="160" height="60">
+        <slide x="3" y="1" width="20" height="20" src-model="question.symbol"></slide>
+        <html x="28" y="1" width="100" height="18" class-model="question.label_color"></html>
+        <label x="31" y="2" model="tags_new_tag_menu.new_label" width="139" height="18">
+            <events></events>
+        </label>
+    </view>
+    <model persist="true">
+        <shortcut>.(Ctrl+1)</shortcut>
+    </model>
+    <commands>
+        <command name="set_tag_label">
+            <model>
+                <new_label>{question.display_name}{tags_new_tag_menu.shortcut}</new_label>
+            </model>
+        </command>
+    </commands>
+</root>

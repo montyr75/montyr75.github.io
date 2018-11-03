@@ -1,0 +1,27 @@
+<root
+    xmlns="http://certiport.com/hammer/trunk/custom" type="slide">
+    <view image="#images/dialogs/options/options_send_to_onenote.jpg" width="749" height="568">
+        <button x="701" y="189" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="701" y="236" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="701" y="258" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="701" y="324" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="701" y="348" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="701" y="370" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="701" y="212" class="hotspot dialog-button" width="18" height="17">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+</root>

@@ -1,0 +1,77 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <!--<events show="set_modify_props"/>-->
+    <view image="#images/dialogs/modify_tag/modify_tag.jpg" width="287" height="277">
+        <button x="25" y="114" class="hotspot dialog-button" width="39" height="23" id="symbol_btn">
+            <events click="open_symbols"></events>
+        </button>
+        <button x="96" y="114" class="hotspot dialog-button" width="40" height="22" id="fontcolor_btn">
+            <events click="open_font_color"></events>
+        </button>
+        <button x="190" y="114" class="hotspot dialog-button" width="40" height="22" id="highlight_btn">
+            <events click="open_highlight_color"></events>
+        </button>
+        <button x="116" y="241" class="hotspot dialog-button" width="71" height="19" id="ok_btn">
+            <events click="ok_handler"></events>
+        </button>
+        <button x="200" y="241" class="hotspot dialog-button" width="71" height="19" id="cancel_btn">
+            <events click="close"></events>
+        </button>
+        <button x="247" y="11" class="hotspot close-button" width="29" height="15" id="close_btn">
+            <events click="close"></events>
+        </button>
+        <slide x="91" y="174" width="20" height="20" src="#views/slides/onenote/symbols/none_symbol.xml" src-model="question.symbol"></slide>
+        <slide x="30" y="117" width="20" height="20" src="#views/slides/onenote/symbols/none_symbol.xml" src-model="question.symbol"></slide>
+        <html x="115" y="175" width="150" height="18" class-model="question.label_color"></html>
+        <label x="119" y="175" model="question.display_name" width="151" height="18">
+            <events></events>
+        </label>
+        <text x="24" y="73" width="248" height="18" focus="all" model="question.display_name"></text>
+        <html x="193" y="130" width="16" height="4" class-model="question.label_color"></html>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="ok_handler">
+            <condition>
+                <if property="question.selected_tag" eq="todo">
+                    <model target="custom_tags_dialog">
+                        <custom_tags>#views/slides/onenote/dialogs/customize_tags/customize_tags_modify_tag.xml</custom_tags>
+                    </model>
+                </if>
+                <if property="question.selected_tag" eq="remember">
+                    <model target="custom_tags_dialog">
+                        <custom_tags>#views/slides/onenote/dialogs/customize_tags/customize_tags_modify_remember.xml</custom_tags>
+                    </model>
+                    <model target="tags_menu">
+                        <symbol>{question.symbol}</symbol>
+                        <display_name>{question.display_name}</display_name>
+                        <label_color>{question.label_color}</label_color>
+                    </model>
+                </if>
+            </condition>
+            <model target="question">
+                <tag_type>modified</tag_type>
+            </model>
+            <close></close>
+        </command>
+        <command name="close">
+            <close></close>
+        </command>
+        <command name="open_highlight_color">
+            <menu src="#views/slides/onenote/menus/highlight_color.xml" modal="true" group="menu" depth="1" direction="bottom"></menu>
+        </command>
+        <command name="open_font_color">
+            <menu src="#views/slides/onenote/menus/font_color.xml" modal="true" group="menu" depth="1" direction="bottom"></menu>
+        </command>
+        <command name="open_symbols">
+            <menu src="#views/slides/onenote/menus/symbols.xml" modal="true" group="menu" depth="1" direction="bottom"></menu>
+        </command>
+        <command name="set_modify_props">
+            <model target="question">
+                <display_name>To Do</display_name>
+                <symbol>#views/slides/onenote/symbols/blue_checkbox.xml</symbol>
+                <label_color></label_color>
+            </model>
+        </command>
+    </commands>
+</root>

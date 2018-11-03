@@ -1,0 +1,45 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="merge_warning">
+    <view image="#images/dialogs/delete_warning/delete_warning.jpg" width="527" height="125">
+        <button x="191" y="93" class="hotspot dialog-button" width="65" height="20" id="yes_btn">
+            <events click="yes_handler"></events>
+        </button>
+        <button x="272" y="93" class="hotspot dialog-button" width="65" height="20" id="no_btn">
+            <events click="close_dialog"></events>
+        </button>
+        <button x="488" y="10" class="hotspot close-button" width="28" height="14" id="close_btn">
+            <events click="close_dialog"></events>
+        </button>
+        <label x="73" y="66" width="126" height="24" model="onenote.label" class="font-size-11">
+            <events></events>
+        </label>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="yes_handler">
+            <condition>
+                <if property="onenote.tab_selected" eq="biology">
+                    <goto target="tabs" src="#views/slides/onenote/tabs/tabs_no_biology.xml"></goto>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy.xml"></goto>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_anatomy.xml"/>
+                </if>
+                <elseif property="onenote.tab_selected" eq="anatomy">
+                    <goto target="tabs" src="#views/slides/onenote/tabs/tabs_no_anatomy.xml"/>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"/>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_math.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_math.xml"/>
+                    <close target="*"/>
+                </elseif>
+                <elseif property="onenote.tab_selected" eq="math">
+                    <goto target="tabs" src="#views/slides/onenote/tabs/tabs_no_math.xml"/>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy.xml"/>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_anatomy.xml"/>
+                    <close target="*"/>
+                </elseif>
+            </condition>
+            <close></close>
+        </command>
+    </commands>
+</root>

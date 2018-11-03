@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root xmlns="http://certiport.com/hammer/sdk/view">
+    <view background-image="" width="200" height="100" background-color="white">
+        <image x="0" y="0" src="assets/images/exhibits/exhibit.gif" width="200" height="100" class="exhibit" />
+
+        <button top="0" right="0" width="15" height="15" class="hotspot close-button" label="x">
+            <events click="close" />
+        </button>
+    </view>
+
+    <functions>
+        <function name="close">
+            <close target="@" />
+        </function>
+    </functions>
+</root>

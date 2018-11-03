@@ -1,0 +1,9 @@
+<root
+    xmlns="http://certiport.com/hammer/trunk/custom" type="slide">
+    <view image="#images/dialogs/options/options_trust.jpg" width="749" height="568">
+        <button x="582" y="404" class="hotspot dialog-button" width="136" height="22">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+</root>

@@ -1,0 +1,135 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/highlight_color.jpg" width="98" height="88">
+        <button x="5" y="31" class="hotspot highlight-button" width="14" height="14" id="yellow_btn" model="question.label_color" value="yellow-label" tooltip="yellow">
+            <events click="close_menu"></events>
+        </button>
+        <button x="23" y="31" class="hotspot highlight-button" width="14" height="14" id="bright_green_btn" model="question.label_color" value="bright-green-label" tooltip="bright_green">
+            <events click="close_menu"></events>
+        </button>
+        <button x="41" y="31" class="hotspot highlight-button" width="14" height="14" id="sky_blue_btn" tooltip="sky_blue" model="question.label_color" value="sky-blue-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="59" y="31" class="hotspot highlight-button" width="14" height="14" id="pink_btn" tooltip="pink" model="question.label_color" value="pink-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="77" y="31" class="hotspot highlight-button" width="14" height="14" id="blue_btn" tooltip="blue" model="question.label_color" value="blue-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="5" y="49" class="hotspot highlight-button" width="14" height="14" id="red_btn" tooltip="red" model="question.label_color" value="red-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="23" y="49" class="hotspot highlight-button" width="14" height="14" id="dark_blue_btn" tooltip="dark_blue" model="question.label_color" value="dark-blue-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="41" y="49" class="hotspot highlight-button" width="14" height="14" id="teal_btn" tooltip="teal" model="question.label_color" value="teal-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="59" y="49" class="hotspot highlight-button" width="14" height="14" id="dark_green_btn" tooltip="dark_green" model="question.label_color" value="dark-green-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="77" y="49" class="hotspot highlight-button" width="14" height="14" id="violet_btn" tooltip="violet" model="question.label_color" value="violet-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="5" y="67" class="hotspot highlight-button" width="14" height="14" id="dark_red_btn" tooltip="dark_red" model="question.label_color" value="dark-red-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="23" y="67" class="hotspot highlight-button" width="14" height="14" id="dark_yellow_batn" tooltip="dark_yellow" model="question.label_color" value="dark-yellow-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="41" y="67" class="hotspot highlight-button" width="14" height="14" id="gray_50_btn" tooltip="gray_50" model="question.label_color" value="gray-fifty-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="59" y="67" class="hotspot highlight-button" width="14" height="14" id="gray_25_btn" tooltip="gray_25" model="question.label_color" value="gray-twentyfive-label">
+            <events click="close_menu"></events>
+        </button>
+        <button x="77" y="67" class="hotspot highlight-button" width="14" height="14" id="black_btn" tooltip="black" model="question.label_color" value="black-label">
+            <events click="close_menu"></events>
+        </button>
+    </view>
+    <tooltips>
+        <tooltip name="yellow" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/yellow_tt.jpg" width="41" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="bright_green" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/bright_green_tt.jpg" width="72" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="sky_blue" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/sky_blue_tt.jpg" width="50" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="pink" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/pink_tt.jpg" width="29" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="blue" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/blue_tt.jpg" width="29" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="red" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/red_tt.jpg" width="26" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_blue" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_blue_tt.jpg" width="56" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="teal" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/teal_tt.jpg" width="28" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_green" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_green_tt.jpg" width="64" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="violet" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/violet_tt.jpg" width="36" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_red" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_red_tt.jpg" width="53" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_yellow" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_yellow_tt.jpg" width="68" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="gray_50" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/gray_50_tt.jpg" width="57" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="gray_25" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/gray_25_tt.jpg" width="57" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="black" class="ui-ribbon-tooltip tooltip-offset-colors">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/black_tt.jpg" width="34" height="21" >]]>
+            </html>
+        </tooltip>
+    </tooltips>
+    <model persist="true"></model>
+    <commands>
+        <command name="close_menu">
+            <model>
+                <temp>0</temp>
+            </model>
+        </command>
+    </commands>
+</root>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/documents/doc_anatomy.jpg" width="748" height="408">
+        <button id="help" x="910" y="2" width="40" height="20" class="hotspot">
+            <events click="not_implemented" />
+        </button>
+    </view>
+
+    <model persist="true">
+    </model>
+
+    <commands>
+    </commands>
+</root>

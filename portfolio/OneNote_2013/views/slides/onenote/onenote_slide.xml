@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="onenote">
+    <events show="init"/>
+    <view image="" width="960" height="600">
+
+        <!-- Title Bar -->
+        <slide id="title_bar" x="1" y="0" width="958" height="28" src="#views/slides/onenote/title_bar/title_bar_math.xml" ></slide>
+        <button x="37" y="3" class="hotspot ribbon-button" width="22" height="22" tooltip="back">
+            <events mousedown="dispatch('bold')"></events>
+        </button>
+        <button x="66" y="3" class="hotspot ribbon-button" width="22" height="22" tooltip="undo">
+            <events mousedown="not_implemented"></events>
+        </button>
+        <button x="94" y="3" class="hotspot ribbon-button" width="24" height="22" tooltip="dock_desktop">
+            <events mousedown="not_implemented"></events>
+        </button>
+        <button x="125" y="3" class="hotspot ribbon-button" width="10" height="22" tooltip="customize_qat">
+            <events mousedown="not_implemented"></events>
+        </button>
+        <button x="817" y="3" class="hotspot ribbon-button" width="22" height="22" tooltip="help">
+            <events mousedown="not_implemented"></events>
+        </button>
+        <button x="846" y="3" class="hotspot ribbon-button" width="22" height="22" tooltip="display_options">
+            <events mousedown="not_implemented"></events>
+        </button>
+        <button x="875" y="3" class="hotspot ribbon-button" width="22" height="22" tooltip="min">
+            <events mousedown="not_implemented"></events>
+        </button>
+        <button x="904" y="3" class="hotspot ribbon-button" width="22" height="22" tooltip="max">
+            <events mousedown="not_implemented"></events>
+        </button>
+        <button x="933" y="3" class="hotspot ribbon-button" width="22" height="22" tooltip="close">
+            <events mousedown="not_implemented"></events>
+        </button>
+
+        <!-- Ribbon -->
+        <slide id="ribbon" x="1" y="28" width="958" height="118" src="#views/slides/onenote/ribbon/home.xml"></slide>
+        <button x="0" y="28" width="60" height="23" class="hotspot" id="ribbon_file_btn">
+            <events mousedown="show_backstage" />
+        </button>
+        <button x="66" y="30" width="58" height="22" class="hotspot ribbon-tab-home-button" id="ribbon_home_btn">
+            <events mousedown="show_home" />
+        </button>
+        <button x="130" y="30" width="61" height="22" class="hotspot ribbon-tab-insert-button" id="ribbon_insert_btn">
+            <events mousedown="show_insert" />
+        </button>
+        <button x="197" y="30" width="57" height="21" class="hotspot ribbon-tab-draw-button" id="ribbon_draw_btn">
+            <events mousedown="show_draw" />
+        </button>
+        <button x="260" y="30" width="71" height="22" class="hotspot ribbon-tab-history-button" id="ribbon_history_btn">
+            <events mousedown="show_history" />
+        </button>
+        <button x="337" y="30" width="63" height="21" class="hotspot ribbon-tab-review-button" id="ribbon_review_btn">
+            <events mousedown="show_review" />
+        </button>
+        <button x="406" y="30" width="50" height="21" class="hotspot ribbon-tab-view-button" id="ribbon_view_btn">
+            <events mousedown="show_view" />
+        </button>
+
+        <!--tabs-->
+        <slide id="tabs" x="1" y="146" width="958" height="44" src="#views/slides/onenote/tabs/tabs_math.xml"></slide>
+        <button x="0" y="153" width="167" height="30" class="hotspot notebooks-button">
+            <events click="show_notebooks_dropdown" rclick="show_notebooks_rc_menu"></events>
+        </button>
+        <button x="940" y="159" class="hotspot" width="14" height="20" id="search_btn">
+            <events click="show_search_menu"></events>
+        </button>
+        <button x="762" y="159" class="hotspot" width="178" height="20" id="search_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="467" y="165" class="hotspot" width="30" height="20" id="search_btn">
+            <events click="not_implemented"></events>
+        </button>
+
+        <!-- Document Area -->
+        <slide id="doc" x="1" y="190" width="748" height="408" src="#views/slides/onenote/documents/doc_math.xml"></slide>
+
+        <!--page panel-->
+        <slide id="page_panel" x="750" y="190" width="208" height="408" src="#views/slides/onenote/page_panel/page_panel_math.xml"></slide>
+
+        <!--task pane-->
+        <slide id="task_pane" x="699" y="145" width="260" height="451" ></slide>
+    </view>
+
+
+
+    <!-- persist equals "keep the data around", if set to false, it will reset the data each time view is displayed-->
+    <model persist="true">
+        <tab>$math</tab>
+        <tab_selected>math</tab_selected>
+        <label></label>
+    </model>
+    <tooltips>
+        <tooltip name="close" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/close_tt.jpg" width="35" height="19" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="max" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/maximize_tt.jpg" width="56" height="19" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="min" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/minimize_tt.jpg" width="55" height="19" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="display_options" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/ribbon_display_options_tt.jpg" width="134" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="back" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/back_tt.jpg" width="35" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="help" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/help_tt.jpg" width="31" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="customize_qat" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/customize_qat_tt.jpg" width="183" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dock_desktop" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/dock_desktop_tt.jpg" width="215" height="129" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="undo" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/undo_tt.jpg" width="39" height="25" >]]>
+            </html>
+        </tooltip>
+    </tooltips>
+
+    <commands>
+        <command name="init">
+            <condition>
+                <if property="question.init_page" eq="math">
+                    <exec command="show_math_tab"/>
+                </if>
+                <if property="question.init_page" eq="biology">
+                    <exec command="show_biology_tab"/>
+                </if>
+                <if property="question.init_page" eq="anatomy">
+                    <exec command="show_anatomy_tab"/>
+                </if>
+                <if property="question.init_page" eq="biology_notes">
+                    <exec command="show_biology_tab"/>
+                    <exec command="show_biology_notes_page"/>
+                </if>
+                <if property="question.init_page" eq="brain_page">
+                    <exec command="show_anatomy_tab"/>
+                    <exec command="show_brain_page"/>
+                </if>
+                <if property="question.init_page" eq="neurons">
+                    <exec command="show_anatomy_tab"/>
+                    <exec command="show_neurons_page"/>
+                </if>
+                <if property="question.item" eq="121">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_untitled.xml"/>
+                    <goto target="tabs" src="#views/slides/onenote/tabs/tabs_untitled.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_untitled.xml"/>
+                </if>
+                <if property="question.item" eq="121B">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_untitled.xml"/>
+                    <goto target="tabs" src="#views/slides/onenote/tabs/tabs_untitled.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_untitled.xml"/>
+                    <!--<exec command="backstage_open_both_unpinned.pin_classnotes"/>-->
+                </if>
+                <if property="question.item" eq="132">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_no_notebook.xml"/>
+                    <goto target="tabs" src="#views/slides/onenote/tabs/tabs_no_notebook.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_no_notebook.xml"/>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_no_notebook.xml"/>
+                </if>
+            </condition>
+        </command>
+        <command name="show_home">
+            <goto target="ribbon" src="#views/slides/onenote/ribbon/home.xml"/>
+            <close></close>
+        </command>
+        <command name="show_insert">
+            <goto target="ribbon" src="#views/slides/onenote/ribbon/insert.xml"/>
+            <close></close>
+        </command>
+        <command name="show_draw">
+            <goto target="ribbon" src="#views/slides/onenote/ribbon/draw.xml"/>
+            <close></close>
+        </command>
+        <command name="show_history">
+            <goto target="ribbon" src="#views/slides/onenote/ribbon/history.xml"/>
+            <close></close>
+        </command>
+        <command name="show_review">
+            <goto target="ribbon" src="#views/slides/onenote/ribbon/review.xml"/>
+            <close></close>
+        </command>
+        <command name="show_view">
+            <goto target="ribbon" src="#views/slides/onenote/ribbon/view.xml"/>
+            <close></close>
+        </command>
+        <command name="show_math_tab">
+            <condition>
+                <if property="question.item" eq="351">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_351.xml"/>
+                </if>
+                <if property="question.item" eq="351B">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_351_B.xml"/>
+                </if>
+                <elseif property="question.item" eq="421">
+                    <condition>
+                        <if property="question.tab_inserted" eq="math">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_math_421.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="422">
+                    <condition>
+                        <if property="question.tab_inserted" eq="math">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                              <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="431B">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_431B.xml"/>
+                </elseif>
+                <elseif property="question.item" eq="112A">
+                    <condition>
+                        <if property="question.template_selected" eq="math notes">
+                                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_math_review.xml"/>
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_review.xml"/>
+                         </if>
+                        <else>
+                            <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_math.xml"/>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="231B">
+                    <condition>
+                        <if property="question.math_unread" eq="true">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_math_unread.xml"/>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="113B">
+                    <condition>
+                        <if property="question.rule" eq="standard">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_standard_rule.xml"/>
+                        </if>
+                        <elseif property="question.rule" eq="college">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_college_rule.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="narrow">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_narrow_rule.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="wide">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_wide_rule.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="small">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_small_grid.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="medium">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_medium_grid.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="large">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_large_grid.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="very_large">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_very_large_grid.xml"/>
+                        </elseif>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <else>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"/>
+                </else>
+            </condition>
+            <condition>
+                <if property="question.item" neq="112A">
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_math.xml"/>
+                </if>
+            </condition>
+
+            <goto target="tabs" src="#views/slides/onenote/tabs/tabs_math.xml"/>
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_math.xml"/>
+            <model>
+                <tab>$math</tab>
+                <label>Mathematics 210</label>
+                <tab_selected>math</tab_selected>
+            </model>
+            <model target="question">
+                <page>math</page>
+                <tab_selected>math</tab_selected>
+            </model>
+            <condition>
+                <if property="add_page" eq="true">
+                    <exec command="add_page_math"/>
+                </if>
+            </condition>
+            <close></close>
+        </command>
+        <command name="show_anatomy_tab">
+            <close></close>
+            <condition>
+                <if property="question.item" eq="421">
+                    <goto target="tabs" src="#views/slides/onenote/tabs/tabs_anatomy.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_anatomy.xml"/>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="anatomy">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy.xml"/>
+                        </else>
+                    </condition>
+                </if>
+                <elseif property="question.item" eq="422">
+                    <goto target="tabs" src="#views/slides/onenote/tabs/tabs_anatomy.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_anatomy.xml"/>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="anatomy">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="112B">
+                    <condition>
+                        <if property="question.template_selected" neq="">
+                            <dialog src="#views/slides/onenote/task_panes/templates_academic_taskpane/templates_academic_taskpane.xml" modal="false" top="145" left="699"></dialog>
+                            <!--<exec command="show_template_taskpane"/>-->
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_academic_detailed_anatomy.xml" />
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy.xml"/>
+                            <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <else>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy.xml"/>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy.xml"/>
+                </else>
+            </condition>
+            <goto target="tabs" src="#views/slides/onenote/tabs/tabs_anatomy.xml"/>
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_anatomy.xml"/>
+
+            <model>
+                <tab>$anatomy</tab>
+                <tab_selected>anatomy</tab_selected>
+                <label>Anatomy 101</label>
+            </model>
+            <model target="question">
+                <tab_selected>anatomy</tab_selected>
+                <page>Anatomy 101</page>
+            </model>
+
+        </command>
+        <command name="show_biology_tab">
+            <condition>
+                <if property="question.item" eq="431">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology_431.xml"/>
+                </if>
+                <elseif property="question.item" eq="421">
+                    <condition>
+                        <if property="question.tab_inserted" eq="exam_review">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="422">
+                    <condition>
+                        <if property="question.tab_inserted" eq="exam_review">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="113">
+                    <condition>
+                        <if property="question.rule" eq="standard">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_standard_rule.xml"/>
+                        </if>
+                        <elseif property="question.rule" eq="college">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_college_rule.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="narrow">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_narrow_rule.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="wide">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_wide_rule.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="small">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_small_grid.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="medium">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_medium_grid.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="large">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_large_grid.xml"/>
+                        </elseif>
+                        <elseif property="question.rule" eq="very_large">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_very_large_grid.xml"/>
+                        </elseif>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <else>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                </else>
+            </condition>
+            <goto target="tabs" src="#views/slides/onenote/tabs/tabs_biology.xml"/>
+            <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_biology.xml"/>
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology.xml"/>
+            <model>
+                <tab>$biology</tab>
+                <tab_selected>biology</tab_selected>
+                <label>Biology</label>
+            </model>
+            <model target="question">
+                <tab_selected>biology</tab_selected>
+                <page>exam_review</page>
+            </model>
+            <close></close>
+        </command>
+        <command name="show_tabs_no_biology">
+            <goto target="tabs" src="#views/slides/onenote/tabs/tabs_no_biology.xml"/>
+            <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+            <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy_biology.xml"/>
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology.xml"/>
+            <close target="*"/>
+        </command>
+        <command name="show_tabs_no_anatomy">
+            <goto target="tabs" src="#views/slides/onenote/tabs/tabs_no_anatomy.xml"/>
+            <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"/>
+            <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_math.xml"/>
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_math.xml"/>
+            <close target="*"/>
+        </command>
+        <command name="show_brain_page">
+            <model target="question">
+                <page>brain</page>
+            </model>
+            <condition>
+                <if property="question.item" eq="421">
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy_brain.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_brain.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="brain">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_brain.xml"/>
+                        </else>
+                    </condition>
+                </if>
+                <elseif property="question.item" eq="422">
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy_brain.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_brain.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="brain">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_brain.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="A423">
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy_brain.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_brain.xml"/>
+                    <condition>
+                        <if property="question.page" eq="brain">
+                            <condition>
+                                <if property="question.image_selected" eq="brain">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_brain_selected.xml"/>
+                                </if>
+                                <else>
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_brain.xml"/>
+                                </else>
+                            </condition>
+                        </if>
+                    </condition>
+                </elseif>
+                <else >
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy_brain.xml"/>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_brain.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_brain.xml"/>
+                </else>
+            </condition>
+
+        </command>
+        <command name="show_brain_selected_page">
+            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_brain_over.xml"/>
+        </command>
+        <command name="show_brain_over_page">
+            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_brain_over.xml"/>
+        </command>
+        <command name="show_neurons_page">
+            <model target="question">
+                <page>neurons</page>
+            </model>
+            <condition>
+                <if property="question.item" eq="421">
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy_neurons.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_neurons.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="neurons" >
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_neurons.xml"/>
+                        </else>
+                    </condition>
+                </if>
+                <elseif property="question.item" eq="422">
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy_neurons.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_neurons.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="neurons">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_neurons.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="A423">
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy_neurons.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_neurons.xml"/>
+                    <condition>
+                        <if property="question.page" eq="neurons">
+                            <condition>
+                                <if property="question.image_selected" eq="neurons">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_neurons_selected.xml"/>
+                                </if>
+                                <else>
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_neurons.xml"/>
+                                </else>
+                            </condition>
+                        </if>
+                    </condition>
+                </elseif>
+                <else>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy_neurons.xml"/>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_neurons.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_neurons.xml"/>
+                </else>
+            </condition>
+
+        </command>
+        <command name="show_neurons_selected_page">
+            <model target="question">
+                <image_selected>neurons</image_selected>
+            </model>
+            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_neurons_selected.xml"/>
+        </command>
+        <command name="show_neurons_over_page">
+            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_neurons_over.xml"/>
+        </command>
+        <command name="show_biology_notes_page">
+            <condition>
+                <if property="question.item" eq="231">
+                    <condition>
+                        <if property="question.notes_unread" eq="true">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology_paper_notes_unread.xml"/>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology_paper_notes.xml"/>
+                        </else>
+                    </condition>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_biology_notes.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology_notes.xml"/>
+                </if>
+                <elseif property="question.item" eq="421">
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_biology_notes.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology_notes.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="biology_notes">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology_paper_notes.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="422">
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_biology_notes.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology_notes.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="biology_notes">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </elseif>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology_paper_notes.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <else>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_biology_notes.xml"/>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology_paper_notes.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology_notes.xml"/>
+                </else>
+            </condition>
+
+            <model target="question">
+                <page>biology_notes</page>
+            </model>
+        </command>
+        <command name="show_exam_review_page">
+            <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_biology.xml"/>
+            <condition>
+                <if property="question.item" eq="431">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology_431.xml"/>
+                </if>
+                <elseif property="question.item" eq="421">
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="exam_review">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </elseif>
+                                <else>
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                                </else>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="422">
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology.xml"/>
+                    <condition>
+                        <if property="question.tab_inserted" eq="exam_review">
+                            <condition>
+                                <if property="question.new_file_inserted" eq="visio">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+                                </if>
+                                <elseif property="question.new_file_inserted" eq="excel">
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+                                </elseif>
+                                <else>
+                                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                                </else>
+                            </condition>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <elseif property="question.item" eq="231">
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology.xml"/>
+                    <condition>
+                        <if property="question.exam_unread" eq="true">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology_unread.xml"/>
+                        </if>
+                        <else>
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                        </else>
+                    </condition>
+                </elseif>
+                <else>
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                    <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_biology.xml"/>
+                </else>
+            </condition>
+            <model target="question">
+                <page>exam_review</page>
+            </model>
+        </command>
+        <command name="show_link_rc_menu">
+
+            <menu src="#views/slides/onenote/menus/link_rc_menu.xml" modal="false" group="menu" depth="1"/>
+            <condition>
+                <if property="question.page" eq="brain">
+                    <exec command="show_brain_selected_page"/>
+                    <model target="question">
+                        <image_selected>brain</image_selected>
+                    </model>
+                </if>
+                <elseif property="question.page" eq="neurons">
+                    <exec command="show_neurons_selected_page"/>
+                    <model target="question">
+                        <image_selected>neurons</image_selected>
+                    </model>
+                </elseif>
+            </condition>
+
+        </command>
+        <command name="show_text_rc_menu">
+            <menu src="#views/slides/onenote/menus/text_rc_bottom_menu.xml" modal="false" group="menu" top="300" depth="1"/>
+            <menu src="#views/slides/onenote/menus/text_rc_top_menu.xml" modal="false" group="menu" depth="1"/>
+        </command>
+        <command name="show_integral_text_rc_menu">
+            <menu src="#views/slides/onenote/menus/text_rc_bottom_menu.xml" modal="false" group="menu" depth="1"/>
+            <menu src="#views/slides/onenote/menus/text_rc_top_menu.xml" modal="false" group="menu" top="300" depth="1"/>
+        </command>
+        <command name="show_derivative_text_rc_menu">
+            <menu src="#views/slides/onenote/menus/text_rc_bottom_menu.xml" modal="false" group="menu" depth="1"/>
+            <menu src="#views/slides/onenote/menus/text_rc_top_menu.xml" modal="false" group="menu" top="250" depth="1"/>
+        </command>
+        <command name="show_math_tabs_rc_menu">
+            <exec command="show_math_tab"/>
+            <menu src="#views/slides/onenote/menus/tabs_rc_menu.xml" modal="false" group="menu" depth="1"/>
+        </command>
+        <command name="show_anatomy_tabs_rc_menu">
+            <exec command="show_anatomy_tab"/>
+            <menu src="#views/slides/onenote/menus/tabs_rc_menu.xml" modal="false" group="menu" depth="1"/>
+        </command>
+        <command name="show_biology_tabs_rc_menu">
+            <exec command="show_biology_tab"/>
+            <menu src="#views/slides/onenote/menus/tabs_rc_menu.xml" modal="false" group="menu" depth="1"/>
+        </command>
+        <command name="show_tabs_rc_menu">
+            <menu src="#views/slides/onenote/menus/tabs_rc_menu.xml" modal="false" group="menu" depth="1"/>
+        </command>
+        <command name="show_notebooks_rc_menu">
+            <condition>
+            <if property="question.item" eq="312">
+                <condition>
+                    <if property="question.merged" eq="true">
+                        <growl message="That feature is not available."/>
+                    </if>
+                </condition>
+            </if>
+            <elseif property="question.item" eq="351">
+                <growl message="That feature is not available."/>
+            </elseif>
+            <elseif property="question.item" eq="122A">
+                <model target="question">
+                    <notebook>classnotes</notebook>
+                </model>
+                <menu src="#views/slides/onenote/menus/notebooks_rc_menu.xml" modal="false" group="menu" depth="1"/>
+            </elseif>
+            <else>
+                <menu src="#views/slides/onenote/menus/notebooks_rc_menu.xml" modal="false" group="menu" depth="1"/>
+            </else>
+            </condition>
+        </command>
+        <command name="show_password_protect_pane">
+            <close/>
+            <dialog src="#views/slides/onenote/task_panes/password_protect_pane/password_pane.xml" modal="false" top="145" left="699"></dialog>
+            <condition>
+                <if property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_taskpane.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <condition>
+                        <if property="question.page" eq="Anatomy 101">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_taskpane.xml"/>
+                        </if>
+                        <elseif property="question.page" eq="brain">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_brain_taskpane.xml"/>
+                        </elseif>
+                        <elseif property="question.page" eq="neurons">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_neurons_taskpane.xml"/>
+                        </elseif>
+                    </condition>
+                </elseif>
+                <elseif property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology_taskpane.xml"/>
+                </elseif>
+            </condition>
+        </command>
+        <command name="show_templates_taskpane">
+            <dialog src="#views/slides/onenote/task_panes/templates_taskpane/templates_taskpane.xml" modal="false" top="145" left="699"></dialog>
+            <condition>
+                <if property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_taskpane.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <condition>
+                        <if property="question.page" eq="Anatomy 101">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_taskpane.xml"/>
+                        </if>
+                        <elseif property="question.page" eq="brain">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_brain_taskpane.xml"/>
+                        </elseif>
+                        <elseif property="question.page" eq="neurons">
+                            <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_neurons_taskpane.xml"/>
+                        </elseif>
+                    </condition>
+                </elseif>
+                <elseif property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology_taskpane.xml"/>
+                </elseif>
+            </condition>
+            <condition>
+                <if property="question.page" eq="exam_review">
+                    <model target="question">
+                        <page_selected>exam_review</page_selected>
+                    </model>
+                </if>
+                <else>
+                    <model target="question">
+                        <page_selected></page_selected>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="open_language_taskpane">
+            <dialog src="#views/slides/onenote/task_panes/proofing_language_taskpane/proofing_language_taskpane.xml" modal="false" top="145" left="699"></dialog>
+            <condition>
+                <if property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_taskpane.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy_taskpane.xml"/>
+                </elseif>
+                <elseif property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology_taskpane.xml"/>
+                </elseif>
+            </condition>
+        </command>
+        <command name="show_my_templates_taskpane">
+            <dialog src="#views/slides/onenote/task_panes/my_templates_taskpane/my_templates_taskpane.xml" modal="false" top="145" left="699"></dialog>
+        </command>
+        <command name="show_templates_academic_taskpane">
+            <close target="*" />
+            <dialog src="#views/slides/onenote/task_panes/templates_academic_taskpane/templates_academic_taskpane.xml" modal="false" top="145" left="699"></dialog>
+        </command>
+        <command name="show_templates_blank_taskpane">
+            <dialog src="#views/slides/onenote/task_panes/templates_blank_taskpane/templates_blank_taskpane.xml" modal="false" top="145" left="699"></dialog>
+        </command>
+        <command name="show_templates_business_taskpane">
+            <dialog src="#views/slides/onenote/task_panes/templates_business_taskpane/templates_business_taskpane.xml" modal="false" top="145" left="699"></dialog>
+        </command>
+        <command name="show_templates_decorative_taskpane">
+            <dialog src="#views/slides/onenote/task_panes/templates_decorative_taskpane/templates_decorative_taskpane.xml" modal="false" top="145" left="699"></dialog>
+        </command>
+        <command name="show_templates_planners_taskpane">
+            <dialog src="#views/slides/onenote/task_panes/templates_planners_taskpane/templates_planners_taskpane.xml" modal="false" top="145" left="699"></dialog>
+        </command>
+        <command name="add_page_math">
+            <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_math_add_page.xml"/>
+            <goto target="doc" src="#views/slides/onenote/documents/doc_new_page.xml"/>
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_untitled.xml"/>
+            <model>
+                <add_page>true</add_page>
+            </model>
+        </command>
+        <command name="show_templates_menu">
+            <menu src="#views/slides/onenote/menus/page_templates_menu.xml" modal="true" group="menu" depth="1" direction="bottom" />
+        </command>
+        <command name="show_backstage">
+            <dialog id="backstage_dlg" src="#views/slides/onenote/backstage/backstage.xml" modal="false"></dialog>
+        </command>
+        <command name="show_notebooks_dropdown">
+            <condition>
+                <if property="question.item" eq="351">
+                    <growl message="That feature is not available."/>
+                </if>
+                <else>
+                    <menu src="#views/slides/onenote/menus/notebooks.xml" direction="bottom" />
+                </else>
+            </condition>
+        </command>
+        <command name="close_panel">
+            <condition>
+                <if property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"></goto>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_anatomy.xml"></goto>
+                    <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_anatomy.xml"></goto>
+                </elseif>
+                <elseif property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"></goto>
+                </elseif>
+            </condition>
+            <close target="*"/>
+        </command>
+        <command name="show_math_notes">
+            <condition>
+                <if property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_math_notes.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_math_anatomy.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="question">
+                <template_selected>math notes</template_selected>
+            </model>
+        </command>
+        <command name="show_academic_detailed">
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_untitled.xml"/>
+            <condition>
+                <if property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_detailed.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_detailed_anatomy.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="question">
+                <template_selected>detailed</template_selected>
+            </model>
+        </command>
+        <command name="show_academic_simple">
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_untitled.xml"/>
+            <condition>
+                <if property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_simple.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_simple_anatomy.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="question">
+                <template_selected>simple</template_selected>
+            </model>
+        </command>
+        <command name="show_academic_questions">
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_untitled.xml"/>
+            <condition>
+                <if property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_questions.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_questions_anatomy.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="question">
+                <template_selected>questions</template_selected>
+            </model>
+        </command>
+        <command name="show_academic_history">
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_untitled.xml"/>
+            <condition>
+                <if property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_history.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_academic_history_anatomy.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="question">
+                <template_selected>history</template_selected>
+            </model>
+        </command>
+        <command name="show_narrow_rule">
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_narrow_rule.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_narrow.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="ribbon_view">
+                <rule>rule_lines</rule>
+            </model>
+        </command>
+        <command name="show_standard_rule">
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_standard_rule.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_standard.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="ribbon_view">
+                <rule>rule_lines</rule>
+            </model>
+        </command>
+        <command name="show_college_rule">
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_college_rule.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_college.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="ribbon_view">
+                <rule>rule_lines</rule>
+            </model>
+            <model target="question">
+                <rule>college</rule>
+            </model>
+        </command>
+        <command name="show_wide_rule">
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_wide_rule.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_wide.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="ribbon_view">
+                <rule>rule_lines</rule>
+            </model>
+        </command>
+        <command name="show_small_grid">
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_small_grid.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_small.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="ribbon_view">
+                <rule>rule_lines</rule>
+            </model>
+        </command>
+        <command name="show_medium_grid">
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_medium_grid.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_medium.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="ribbon_view">
+                <rule>rule_lines</rule>
+            </model>
+        </command>
+        <command name="show_large_grid">
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_large_grid.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_biology.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="ribbon_view">
+                <rule>rule_lines</rule>
+            </model>
+        </command>
+        <command name="show_very_large_grid">
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_very_large_grid.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math_very_large.xml"/>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+            <model target="ribbon_view">
+                <rule>rule_lines</rule>
+            </model>
+        </command>
+        <command name="show_no_rule">
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_biology.xml"/>
+                </if>
+                <elseif property="tab_selected" eq="math">
+                    <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"/>
+                </elseif>
+            </condition>
+
+            <model target="ribbon_view">
+                <rule></rule>
+            </model>
+        </command>
+        <command name="show_color_thickness_dialog">
+            <dialog src="#views/slides/onenote/dialogs/color_and_thickness/color_thickness.xml" modal="true" top="130" left="160"></dialog>
+        </command>
+        <command name="show_link_dialog">
+            <model target="question">
+                <link></link>
+            </model>
+            <dialog src="#views/slides/onenote/dialogs/link/link.xml" modal="true" top="80" left="240"></dialog>
+        </command>
+        <command name="show_outlook_email">
+            <model target="question" >
+                <send_method>email</send_method>
+            </model>
+            <condition>
+                <if property="tab_selected" eq="anatomy">
+                    <condition>
+                        <if property="question.page" eq="Anatomy 101">
+                            <dialog src="#views/slides/onenote/dialogs/outlook/outlook_email_anatomy_page.xml" modal="true" top="40" left="80"></dialog>
+                        </if>
+                        <elseif property="question.page" eq="brain">
+                            <dialog src="#views/slides/onenote/dialogs/outlook/outlook_email_brain_page.xml" modal="true" top="40" left="80"></dialog>
+                        </elseif>
+                        <elseif property="question.page" eq="neurons">
+                            <dialog src="#views/slides/onenote/dialogs/outlook/outlook_email_neurons_page.xml" modal="true" top="40" left="80"></dialog>
+                        </elseif>
+                    </condition>
+                </if>
+                <elseif property="tab_selected" eq="biology">
+                    <condition>
+                        <if property="question.page" eq="exam_review">
+                            <dialog src="#views/slides/onenote/dialogs/outlook/outlook_email_exam_review.xml" modal="true" top="40" left="80"></dialog>
+                        </if>
+                        <elseif property="question.page" eq="biology_notes">
+                            <dialog src="#views/slides/onenote/dialogs/outlook/outlook_email_biology_notes.xml" modal="true" top="40" left="80"></dialog>
+                        </elseif>
+                    </condition>
+                </elseif>
+                <elseif property="question.page" eq="math">
+                    <dialog src="#views/slides/onenote/dialogs/outlook/outlook_email_math_page.xml" modal="true" top="40" left="80"></dialog>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+
+        </command>
+        <command name="show_outlook_attachment">
+            <model target="question" >
+                <send_method>attachment</send_method>
+            </model>
+            <condition>
+                <if property="question.page" eq="exam_review">
+                    <dialog src="#views/slides/onenote/dialogs/outlook/outlook_email_attachment.xml" modal="true" top="40" left="80"></dialog>
+                </if>
+                <elseif property="question.page" eq="biology_notes">
+                    <dialog src="#views/slides/onenote/dialogs/outlook/outlook_attach_biology_notes.xml" modal="true" top="40" left="80"></dialog>
+                </elseif>
+                <elseif property="question.page" eq="brain">
+                    <dialog src="#views/slides/onenote/dialogs/outlook/outlook_email_attachment.xml" modal="true" top="40" left="80"></dialog>
+                </elseif>
+                <else>
+                    <exec command="not_implemented"/>
+                </else>
+            </condition>
+
+        </command>
+        <command name="show_spreadsheet_menu">
+            <menu src="#views/slides/onenote/menus/spreadsheet_menu.xml" direction="bottom" />
+        </command>
+        <command name="show_diagram_menu">
+            <menu src="#views/slides/onenote/menus/diagram_menu.xml" direction="bottom" />
+        </command>
+        <command name="show_outlook_tasks_menu">
+            <menu src="#views/slides/onenote/menus/outlook_tasks_menu.xml" direction="bottom" />
+        </command>
+        <command name="show_new_spreadsheet">
+            <goto target="doc" src="#views/slides/onenote/documents/doc_spreadsheet_inserted.xml"/>
+            <model target="question">
+                <new_file_inserted>excel</new_file_inserted>
+            </model>
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <condition>
+                        <if property="question.page" eq="exam_review">
+                            <model target="doc_spreadsheet_inserted">
+                                <page_title>Exam review - Spreadsheet</page_title>
+                            </model>
+                            <model target="question">
+                                <tab_inserted>exam_review</tab_inserted>
+                            </model>
+                        </if>
+                        <elseif property="question.page" eq="biology_notes">
+                            <model target="doc_spreadsheet_inserted">
+                                <page_title>Biology paper notes - Spreadsheet</page_title>
+                            </model>
+                            <model target="question">
+                                <tab_inserted>biology_notes</tab_inserted>
+                            </model>
+                        </elseif>
+                    </condition>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <model target="doc_spreadsheet_inserted">
+                        <page_title>Introduction to Anatomy 101 - Spreadsheet</page_title>
+                    </model>
+                    <model target="question">
+                        <tab_inserted>anatomy</tab_inserted>
+                    </model>
+                    <condition>
+                        <if property="question.page" eq="anatomy">
+                            <model target="doc_spreadsheet_inserted">
+                                <page_title>Introduction to Anatomy 101 - Spreadsheet</page_title>
+                            </model>
+                            <model target="question">
+                                <tab_inserted>anatomy</tab_inserted>
+                            </model>
+                        </if>
+                        <elseif property="question.page" eq="brain">
+                            <model target="doc_spreadsheet_inserted">
+                                <page_title>Section 1: The Brain - Spreadsheet</page_title>
+                            </model>
+                            <model target="question">
+                                <tab_inserted>brain</tab_inserted>
+                            </model>
+                        </elseif>
+                        <elseif property="question.page" eq="neurons">
+                            <model target="doc_spreadsheet_inserted">
+                                <page_title>Neurons/Synapses - Spreadsheet</page_title>
+                            </model>
+                            <model target="question">
+                                <tab_inserted>neurons</tab_inserted>
+                            </model>
+                        </elseif>
+                    </condition>
+                </elseif>
+                <elseif property="tab_selected" eq="math">
+                    <model target="doc_spreadsheet_inserted">
+                        <page_title>Derivatives and Integrals - Spreadsheet</page_title>
+                    </model>
+                    <model target="question">
+                        <tab_inserted>math</tab_inserted>
+                    </model>
+                </elseif>
+            </condition>
+        </command>
+        <command name="show_insert_document">
+            <dialog src="#views/slides/onenote/dialogs/insert_document/insert_document.xml" modal="true" top="50" left="145"></dialog>
+        </command>
+        <command name="show_visio_file_inserted">
+            <goto target="doc" src="#views/slides/onenote/documents/doc_visio_inserted.xml"/>
+            <model target="question">
+                <new_file_inserted>visio</new_file_inserted>
+            </model>
+            <condition>
+                <if property="tab_selected" eq="biology">
+                    <condition>
+                        <if property="question.page" eq="exam_review">
+                            <model target="doc_visio_inserted">
+                                <page_title>Exam review - Drawing</page_title>
+                            </model>
+                            <model target="question">
+                                <tab_inserted>exam_review</tab_inserted>
+                            </model>
+                        </if>
+                        <elseif property="question.page" eq="biology_notes">
+                            <model target="doc_visio_inserted">
+                                <page_title>Biology paper notes - Drawing</page_title>
+                            </model>
+                            <model target="question">
+                                <new_visio_inserted>true</new_visio_inserted>
+                                <tab_inserted>biology_notes</tab_inserted>
+                            </model>
+                        </elseif>
+                    </condition>
+                </if>
+                <elseif property="tab_selected" eq="anatomy">
+                    <condition>
+                        <if property="question.page" eq="Anatomy 101">
+                            <model target="doc_visio_inserted">
+                                <page_title>Introduction to Anatomy 101 - Drawing</page_title>
+                            </model>
+                            <model target="question">
+                                <tab_inserted>anatomy</tab_inserted>
+                            </model>
+                        </if>
+                        <elseif property="question.page" eq="brain">
+                            <model target="doc_visio_inserted">
+                                <page_title>Section 1: The Brain - Drawing</page_title>
+                            </model>
+                            <model target="question">
+                                <tab_inserted>brain</tab_inserted>
+                            </model>
+                        </elseif>
+                        <elseif property="question.page" eq="neurons">
+                            <model target="doc_visio_inserted">
+                                <page_title>Neurons/Synapses - Drawing</page_title>
+                            </model>
+                            <model target="question">
+                                <tab_inserted>neurons</tab_inserted>
+                            </model>
+                        </elseif>
+                    </condition>
+                </elseif>
+                <elseif property="tab_selected" eq="math">
+                    <model target="doc_visio_inserted">
+                        <page_title>Derivatives and Integrals - Drawing</page_title>
+                    </model>
+                    <model target="question">
+                        <tab_inserted>math</tab_inserted>
+                    </model>
+                </elseif>
+            </condition>
+        </command>
+        <command name="show_insert_visio_file">
+            <dialog src="#views/slides/onenote/dialogs/insert_visio_file/insert_visio_file.xml" modal="true" top="50" left="145"></dialog>
+        </command>
+        <command name="show_attach_file_dialog">
+            <dialog src="#views/slides/onenote/dialogs/attach_file/attach_file.xml" modal="true" top="50" left="145"></dialog>
+        </command>
+        <command name="show_search_menu">
+            <menu src="#views/slides/onenote/menus/search_menu.xml" direction="bottom" />
+        </command>
+        <command name="show_mark_as_read_menu">
+            <condition>
+                <if property="question.show_unread_changes" eq="true">
+                    <menu src="#views/slides/onenote/menus/mark_as_read_menu.xml" direction="bottom"/>
+                </if>
+                <else>
+                    <menu src="#views/slides/onenote/menus/show_unread_changes_menu.xml" direction="bottom"/>
+                </else>
+            </condition>
+        </command>
+        <command name="add_question_tag">
+            <condition>
+                <if property="question.tag" eq="question">
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag></tag>
+                    </model>
+                </if>
+                <else>
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/question.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag>question</tag>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="add_important_tag">
+            <condition>
+                <if property="question.tag" eq="important">
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag></tag>
+                        <question_tag>false</question_tag>
+                    </model>
+                </if>
+                <else>
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/important.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag>important</tag>
+                        <question_tag>false</question_tag>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="add_todo_tag">
+            <condition>
+                <if property="question.tag" eq="todo">
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag></tag>
+                        <question_tag>false</question_tag>
+                    </model>
+                </if>
+                <else>
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/blue_checkbox.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag>todo</tag>
+                        <question_tag>false</question_tag>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="add_highlight_tag">
+            <condition>
+                <if property="question.tag" eq="highlight">
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                    </model>
+                    <model target="question">
+                        <tag></tag>
+                    </model>
+                </if>
+                <else>
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/highlight.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag>highlight</tag>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="add_contact_tag">
+            <condition>
+                <if property="question.tag" eq="contact">
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag></tag>
+                    </model>
+                </if>
+                <else>
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/contact.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag>contact</tag>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="add_phone_tag">
+            <condition>
+                <if property="question.tag" eq="phone">
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag></tag>
+                    </model>
+                </if>
+                <else>
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/phone.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag>phone</tag>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="add_address_tag">
+            <condition>
+                <if property="question.tag" eq="address">
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag></tag>
+                    </model>
+                </if>
+                <else>
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/address.xml</tag>
+                        <label_color></label_color>
+                    </model>
+                    <model target="question">
+                        <tag>address</tag>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="add_remember_tag">
+            <condition>
+                <if property="question.tag" eq="remember">
+                    <model target="math_351">
+                        <label_color></label_color>
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                    </model>
+                </if>
+                <else>
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                        <label_color>yellow-label</label_color>
+                    </model>
+                    <model target="question">
+                        <tag>remember</tag>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="add_definition_tag">
+            <condition>
+                <if property="question.tag" eq="definition">
+                    <model target="math_351">
+                        <label_color></label_color>
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                    </model>
+                </if>
+                <else>
+                    <model target="math_351">
+                        <tag>#views/slides/onenote/symbols/none.xml</tag>
+                        <label_color>bright-green-label</label_color>
+                    </model>
+                    <model target="question">
+                        <tag>definition</tag>
+                    </model>
+                </else>
+            </condition>
+        </command>
+        <command name="add_heading1">
+            <model target="question">
+                <style>style-heading1</style>
+            </model>
+        </command>
+        <command name="show_outlook_tasks1_tag">
+            <model target="math_351">
+                <tag>#views/slides/onenote/symbols/outlook_tasks1.xml</tag>
+                <label_color></label_color>
+            </model>
+            <model target="question">
+                <question_tag></question_tag>
+            </model>
+        </command>
+        <command name="show_outlook_tasks2_tag">
+            <model target="math_351">
+                <tag>#views/slides/onenote/symbols/outlook_tasks2.xml</tag>
+                <label_color></label_color>
+            </model>
+            <model target="question">
+                <question_tag></question_tag>
+            </model>
+        </command>
+        <command name="delete_outlook_task">
+            <model target="math_351">
+                <tag>#views/slides/onenote/symbols/none.xml</tag>
+                <label_color></label_color>
+            </model>
+            <model target="question">
+                <question_tag></question_tag>
+            </model>
+        </command>
+    </commands>
+</root>

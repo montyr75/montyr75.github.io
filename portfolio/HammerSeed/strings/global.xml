@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+    <reset>Reset Question</reset>
+    <debug_on>Debug On</debug_on>
+    <debug_off>Debug Off</debug_off>
+    <copyright></copyright>
+    <title_dialog>Alert</title_dialog>
+    <close_dialog>Close</close_dialog>
+    <not_avail>That feature is not available for this item.</not_avail>
+    <actions_recorded>Your actions have been recorded for scoring purposes.</actions_recorded>
+
+    <doc1>Doc 1</doc1>
+    <doc2>Doc 2</doc2>
+    <doc1_header>Doc 1 Slide</doc1_header>
+    <doc2_header>Doc 2 Slide</doc2_header>
+    <button>Button</button>
+    <clicked>Button on main_slide clicked!</clicked>
+    <built_in_lbl>Built-in Action</built_in_lbl>
+    <custom_lbl>Custom Action</custom_lbl>
+</strings>

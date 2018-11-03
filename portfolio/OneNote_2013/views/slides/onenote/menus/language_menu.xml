@@ -1,0 +1,15 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/language_menu.jpg" width="187" height="52">
+        <button x="2" y="1" class="hotspot ribbon-button" width="183" height="25" id="set_btn">
+            <events click="onenote.open_language_taskpane"></events>
+        </button>
+        <button x="2" y="27" class="hotspot ribbon-button" width="183" height="23" id="preference_btn">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands>
+
+    </commands>
+</root>

@@ -1,0 +1,12 @@
+<root
+    xmlns="http://certiport.com/hammer/trunk/custom" type="slide">
+    <view image="#images/dialogs/options/options_addins.jpg" width="749" height="568">
+        <button x="358" y="487" class="hotspot dialog-button" width="71" height="22">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="328" y="488" class="hotspot dialog-button" width="18" height="18">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+</root>

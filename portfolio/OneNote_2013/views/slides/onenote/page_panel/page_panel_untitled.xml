@@ -1,0 +1,13 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/page_panel/page_panel_untitled.jpg" width="208" height="409">
+        <button x="7" y="2" class="hotspot add-page-math" width="197" height="20">
+            <events click="not_implemented"></events>
+        </button>
+        <text x="14" y="51" width="120" height="16" class="page-text-no-border" model="question.personal" placeholder="Untitled page">
+            <events></events>
+        </text>
+    </view>
+    <model persist="true"></model>
+    <commands></commands>
+</root>

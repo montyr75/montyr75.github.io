@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<strings>
+    <app_widget>Welcome, John Smith</app_widget>
+    <boxLabel>Messenger</boxLabel>
+    <custom_widget>Custom Widget</custom_widget>
+</strings>

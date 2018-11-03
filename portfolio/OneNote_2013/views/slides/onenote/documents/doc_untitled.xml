@@ -1,0 +1,10 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/documents/doc_untitled.jpg" width="748" height="406">
+
+    </view>
+    <model persist="true">
+        <rule>{question.rule}</rule>
+    </model>
+    <commands></commands>
+</root>

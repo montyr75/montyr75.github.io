@@ -1,0 +1,33 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="invite_people">
+    <view image="#images/backstage/backstage_share_invite_people.jpg" width="813" height="530">
+        <button x="42" y="235" class="hotspot ribbon-button" width="276" height="55">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="42" y="296" class="hotspot ribbon-button" width="276" height="55">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="42" y="356" class="hotspot ribbon-button" width="276" height="55">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="42" y="416" class="hotspot ribbon-button" width="276" height="55">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="356" y="451" class="hotspot ribbon-button" width="80" height="85">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="356" y="412" class="hotspot ribbon-button" width="11" height="12">
+            <events click="not_implemented"></events>
+        </button>
+        <text x="355" y="246" width="247" height="19">
+            <events></events>
+        </text>
+        <!--<label x="84" y="130" width="123" height="21" model="invite_people.notebook_name">-->
+            <!--<events></events>-->
+        <!--</label>-->
+    </view>
+    <model persist="true">
+        <notebook_name>Class Notes</notebook_name>
+    </model>
+    <commands></commands>
+</root>

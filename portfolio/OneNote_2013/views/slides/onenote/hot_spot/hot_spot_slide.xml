@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root xmlns="http://certiport.com/hammer/1.1/slide" type="slide">
+    <view image="" width="960" height="600">
+        <hotspot x="10" y="10"
+                 options="question.hs1"
+                 points='question.total_points'
+                 selectedOptions="question.selectedOptions"
+                 metadata="question.metadata">
+        </hotspot>
+    </view>
+
+    <model persist="true">
+        <selectedItems></selectedItems>
+    </model>
+
+    <commands>
+    </commands>
+</root>

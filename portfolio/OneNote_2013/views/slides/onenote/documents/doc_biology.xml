@@ -1,0 +1,23 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="doc_biology">
+    <view image="#images/documents/doc_biology.jpg" width="748" height="408">
+        <button x="380" y="15" class="hotspot" width="245" height="359" id="graphic_btn">
+            <events mousedown="show_selected" rclick="show_rc_menu"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="show_selected">
+            <goto target="doc" src="#views/slides/onenote/documents/doc_biology_selected.xml"/>
+            <model target="question">
+                <image_selected>biology_image</image_selected>
+            </model>
+        </command>
+        <command name="show_rc_menu">
+            <menu src="#views/slides/onenote/menus/link_rc_menu.xml" modal="false" group="menu" depth="1"/>
+        </command>
+        <model target="question">
+            <image_selected>{question.image_selected}</image_selected>
+        </model>
+    </commands>
+</root>

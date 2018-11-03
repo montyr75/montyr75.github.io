@@ -1,0 +1,31 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/page_panel/page_panel_math_add_page.jpg" width="208" height="408">
+        <button x="6" y="1" class="hotspot add-page-math" width="197" height="20">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="0" y="46" class="hotspot derivative-button" width="197" height="20" id="derivative_btn">
+            <events click="show_math_page"></events>
+        </button>
+        <text x="14" y="72" width="120" height="16" class="page-text-no-border" model="question.untitled" placeholder="Untitled page">
+            <events></events>
+        </text>
+    </view>
+    <model persist="true">
+        <untitled>Untitled page</untitled>
+    </model>
+    <commands>
+        <command name="show_math_page">
+            <model target="onenote">
+                <add_page>false</add_page>
+            </model>
+            <model target="question">
+                <untitled></untitled>
+            </model>
+            <goto target="doc" src="#views/slides/onenote/documents/doc_math.xml"/>
+            <goto target="tabs" src="#views/slides/onenote/tabs/tabs_math.xml"/>
+            <goto target="page_panel" src="#views/slides/onenote/page_panel/page_panel_math.xml"/>
+            <goto target="title_bar" src="#views/slides/onenote/title_bar/title_bar_math.xml"/>
+        </command>
+    </commands>
+</root>

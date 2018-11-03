@@ -1,0 +1,28 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/classnotes_settings_menu.jpg" width="154" height="136">
+        <button x="3" y="5" class="hotspot ribbon-button" width="147" height="41">
+            <events click="open_class_notes_share"></events>
+        </button>
+        <button x="4" y="47" class="hotspot ribbon-button" width="147" height="41">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="89" class="hotspot ribbon-button" width="147" height="41">
+            <events click="open_class_notes_properties"></events>
+        </button>
+
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="open_class_notes_properties">
+            <dialog src="#views/slides/onenote/dialogs/class_notes_properties/class_notes_properties.xml" modal="true" top="160" left="225"></dialog>+
+            <model target="question">
+                <notebook>classnotes</notebook>
+                <notebook_2007>classnotes</notebook_2007>
+            </model>
+        </command>
+        <command name="open_class_notes_share">
+            <goto target="backstageScreen" src="#views/slides/onenote/backstage/backstage_share.xml"/>
+        </command>
+    </commands>
+</root>

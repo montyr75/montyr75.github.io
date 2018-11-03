@@ -1,0 +1,69 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/ribbon/ribbon_review.jpg" width="958" height="118">
+        <button x="5" y="28" class="hotspot ribbon-button" width="44" height="70" id="spelling_btn" tooltip="spelling">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="52" y="28" class="hotspot ribbon-button" width="50" height="70" id="research_btn" tooltip="research">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="104" y="28" class="hotspot ribbon-button" width="56" height="70" id="thesaurus_btn" tooltip="thesaurus">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="171" y="28" class="hotspot ribbon-button" width="52" height="70" id="translate_btn" tooltip="translate">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="225" y="28" class="hotspot ribbon-button" width="54" height="70" id="language_btn" tooltip="language">
+            <events click="show_language_menu"></events>
+        </button>
+        <button x="291" y="28" class="hotspot ribbon-button" width="54" height="70" id="password_btn" tooltip="password">
+            <events click="show_password_protect_pane"></events>
+        </button>
+        <button x="353" y="28" class="hotspot ribbon-button" width="44" height="70" id="linked_notes_btn" tooltip="linked_notes">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <tooltips>
+        <tooltip name="spelling" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/spelling_tt.jpg" width="52" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="research" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/research_tt.jpg" width="215" height="159" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="thesaurus" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/thesaurus_tt.jpg" width="215" height="69" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="translate" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/translate_tt.jpg" width="215" height="84" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="language" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/language_tt.jpg" width="215" height="144" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="password" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/password_tt.jpg" width="168" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="linked_notes" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/linked_notes_tt.jpg" width="215" height="99" >]]>
+            </html>
+        </tooltip>
+    </tooltips>
+    <model persist="true"></model>
+    <commands>
+        <command name="show_language_menu">
+            <menu src="#views/slides/onenote/menus/language_menu.xml" modal="true" group="menu" depth="1" direction="bottom"></menu>
+        </command>
+    </commands>
+</root>

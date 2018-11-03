@@ -1,0 +1,21 @@
+<root
+    xmlns="http://certiport.com/hammer/trunk/custom" type="slide">
+    <view image="#images/dialogs/options/options_quick.jpg" width="749" height="568">
+        <button x="433" y="281" class="hotspot dialog-button" width="79" height="21">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="404" y="106" class="hotspot dialog-button" width="17" height="17">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="621" y="442" class="hotspot dialog-button" width="71" height="21">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="621" y="470" class="hotspot dialog-button" width="96" height="21">
+            <events click="not_implemented"></events>
+        </button>
+        <checkbox x="188" y="452" width="15" height="18">
+            <events></events>
+        </checkbox>
+    </view>
+    <model persist="true"></model>
+</root>

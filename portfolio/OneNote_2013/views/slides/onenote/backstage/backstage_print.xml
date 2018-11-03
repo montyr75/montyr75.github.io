@@ -1,0 +1,13 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/backstage/file_print.jpg" width="959" height="599">
+        <button x="160" y="146" class="hotspot ribbon-button" width="277" height="50" id="print_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="160" y="207" class="hotspot ribbon-button" width="277" height="50" id="print_preview_btn">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands></commands>
+</root>

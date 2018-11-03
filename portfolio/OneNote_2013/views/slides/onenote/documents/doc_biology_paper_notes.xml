@@ -1,0 +1,12 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/documents/doc_biology_paper_notes.jpg" width="748" height="408">
+        <text x="47" y="245" width="120" height="24"  class="text-no-border">
+            <events></events>
+        </text>
+    </view>
+    <model persist="true"></model>
+    <commands>
+
+    </commands>
+</root>

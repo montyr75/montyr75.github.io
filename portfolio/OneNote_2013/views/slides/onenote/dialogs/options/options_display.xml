@@ -1,0 +1,40 @@
+<root
+    xmlns="http://certiport.com/hammer/trunk/custom" type="slide" id="options_display">
+    <view image="#images/dialogs/options/options_display.jpg" width="749" height="568">
+        <checkbox x="188" y="126" width="15" height="19" model="options_display.place">
+            <events></events>
+        </checkbox>
+        <checkbox x="188" y="148" width="15" height="19" model="options_display.rule_lines" id="rule_lines_cb">
+            <events></events>
+        </checkbox>
+        <checkbox x="188" y="170" width="15" height="19" model="options_display.quick_note">
+            <events></events>
+        </checkbox>
+        <checkbox x="188" y="192" width="15" height="19">
+            <events></events>
+        </checkbox>
+        <checkbox x="188" y="214" width="15" height="19" model="options_display.floating">
+            <events></events>
+        </checkbox>
+        <checkbox x="188" y="236" width="15" height="19" model="options_display.navigation">
+            <events></events>
+        </checkbox>
+        <checkbox x="188" y="258" width="15" height="19">
+            <events></events>
+        </checkbox>
+        <checkbox x="188" y="280" width="15" height="19" model="options_display.note">
+            <events></events>
+        </checkbox>
+        <checkbox x="188" y="302" width="15" height="19">
+            <events></events>
+        </checkbox>
+    </view>
+    <model persist="true">
+        <place>yes</place>
+        <rule_lines>no</rule_lines>
+        <floating>yes</floating>
+        <navigation>yes</navigation>
+        <note>yes</note>
+        <quick_note>no</quick_note>
+    </model>
+</root>

@@ -1,0 +1,109 @@
+<div id="debug-console" ng-controller="ConsoleCtrl" ng-init="selected = ''" ng-show="settings.debug" class="{{selected && 'expanded'}}">
+	<div class="head">
+		<ul class="tabs">
+			<li ng-click="select('')" class="{{selected == '' && 'active'}}">#</li>
+			<li ng-click="select('score')" class="{{selected == 'score' && 'active'}}">Report Card</li>
+			<li ng-click="select('model')" class="{{selected == 'model' && 'active'}}">Model</li>
+			<li ng-click="select('log')" class="{{selected == 'log' && 'active'}}">Log</li>
+			<li ng-click="select('io')" class="{{selected == 'io' && 'active'}}">I/O</li>
+		</ul>
+		<ul class="details">
+			<li>{{settings.version}}</li>
+			<li>{{model.meta.id}}</li>
+			<li>{{model.meta.language}}</li>
+			<li ng-show="reportCard.pass" class="exam-pass">Pass</li>
+			<li ng-hide="reportCard.pass" class="exam-fail">Fail</li>
+		</ul>
+		<div class="clearfix"></div>
+	</div>
+	<div class="body">
+
+		<div class="debug-model" ng-show="selected=='model'">
+
+			<div class="console-scroll">
+				<p class="note">The following represents current state of the question model.</p>
+				<table>
+					<thead>
+					<tr>
+						<th>Key</th>
+						<th>Value</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="(key, val) in model.output()">
+						<td class="key">{{key}}</td>
+						<td>{{val}}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="debug-score" ng-show="selected=='score'">
+			<p class="note" ng-hide="reportCard">No actions have been taken yet to score against.</p>
+
+			<div class="console-scroll">
+				<div ng-show="reportCard.details.any.length">
+					<p class="note any">Any of the following must be true.</p>
+					<table>
+						<thead>
+						<tr>
+							<th>Property</th>
+							<th>Operator</th>
+							<th>Value</th>
+							<th>Current</th>
+							<th>Status</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="item in reportCard.details.any" class="{{item.pass}}">
+							<td class="property">{{item.property}}</td>
+							<td class="operator">{{item.operator}}</td>
+							<td class="value">{{item.value}}</td>
+							<td class="current">{{item.current}}</td>
+							<td ng-show="item.pass">PASS</td>
+							<td ng-hide="item.pass">FAIL</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div ng-show="reportCard.details.all.length">
+					<p class="note all">All of the following must be true.</p>
+					<table>
+						<thead>
+						<tr>
+							<th>Property</th>
+							<th>Operator</th>
+							<th>Value</th>
+							<th>Current</th>
+							<th>Passed</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr ng-repeat="item in reportCard.details.all" class="{{item.pass}}">
+							<td class="property">{{item.property}}</td>
+							<td class="operator">{{item.operator}}</td>
+							<td class="value">{{item.value}}</td>
+							<td class="current">{{item.current}}</td>
+							<td ng-show="item.pass">PASS</td>
+							<td ng-hide="item.pass">FAIL</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="debug-log" ng-show="selected=='log'">
+			<div class="console-scroll selectable" style="margin: 4px;font-size: 11px;">
+				<ul>
+					<li ng-repeat="item in logs">[{{item.timestamp|date}}]: <strong>{{item.name}}</strong> - {{item.template}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="debug-io" ng-show="selected=='io'">
+			<div>
+				<a style="cursor:pointer;" href="" ng-click="read()">Read</a> | <a style="cursor:pointer;" href="" ng-click="write()">Write</a>
+			</div>
+			<textarea rows="10" class="selectable" style="width:940px;resize: none;" ng-model="io_data"></textarea>
+		</div>
+	</div>
+</div>

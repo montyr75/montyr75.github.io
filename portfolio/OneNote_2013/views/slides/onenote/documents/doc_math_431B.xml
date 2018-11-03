@@ -1,0 +1,13 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="doc_math">
+    <view image="#images/documents/doc_math.jpg" width="748" height="406">
+        <text x="42" y="19" width="267" height="26" model="review_text" focus="start" lockFocus="start" class-model="question.style">
+            <events rclick="show_text_rc_menu"></events>
+        </text>
+    </view>
+    <model persist="true">
+        <review_text>Derivatives and Integrals</review_text>
+        <style>style-page-title</style>
+    </model>
+    <commands></commands>
+</root>

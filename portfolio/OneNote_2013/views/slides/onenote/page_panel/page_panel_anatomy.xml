@@ -1,0 +1,16 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/page_panel/page_panel_anatomy.jpg" width="208" height="408">
+        <button id="brain_btn" x="0" y="70" width="201" height="21" class="hotspot page-panel-brain-button">
+            <events click="show_brain_page"></events>
+        </button>
+        <button id="neurons_btn" x="0" y="91" width="201" height="21" class="hotspot page-panel-neurons-button">
+            <events click="show_neurons_page"></events>
+        </button>
+        <button x="7" y="1" class="hotspot add-page-anatomy" width="192" height="20" id="add_page_btn">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands></commands>
+</root>

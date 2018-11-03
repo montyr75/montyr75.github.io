@@ -1,0 +1,32 @@
+[
+    {
+        "id": "card1",
+        "title": "beach ball",
+        "imageFilename": "beach_ball.png"
+    },
+    {
+        "id": "card2",
+        "title": "hot dog",
+        "imageFilename": "hot_dog.png"
+    },
+    {
+        "id": "card3",
+        "title": "pail",
+        "imageFilename": "pail.png"
+    },
+    {
+        "id": "card4",
+        "title": "sand castle",
+        "imageFilename": "sand_castle.png"
+    },
+    {
+        "id": "card5",
+        "title": "shovel",
+        "imageFilename": "shovel.png"
+    },
+    {
+        "id": "card6",
+        "title": "sun",
+        "imageFilename": "sun.png"
+    }
+]

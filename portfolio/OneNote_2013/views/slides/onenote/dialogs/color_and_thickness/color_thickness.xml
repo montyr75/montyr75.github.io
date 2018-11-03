@@ -1,0 +1,499 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="color_thickness_dialog">
+    <view image="#images/dialogs/color_and_thickness/color_thickness.jpg" width="578" height="336">
+        <slide x="52" y="75" width="473" height="26" src-model="color_thickness_dialog.highlighter"/>
+        <button x="29" y="126" class="hotspot color-thickness-button cursor-custom" width="32" height="30" model="color_thickness_dialog.color" value="plum" toggle="true" id="plum_btn" tooltip="plum">
+            <events></events>
+        </button>
+        <button x="69" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="dark_red" toggle="true" id="dark_red_btn" tooltip="dark_red">
+            <events></events>
+        </button>
+        <button x="109" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="brown1" toggle="true" id="brown1_btn" tooltip="brown">
+            <events></events>
+        </button>
+        <button x="149" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="dark_yellow" toggle="true" id="dark_yellow_btn" tooltip="dark_yellow">
+            <events></events>
+        </button>
+        <button x="189" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="dark_green1" toggle="true" id="dark_green1_btn" tooltip="dark_green">
+            <events></events>
+        </button>
+        <button x="229" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="dark_green2" toggle="true" id="dark_green2_btn" tooltip="dark_green">
+            <events></events>
+        </button>
+        <button x="269" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="dark_teal" toggle="true" id="dark_teal_btn" tooltip="dark_teal">
+            <events></events>
+        </button>
+        <button x="309" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="dark_blue" toggle="true" id="dark_blue_btn" tooltip="dark_blue">
+            <events></events>
+        </button>
+        <button x="349" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="dark_purple" toggle="true" id="dark_purple_btn" tooltip="dark_purple">
+            <events></events>
+        </button>
+        <button x="389" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="brown2" toggle="true" id="brown2_btn" tooltip="brown">
+            <events></events>
+        </button>
+        <button x="429" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="gray_80" toggle="true" id="gray_80_btn" tooltip="gray_80">
+            <events></events>
+        </button>
+        <button x="469" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="yellow" toggle="true" id="yellow_btn" tooltip="yellow">
+            <events></events>
+        </button>
+        <button x="509" y="126" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="purple" toggle="true" id="purple_btn" tooltip="purple">
+            <events></events>
+        </button>
+        <button x="269" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="turquoise" toggle="true" id="turquoise_btn" tooltip="turquoise">
+            <events></events>
+        </button>
+        <button x="189" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="green" toggle="true" id="green_btn" tooltip="green">
+            <events></events>
+        </button>
+        <button x="69" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="red" toggle="true" id="red_btn" tooltip="red">
+            <events></events>
+        </button>
+        <button x="109" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="orange" toggle="true" id="orange_btn" tooltip="orange">
+            <events></events>
+        </button>
+        <button x="149" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="yellow" toggle="true" id="yellow_btn" tooltip="yellow">
+            <events></events>
+        </button>
+        <button x="29" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="pink" toggle="true" id="pink_btn" tooltip="pink">
+            <events></events>
+        </button>
+        <button x="229" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_green2" toggle="true" id="dark_green5_btn" tooltip="dark_green">
+            <events></events>
+        </button>
+        <button x="309" y="163" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="blue" toggle="true" id="blue_btn" tooltip="blue">
+            <events></events>
+        </button>
+        <button x="349" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="purple2" toggle="true" id="purple2_btn" tooltip="purple">
+            <events></events>
+        </button>
+        <button x="389" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="brown3" toggle="true" id="brown3_btn" tooltip="brown">
+            <events></events>
+        </button>
+        <button x="429" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="gray_80_2" toggle="true" id="gray_80_2_btn" tooltip="gray_80">
+            <events></events>
+        </button>
+        <button x="469" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="green2" toggle="true" id="green2_btn" tooltip="green">
+            <events></events>
+        </button>
+        <button x="509" y="164" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="purple3" toggle="true" id="purple3_btn" tooltip="purple">
+            <events></events>
+        </button>
+        <button x="229" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="green3" toggle="true" id="green3_btn" tooltip="green">
+            <events></events>
+        </button>
+        <button x="269" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="sky_blue" toggle="true" id="sky_blue_btn" tooltip="sky_blue">
+            <events></events>
+        </button>
+        <button x="309" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_blue" toggle="true" id="light_blue_btn" tooltip="light_blue">
+            <events></events>
+        </button>
+        <button x="109" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_orange" toggle="true" id="light_orange_btn" tooltip="light_orange">
+            <events></events>
+        </button>
+        <button x="189" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_green1" toggle="true" id="light_green1_btn" tooltip="light_green">
+            <events></events>
+        </button>
+        <button x="69" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="rose" toggle="true" id="rose_btn" tooltip="rose">
+            <events></events>
+        </button>
+        <button x="149" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_yellow" toggle="true" id="light_yellow_btn" tooltip="light_yellow">
+            <events></events>
+        </button>
+        <button x="29" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="plum2" toggle="true" id="pink4_btn" tooltip="pink">
+            <events></events>
+        </button>
+        <button x="349" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="lavender" toggle="true" id="lavender_btn" tooltip="lavender">
+            <events></events>
+        </button>
+        <button x="389" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="brown4" toggle="true" id="brown4_btn" tooltip="brown">
+            <events></events>
+        </button>
+        <button x="429" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="gray_50" toggle="true" id="gray_50_btn" tooltip="gray_50">
+            <events></events>
+        </button>
+        <button x="469" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="aqua" toggle="true" id="aqua_btn" tooltip="aqua">
+            <events></events>
+        </button>
+        <button x="509" y="202" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="orange" toggle="true" id="orange_btn" tooltip="orange">
+            <events></events>
+        </button>
+        <button x="189" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_green3" toggle="true" id="light_green3_btn" tooltip="light_green">
+            <events></events>
+        </button>
+        <button x="149" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_yellow2" toggle="true" id="light_yellow2_btn" tooltip="light_yellow">
+            <events></events>
+        </button>
+        <button x="69" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="rose2_red" toggle="true" id="rose2_btn" tooltip="rose">
+            <events></events>
+        </button>
+        <button x="109" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_orange2" toggle="true" id="light_orange2_btn" tooltip="light_orange">
+            <events></events>
+        </button>
+        <button x="269" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="sky_blue2" toggle="true" id="sky_blue2_btn" tooltip="sky_blue">
+            <events></events>
+        </button>
+        <button x="309" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_blue2" toggle="true" id="light_blue2_btn" tooltip="light_blue">
+            <events></events>
+        </button>
+        <button x="229" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="light_green4" toggle="true" id="light_green4_btn" tooltip="light_green">
+            <events></events>
+        </button>
+        <button x="29" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="pink3" toggle="true" id="pink3_btn" tooltip="pink">
+            <events></events>
+        </button>
+        <button x="349" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="lavender2" toggle="true" id="lavender2_btn" tooltip="lavender">
+            <events></events>
+        </button>
+        <button x="389" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="tan" toggle="true" id="tan_btn" tooltip="tan">
+            <events></events>
+        </button>
+        <button x="429" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="gray_25" toggle="true" id="gray_25_btn" tooltip="gray_25">
+            <events></events>
+        </button>
+        <button x="469" y="240" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="white" toggle="true" id="white_btn" tooltip="white">
+            <events></events>
+        </button>
+        <button x="509" y="239" class="hotspot color-thickness-button" width="32" height="30" model="color_thickness_dialog.color" value="black" toggle="true" id="black_btn" tooltip="black">
+            <events></events>
+        </button>
+
+        <button x="401" y="293" class="hotspot dialog-button" width="71" height="19" id="ok_btn">
+            <events click="ok_handler"></events>
+        </button>
+        <button x="485" y="293" class="hotspot dialog-button" width="71" height="19" id="cancel_btn">
+            <events click="cancel_handler"></events>
+        </button>
+        <button x="539" y="11" class="hotspot close-button" width="27" height="14" id="close_btn" tooltip="close">
+            <events click="cancel_handler"></events>
+        </button>
+        <radio x="20" y="46" width="41" height="21" id="pen_rb" model="color_thickness_dialog.marker" value="pen">
+            <events click="show_pen"></events>
+        </radio>
+        <radio x="70" y="46" width="81" height="21" id="highlight_rb" model="color_thickness_dialog.marker" value="highlight">
+            <events click="show_highlighter"></events>
+        </radio>
+    </view>
+    <model persist="true">
+        <marker>pen</marker>
+        <thickness>2</thickness>
+        <color>black</color>
+        <highlighter>#views/slides/onenote/dialogs/color_and_thickness/pen.xml</highlighter>
+    </model>
+    <tooltips>
+        <tooltip name="25mm" class="ui-tooltip">
+            <html>
+                0.25 mm
+            </html>
+        </tooltip>
+        <tooltip name="35mm" class="ui-tooltip">
+            <html>
+                0.35 mm
+            </html>
+        </tooltip>
+        <tooltip name="50mm" class="ui-tooltip">
+            <html>
+                0.5 mm
+            </html>
+        </tooltip>
+        <tooltip name="70mm" class="ui-tooltip">
+            <html>
+                0.7 mm
+            </html>
+        </tooltip>
+        <tooltip name="100mm" class="ui-tooltip">
+            <html>
+                1.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="150mm" class="ui-tooltip">
+            <html>
+                1.5 mm
+            </html>
+        </tooltip>
+        <tooltip name="200mm" class="ui-tooltip">
+            <html>
+                2.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="350mm" class="ui-tooltip">
+            <html>
+                3.5 mm
+            </html>
+        </tooltip>
+        <tooltip name="500mm" class="ui-tooltip">
+            <html>
+                5.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="close" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/close_tt.jpg" width="35" height="19" >]]>
+            </html>
+        </tooltip>
+        <!--colors-->
+        <tooltip name="yellow" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/yellow_tt.jpg" width="41" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="bright_green" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/bright_green_tt.jpg" width="72" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="sky_blue" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/sky_blue_tt.jpg" width="50" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="pink" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/pink_tt.jpg" width="29" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="blue" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/blue_tt.jpg" width="29" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="red" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/red_tt.jpg" width="26" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_blue" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_blue_tt.jpg" width="56" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="teal" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/teal_tt.jpg" width="28" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_green" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_green_tt.jpg" width="64" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="violet" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/violet_tt.jpg" width="36" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_red" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_red_tt.jpg" width="53" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_yellow" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_yellow_tt.jpg" width="68" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="gray_50" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/gray_50_tt.jpg" width="57" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="gray_25" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/gray_25_tt.jpg" width="57" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="black" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/black_tt.jpg" width="34" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="blue_gray" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/blue_grayy_tt.jpg" width="58" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="brown" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/brown_tt.jpg" width="40" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_teal" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_teal_tt.jpg" width="55" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="gold" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/gold_tt.jpg" width="31" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="gray_40" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/gray_40_tt.jpg" width="57" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="gray_80" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/gray_80_tt.jpg" width="57" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="green" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/green_tt.jpg" width="37" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="indigo" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/indigo_tt.jpg" width="40" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="lavender" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/lavender_tt.jpg" width="54" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="light_blue" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/light_blue_tt.jpg" width="59" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="light_green" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/light_green_tt.jpg" width="67" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="light_orange" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/light_orange_tt.jpg" width="75" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="light_turquoise" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/light_turquoise_tt.jpg" width="89" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="light_yellow" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/light_yellow_tt.jpg" width="71" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="lime" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/lime_tt.jpg" width="32" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="olive_green" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/olive_green.jpg" width="67" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="orange" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/orange_tt.jpg" width="45" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="pale_blue" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/pale_blue_tt.jpg" width="54" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="plum" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/plum_tt.jpg" width="34" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="rose" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/rose_tt.jpg" width="31" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="sea_green" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/sea_green_tt.jpg" width="58" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="sky_blue" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/sky_blue_tt.jpg" width="58" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="tan" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/tan_tt.jpg" width="26" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="turquoise" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/turquoise_tt.jpg" width="59" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="white" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/white_tt.jpg" width="37" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="aqua" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/aqua_tt.jpg" width="34" height="21" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="purple" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/purple_tt.jpg" width="44" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="dark_purple" class="ui-color-tooltips">
+            <html>
+                <![CDATA[<img src="#images/tooltips/colors/dark_purple_tt.jpg" width="67" height="21" >]]>
+            </html>
+        </tooltip>
+    </tooltips>
+    <commands>
+        <command name="ok_handler">
+            <model target="question">
+                <thickness>{pen.thickness}</thickness>
+                <color>{color_thickness_dialog.color}</color>
+            </model>
+            <condition>
+                <if property="question.tool" eq="pen">
+                    <model target="doc_math">
+                        <cursor>cursor-dot</cursor>
+                    </model>
+                </if>
+                <elseif property="question.tool" eq="highlighter">
+                    <model target="doc_math">
+                        <cursor>cursor-highlight</cursor>
+                    </model>
+                </elseif>
+            </condition>
+            <close></close>
+        </command>
+        <command name="cancel_handler">
+            <model>
+                <thickness>{question.thickness}</thickness>
+                <color>{question.color}</color>
+            </model>
+            <model target="pen">
+                <thickness>{question.thickness}</thickness>
+            </model>
+            <close></close>
+        </command>
+        <command name="show_highlighter">
+            <model>
+                <highlighter>#views/slides/onenote/dialogs/color_and_thickness/highlighter.xml</highlighter>
+            </model>
+            <model target="question">
+                <tool>highlighter</tool>
+            </model>
+        </command>
+        <command name="show_pen">
+            <model>
+                <highlighter>#views/slides/onenote/dialogs/color_and_thickness/pen.xml</highlighter>
+            </model>
+            <model target="question">
+                <tool>pen</tool>
+            </model>
+        </command>
+    </commands>
+</root>

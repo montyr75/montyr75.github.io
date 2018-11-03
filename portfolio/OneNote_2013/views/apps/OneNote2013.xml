@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+
+    <view></view>
+
+    <!-- persist equals "keep the data around", if set to false, it will reset the data each time view is displayed-->
+    <model persist="true">
+        <currentDoc></currentDoc>
+    </model>
+
+    <commands>
+        <command name="default">
+            <growl message="$not_avail"/>
+        </command>
+        <command name="not_implemented">
+            <growl message="$not_avail"/>
+        </command>
+        <command name="actions_recorded">
+            <growl message="$actions_recorded"></growl>
+        </command>
+        <command name="close_dialog">
+            <close/>
+        </command>
+
+
+    </commands>
+</root>

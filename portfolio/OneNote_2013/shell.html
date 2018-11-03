@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<!--<script type="text/javascript" src="../Hammer/builds/2.0.3/hammer/bower_components/jquery/jquery.min.js"></script>-->
+</head>
+<body>
+<div id="preloader">
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        .preloader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+            z-index: 99999
+        }
+    </style>
+    <div id="preloader-spin" class="preloader"></div>
+</div>
+<!-- spin.js -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/spin.js/1.2.7/spin.min.js"></script>
+<script>
+    var opts = {
+        lines:13, // The number of lines to draw
+        length:7, // The length of each line
+        width:2, // The line thickness
+        radius:10, // The radius of the inner circle
+        corners:1, // Corner roundness (0..1)
+        rotate:0, // The rotation offset
+        color:'#3D89B9', // #rgb or #rrggbb
+        speed:1.5, // Rounds per second
+        trail:60, // Afterglow percentage
+        shadow:false, // Whether to render a shadow
+        hwaccel:false, // Whether to use hardware acceleration
+        className:'spinner', // The CSS class to assign to the spinner
+        zIndex:2e9, // The z-index (defaults to 2000000000)
+        top:'auto', // Top position relative to parent in px
+        left:'auto' // Left position relative to parent in px
+    };
+    var target = document.getElementById('preloader-spin');
+    var spinner = new Spinner(opts).spin(target);
+</script>
+<!-- require.js -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.4/require.min.js"></script>
+<script>
+    // load config
+    require(['config'], function (config) {
+        // setup require config
+        require.config({
+            baseUrl:config.sdkPath
+        });
+        // load main (hammer)
+        require(['main']);
+    })
+</script>
+</body>
+</html>

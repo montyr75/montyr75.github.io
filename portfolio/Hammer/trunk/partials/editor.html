@@ -1,0 +1,57 @@
+<div id="editor" ng-controller="EditorCtrl">
+
+    <div ng-if="canShow()" ui-editor>
+
+        <!-- Save Path to clipboard -->
+        <div class="editor-slide-path" ng-if="editor.connected">
+            <a href="" id="clippy" data-clipboard-text="{{editor.dir()}}" title="Click to copy me"
+               ng-bind="editor.path + '/' + editor.slide.url"></a>
+            <!--<button id="copy-button" data-clipboard-text="{{editor.path + '/' + editor.slide.url}}" title="Click to copy me.">Copy to Clipboard</button>-->
+        </div>
+
+        <!-- Widget properties -->
+        <div class="editor-panel" style="right: 10px;">
+            <div class="editor-panel-label">{{editor.widget.id || 'Slide'}}</div>
+            <div class="editor-panel-row" ng-repeat="(prop, val) in editor.widget">
+                <div class="editor-panel-prop">{{prop}}</div>
+                <div class="editor-panel-val" title="{{val}}">{{val}}</div>
+                <div class="editor-number-btn"
+                     ng-if="canEditNumber(prop, val)" ng-mousedown="startInc(prop, val)" ng-mouseup="stop()">+
+                </div>
+                <div class="editor-number-btn"
+                     ng-if="canEditNumber(prop, val)" ng-mousedown="startDec(prop, val)" ng-mouseup="stop()">-
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide widgets -->
+        <div class="editor-panel" style="left: 10px;width: 220px">
+            <div class="editor-panel-label" style="text-align: left">Widgets</div>
+            <div class="editor-panel-row" ng-repeat="widget in editor.slideScope.widgets"
+                 ng-class="{ active: $index == editor.widgetPosition }" ng-click="selectWidget($index, widget)">
+                <div class="editor-panel-widget"><span style="margin-right: 10px" ng-bind="$index + 1"></span>
+                    {{widget.id || widget.label}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Message-->
+        <div ng-if="editor.message" class="editor-message animated fadeInDown">{{editor.message}}</div>
+
+        <!-- Actions -->
+        <div class="editor-slide-label">
+            <a href="" ng-click="editor.widget = null">Close</a>
+            <a ng-href="{{editor.slide.url}}" target="_blank">{{editor.slide.url}}</a>
+            <a href="" ng-if="editor.connected" ng-click="save()">Save</a>
+        </div>
+
+
+        <div id="slideOutline" class="editor-avoid-clicks"></div>
+        <div id="widgetOutline" class="editor-avoid-clicks"></div>
+
+        <!--<div class="editor-button" ng-class="{active: editor.active}" ng-click="toggleEditor()">-->
+        <!--<div class="editor-icon"></div>-->
+        <!--</div>-->
+    </div>
+
+</div>

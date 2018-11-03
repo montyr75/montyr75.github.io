@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<strings>
+    <stem><![CDATA[The question stem for Question 1 goes here. It might include a link to an [link click="commands/app::showExhibit"]exhibit[/link].<br><br><em>Tip:</em> Turning on Debug Mode will reveal invisible hot spots.<br><em>Tip:</em> Shift-click elements to enter edit mode (beta).]]></stem>
+</strings>

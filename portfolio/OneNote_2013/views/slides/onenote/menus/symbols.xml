@@ -1,0 +1,908 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/symbols.jpg" width="416" height="232">
+        <button x="6" y="30" class="hotspot highlight-button" width="18" height="19" tooltip="blue_check_box" model="question.symbol" value="#views/slides/onenote/symbols/blue_checkbox.xml">
+            <events click=""></events>
+        </button>
+        <button x="9" y="6" class="hotspot highlight-button" width="58" height="19" tooltip="none">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="27" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_check_box" model="question.symbol" value="#views/slides/onenote/symbols/yellow_checkbox.xml">
+            <events click=""></events>
+        </button>
+        <button x="50" y="30" class="hotspot highlight-button" width="18" height="19" tooltip="green_check_box" model="question.symbol" value="#views/slides/onenote/symbols/green_checkbox.xml">
+            <events click=""></events>
+        </button>
+        <button x="6" y="53" class="hotspot highlight-button" width="18" height="19" tooltip="blue_star_check_box" model="question.symbol" value="#views/slides/onenote/symbols/blue_star_checkbox.xml">
+            <events click=""></events>
+        </button>
+        <button x="28" y="53" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_star_check_box" model="question.symbol" value="#views/slides/onenote/symbols/yellow_star_checkbox.xml">
+            <events click=""></events>
+        </button>
+        <button x="50" y="53" class="hotspot highlight-button" width="18" height="19" tooltip="green_star_check_box" model="question.symbol" value="#views/slides/onenote/symbols/green_star_checkbox.xml">
+            <events click=""></events>
+        </button>
+        <button x="6" y="75" class="hotspot highlight-button" width="18" height="19" tooltip="blue_!_check_box">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="27" y="74" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_!_check_box">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="49" y="74" class="hotspot highlight-button" width="18" height="19" tooltip="green_!_check_box">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="5" y="96" class="hotspot highlight-button" width="18" height="19" tooltip="blue_arrow_check_box">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="27" y="96" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_arrow_check_box">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="49" y="96" class="hotspot highlight-button" width="18" height="19" tooltip="green_arrow_check_box">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="5" y="118" class="hotspot highlight-button" width="18" height="19" tooltip="blue_check_box1">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="27" y="118" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_check_box1">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="49" y="118" class="hotspot highlight-button" width="18" height="19" tooltip="green_check_box1">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="5" y="140" class="hotspot highlight-button" width="18" height="19" tooltip="blue_check_box2">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="27" y="139" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_check_box2">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="49" y="140" class="hotspot highlight-button" width="18" height="19" tooltip="green_check_box2">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="5" y="162" class="hotspot highlight-button" width="18" height="19" tooltip="blue_check_box3">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="27" y="162" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_check_box3">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="50" y="161" class="hotspot highlight-button" width="18" height="19" tooltip="green_check_box3">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="6" y="183" class="hotspot highlight-button" width="18" height="19" tooltip="todo_blue_person">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="28" y="183" class="hotspot highlight-button" width="18" height="19" tooltip="todo_yellow_person">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="50" y="183" class="hotspot highlight-button" width="18" height="19" tooltip="todo_green_person">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="6" y="206" class="hotspot highlight-button" width="18" height="19" tooltip="todo_blue_flag">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="28" y="206" class="hotspot highlight-button" width="18" height="19" tooltip="todo_yellow_flag">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="50" y="206" class="hotspot highlight-button" width="18" height="19" tooltip="todo_green_flag">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="136" y="94" class="hotspot highlight-button" width="18" height="19" tooltip="green_solid_target">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="93" y="160" class="hotspot highlight-button" width="18" height="19" tooltip="blue_circle3" model="question.symbol" value="#views/slides/onenote/symbols/blue_circle3.xml">
+            <events click=""></events>
+        </button>
+        <button x="112" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_triangle" model="question.symbol" value="#views/slides/onenote/symbols/yellow_triangle.xml">
+            <events click=""></events>
+        </button>
+        <button x="134" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="green_triangle" model="question.symbol" value="#views/slides/onenote/symbols/green_triangle.xml">
+            <events click=""></events>
+        </button>
+        <button x="92" y="51" class="hotspot highlight-button" width="18" height="19" tooltip="blue_circle" model="question.symbol" value="#views/slides/onenote/symbols/blue_circle.xml">
+            <events click=""></events>
+        </button>
+        <button x="90" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="blue_triangle" model="question.symbol" value="#views/slides/onenote/symbols/blue_triangle.xml">
+            <events click=""></events>
+        </button>
+        <button x="114" y="7" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_star" model="question.symbol" value="#views/slides/onenote/symbols/yellow_star.xml">
+            <events click=""></events>
+        </button>
+        <button x="136" y="7" class="hotspot highlight-button" width="18" height="19" tooltip="green_star" model="question.symbol" value="#views/slides/onenote/symbols/green_star.xml">
+            <events click=""></events>
+        </button>
+        <button x="92" y="7" class="hotspot highlight-button" width="18" height="19" tooltip="blue_star" model="question.symbol" value="#views/slides/onenote/symbols/blue_star.xml">
+            <events click=""></events>
+        </button>
+        <button x="199" y="7" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_sun" model="question.symbol" value="#views/slides/onenote/symbols/yellow_sun.xml">
+            <events click=""></events>
+        </button>
+        <button x="221" y="7" class="hotspot highlight-button" width="18" height="19" tooltip="green_sun" model="question.symbol" value="#views/slides/onenote/symbols/green_sun.xml">
+            <events click=""></events>
+        </button>
+        <button x="177" y="7" class="hotspot highlight-button" width="18" height="19" tooltip="blue_sun" model="question.symbol" value="#views/slides/onenote/symbols/blue_sun.xml">
+            <events click=""></events>
+        </button>
+        <button x="284" y="7" class="hotspot highlight-button" width="18" height="19" tooltip="envelope_closed" model="question.symbol" value="#views/slides/onenote/symbols/envelope_closed.xml">
+            <events click=""></events>
+        </button>
+        <button x="306" y="7" class="hotspot highlight-button" width="18" height="19" tooltip="envelope_open" model="question.symbol" value="#views/slides/onenote/symbols/envelope_open.xml">
+            <events click=""></events>
+        </button>
+        <button x="262" y="7" class="hotspot highlight-button" width="18" height="19" tooltip="email" model="question.symbol" value="#views/slides/onenote/symbols/email.xml">
+            <events click=""></events>
+        </button>
+        <button x="368" y="6" class="hotspot highlight-button" width="18" height="19" tooltip="link_globe">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="390" y="6" class="hotspot highlight-button" width="18" height="19" tooltip="laptop">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="346" y="6" class="hotspot highlight-button" width="18" height="19" tooltip="globe">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="136" y="51" class="hotspot highlight-button" width="18" height="19" tooltip="green_circle" model="question.symbol" value="#views/slides/onenote/symbols/green_circle.xml">
+            <events click=""></events>
+        </button>
+        <button x="114" y="51" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_circle" model="question.symbol" value="#views/slides/onenote/symbols/yellow_circle.xml">
+            <events click=""></events>
+        </button>
+        <button x="92" y="73" class="hotspot highlight-button" width="18" height="19" tooltip="blue_target">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="113" y="72" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_target">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="135" y="72" class="hotspot highlight-button" width="18" height="19" tooltip="green_target">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="92" y="94" class="hotspot highlight-button" width="18" height="19" tooltip="blue_solid_target">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="114" y="94" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_solid_target">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="114" y="138" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_circle2">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="92" y="116" class="hotspot highlight-button" width="18" height="19" tooltip="blue_circle1">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="114" y="116" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_circle1">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="136" y="116" class="hotspot highlight-button" width="18" height="19" tooltip="green_check_box1">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="92" y="138" class="hotspot highlight-button" width="18" height="19" tooltip="blue_circle2">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="136" y="138" class="hotspot highlight-button" width="18" height="19" tooltip="green_circle2">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="114" y="160" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_circle3">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="137" y="161" class="hotspot highlight-button" width="18" height="19" tooltip="green_circle3">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="92" y="181" class="hotspot highlight-button" width="18" height="19" tooltip="blue_check" model="question.symbol" value="#views/slides/onenote/symbols/blue_check.xml">
+            <events click=""></events>
+        </button>
+        <button x="114" y="181" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_check" model="question.symbol" value="#views/slides/onenote/symbols/yellow_check.xml">
+            <events click=""></events>
+        </button>
+        <button x="136" y="181" class="hotspot highlight-button" width="18" height="19" tooltip="green_check" model="question.symbol" value="#views/slides/onenote/symbols/green_check.xml">
+            <events click=""></events>
+        </button>
+        <button x="93" y="204" class="hotspot highlight-button" width="18" height="19" tooltip="blue_umbrella" model="question.symbol" value="#views/slides/onenote/symbols/blue_umbrella.xml">
+            <events click=""></events>
+        </button>
+        <button x="115" y="204" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_umbrella" model="question.symbol" value="#views/slides/onenote/symbols/yellow_umbrella.xml">
+            <events click=""></events>
+        </button>
+        <button x="136" y="204" class="hotspot highlight-button" width="18" height="19" tooltip="green_umbrella" model="question.symbol" value="#views/slides/onenote/symbols/green_umbrella.xml">
+            <events click=""></events>
+        </button>
+        <button x="199" y="161" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_up" model="question.symbol" value="#views/slides/onenote/symbols/yellow_up_arrow.xml">
+            <events click=""></events>
+        </button>
+        <button x="219" y="139" class="hotspot highlight-button" width="18" height="19" tooltip="green_down">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="219" y="95" class="hotspot highlight-button" width="18" height="19" tooltip="green_left">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="196" y="51" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_x_dots" model="question.symbol" value="#views/slides/onenote/symbols/yellow_x_with_dots.xml">
+            <events click=""></events>
+        </button>
+        <button x="177" y="161" class="hotspot highlight-button" width="18" height="19" tooltip="blue_up" model="question.symbol" value="#views/slides/onenote/symbols/blue_up_arrow.xml">
+            <events click=""></events>
+        </button>
+        <button x="218" y="51" class="hotspot highlight-button" width="18" height="19" tooltip="green_x_dots" model="question.symbol" value="#views/slides/onenote/symbols/green_x_with_dots.xml">
+            <events click=""></events>
+        </button>
+        <button x="175" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="blue_8_star" model="question.symbol" value="#views/slides/onenote/symbols/blue_8_star.xml">
+            <events click=""></events>
+        </button>
+        <button x="218" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="green_8_star" model="question.symbol" value="#views/slides/onenote/symbols/green_8_star.xml">
+            <events click=""></events>
+        </button>
+        <button x="176" y="51" class="hotspot highlight-button" width="18" height="19" tooltip="blue_x_dots" model="question.symbol" value="#views/slides/onenote/symbols/blue_x_with_dots.xml">
+            <events click=""></events>
+        </button>
+        <button x="197" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_8_star" model="question.symbol" value="#views/slides/onenote/symbols/yellow_8_star.xml">
+            <events click=""></events>
+        </button>
+        <button x="176" y="73" class="hotspot highlight-button" width="18" height="19" tooltip="blue_x">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="197" y="72" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_x">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="219" y="72" class="hotspot highlight-button" width="18" height="19" tooltip="green_x">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="175" y="95" class="hotspot highlight-button" width="18" height="19" tooltip="blue_left">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="197" y="95" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_left">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="177" y="139" class="hotspot highlight-button" width="18" height="19" tooltip="blue_down">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="197" y="117" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_right">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="175" y="117" class="hotspot highlight-button" width="18" height="19" tooltip="blue_right">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="197" y="139" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_down">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="219" y="117" class="hotspot highlight-button" width="18" height="19" tooltip="green_right">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="222" y="161" class="hotspot highlight-button" width="18" height="19" tooltip="green_up" model="question.symbol" value="#views/slides/onenote/symbols/green_up_arrow.xml">
+            <events click=""></events>
+        </button>
+        <button x="176" y="182" class="hotspot highlight-button" width="18" height="19" tooltip="red_square" model="question.symbol" value="#views/slides/onenote/symbols/red_square.xml">
+            <events click=""></events>
+        </button>
+        <button x="198" y="182" class="hotspot highlight-button" width="18" height="19" tooltip="yellow_square" model="question.symbol" value="#views/slides/onenote/symbols/yellow_square.xml">
+            <events click=""></events>
+        </button>
+        <button x="220" y="182" class="hotspot highlight-button" width="18" height="19" tooltip="blue_square" model="question.symbol" value="#views/slides/onenote/symbols/blue_square.xml">
+            <events click=""></events>
+        </button>
+        <button x="176" y="205" class="hotspot highlight-button" width="18" height="19" tooltip="green_square" model="question.symbol" value="#views/slides/onenote/symbols/green_square.xml">
+            <events click=""></events>
+        </button>
+        <button x="198" y="205" class="hotspot highlight-button" width="18" height="19" tooltip="orange_square" model="question.symbol" value="#views/slides/onenote/symbols/orange_square.xml">
+            <events click=""></events>
+        </button>
+        <button x="220" y="205" class="hotspot highlight-button" width="18" height="19" tooltip="pink_square" model="question.symbol" value="#views/slides/onenote/symbols/pink_square.xml">
+            <events click=""></events>
+        </button>
+        <button x="284" y="72" class="hotspot highlight-button" width="18" height="19" tooltip="comment">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="305" y="115" class="hotspot highlight-button" width="18" height="19" model="question.symbol" value="#views/slides/onenote/symbols/award.xml" tooltip="award">
+            <events click=""></events>
+        </button>
+        <button x="282" y="159" class="hotspot highlight-button" width="18" height="19" tooltip="contact">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="304" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="phone_clock">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="305" y="137" class="hotspot highlight-button" width="18" height="19" tooltip="two_people">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="263" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="mobile_phone">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="307" y="50" class="hotspot highlight-button" width="18" height="19" tooltip="high_priority">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="285" y="50" class="hotspot highlight-button" width="18" height="19" tooltip="question">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="260" y="158" class="hotspot highlight-button" width="18" height="19" tooltip="reminder">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="306" y="95" class="hotspot highlight-button" width="18" height="19" tooltip="home">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="264" y="50" class="hotspot highlight-button" width="18" height="19" tooltip="follow_up">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="285" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="phone">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="262" y="72" class="hotspot highlight-button" width="18" height="19" tooltip="lightbulb">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="283" y="137" class="hotspot highlight-button" width="18" height="19" tooltip="person">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="306" y="72" class="hotspot highlight-button" width="18" height="19" tooltip="question_balloon">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="261" y="115" class="hotspot highlight-button" width="18" height="19" model="question.symbol" value="#views/slides/onenote/symbols/frowney.xml" tooltip="frowning">
+            <events click=""></events>
+        </button>
+        <button x="262" y="136" class="hotspot highlight-button" width="18" height="19" tooltip="im_contact">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="284" y="95" class="hotspot highlight-button" width="18" height="19" tooltip="pushpin">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="262" y="95" class="hotspot highlight-button" width="18" height="19" tooltip="paperclip">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="283" y="115" class="hotspot highlight-button" width="18" height="19" tooltip="smiley" model="question.symbol" value="#views/slides/onenote/symbols/smiley.xml">
+            <events click=""></events>
+        </button>
+        <button x="305" y="159" class="hotspot highlight-button" width="18" height="19" tooltip="flowers">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="261" y="179" class="hotspot highlight-button" width="18" height="19" model="question.symbol" value="#views/slides/onenote/symbols/date.xml" tooltip="date">
+            <events click=""></events>
+        </button>
+        <button x="283" y="179" class="hotspot highlight-button" width="18" height="19" model="question.symbol" value="#views/slides/onenote/symbols/calendar.xml" tooltip="calendar">
+            <events click=""></events>
+        </button>
+        <button x="305" y="180" class="hotspot highlight-button" width="18" height="19" model="question.symbol" value="#views/slides/onenote/symbols/clock.xml" tooltip="clock">
+            <events click=""></events>
+        </button>
+        <button x="262" y="202" class="hotspot highlight-button" width="18" height="19" tooltip="music" model="question.symbol" value="#views/slides/onenote/symbols/music.xml">
+            <events click=""></events>
+        </button>
+        <button x="284" y="202" class="hotspot highlight-button" width="18" height="19" tooltip="movie" model="question.symbol" value="#views/slides/onenote/symbols/movie.xml">
+            <events click=""></events>
+        </button>
+        <button x="305" y="203" class="hotspot highlight-button" width="18" height="19" tooltip="quote" model="question.symbol" value="#views/slides/onenote/symbols/quote.xml">
+            <events click=""></events>
+        </button>
+        <button x="369" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="car">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="368" y="117" class="hotspot highlight-button" width="18" height="19" tooltip="task" model="question.symbol" value="#views/slides/onenote/symbols/task.xml">
+            <events click=""></events>
+        </button>
+        <button x="368" y="72" class="hotspot highlight-button" width="18" height="19" tooltip="notebook">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="369" y="51" class="hotspot highlight-button" width="18" height="19" tooltip="presentation">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="389" y="117" class="hotspot highlight-button" width="18" height="19" tooltip="lightning" model="question.symbol" value="#views/slides/onenote/symbols/lightning.xml">
+            <events click=""></events>
+        </button>
+        <button x="391" y="51" class="hotspot highlight-button" width="18" height="19" tooltip="padlock">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="347" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="plane">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="391" y="28" class="hotspot highlight-button" width="18" height="19" tooltip="key">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="389" y="139" class="hotspot highlight-button" width="18" height="19" tooltip="flower" model="question.symbol" value="#views/slides/onenote/symbols/flower.xml">
+            <events click=""></events>
+        </button>
+        <button x="390" y="95" class="hotspot highlight-button" width="18" height="19" tooltip="dollar_sign">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="346" y="51" class="hotspot highlight-button" width="18" height="19" tooltip="binoculars">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="346" y="95" class="hotspot highlight-button" width="18" height="19" tooltip="research">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="347" y="73" class="hotspot highlight-button" width="18" height="19" tooltip="book">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="368" y="95" class="hotspot highlight-button" width="18" height="19" tooltip="marker">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="345" y="117" class="hotspot highlight-button" width="18" height="19" tooltip="coins" model="question.symbol" value="#views/slides/onenote/symbols/coins.xml">
+            <events click=""></events>
+        </button>
+        <button x="390" y="72" class="hotspot highlight-button" width="18" height="19" tooltip="paper">
+            <events click=""></events>
+        </button>
+        <button x="367" y="139" class="hotspot highlight-button" width="18" height="19" tooltip="heart" model="question.symbol" value="#views/slides/onenote/symbols/heart.xml">
+            <events click=""></events>
+        </button>
+        <button x="345" y="139" class="hotspot highlight-button" width="18" height="19" tooltip="cloud" model="question.symbol" value="#views/slides/onenote/symbols/cloud.xml">
+            <events click=""></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <tooltips>
+        <tooltip name="blue_star" class="ui-tooltip">
+            <html>
+                Blue Star
+            </html>
+        </tooltip>
+        <tooltip name="yellow_star" class="ui-tooltip">
+            <html>
+                Yellow Star
+            </html>
+        </tooltip>
+        <tooltip name="green_star" class="ui-tooltip">
+            <html>
+                Green Star
+            </html>
+        </tooltip>
+        <tooltip name="blue_triangle" class="ui-tooltip">
+            <html>
+                Blue Triangle
+            </html>
+        </tooltip>
+        <tooltip name="blue_triangle" class="ui-tooltip">
+            <html>
+                Blue Triangle
+            </html>
+        </tooltip>
+        <tooltip name="yellow_triangle" class="ui-tooltip">
+            <html>
+                Yellow Triangle
+            </html>
+        </tooltip>
+        <tooltip name="green_triangle" class="ui-tooltip">
+            <html>
+                Green Triangle
+            </html>
+        </tooltip>
+        <tooltip name="blue_circle" class="ui-tooltip">
+            <html>
+                Blue Circle
+            </html>
+        </tooltip>
+        <tooltip name="yellow_circle" class="ui-tooltip">
+            <html>
+                Yellow Circle
+            </html>
+        </tooltip>
+        <tooltip name="green_circle" class="ui-tooltip">
+            <html>
+                Green Circle
+            </html>
+        </tooltip>
+        <tooltip name="blue_target" class="ui-tooltip">
+            <html>
+                Blue Target
+            </html>
+        </tooltip>
+        <tooltip name="yellow_target" class="ui-tooltip">
+            <html>
+                Yellow Target
+            </html>
+        </tooltip>
+        <tooltip name="green_target" class="ui-tooltip">
+            <html>
+                Green Target
+            </html>
+        </tooltip>
+        <tooltip name="blue_solid_target" class="ui-tooltip">
+            <html>
+                Blue Solid Target
+            </html>
+        </tooltip>
+        <tooltip name="yellow_solid_target" class="ui-tooltip">
+            <html>
+                Yellow Solid Target
+            </html>
+        </tooltip>
+        <tooltip name="green_solid_target" class="ui-tooltip">
+            <html>
+                Green Solid Target
+            </html>
+        </tooltip>
+        <tooltip name="blue_circle1" class="ui-tooltip">
+            <html>
+                Blue Circle 1
+            </html>
+        </tooltip>
+        <tooltip name="yellow_circle1" class="ui-tooltip">
+            <html>
+                Yellow Circle 1
+            </html>
+        </tooltip>
+        <tooltip name="green_circle1" class="ui-tooltip">
+            <html>
+                Green Circle 1
+            </html>
+        </tooltip>
+        <tooltip name="blue_circle2" class="ui-tooltip">
+            <html>
+                Blue Circle 2
+            </html>
+        </tooltip>
+        <tooltip name="yellow_circle2" class="ui-tooltip">
+            <html>
+                Yellow Circle 2
+            </html>
+        </tooltip>
+        <tooltip name="green_circle2" class="ui-tooltip">
+            <html>
+                Green Circle 2
+            </html>
+        </tooltip>
+        <tooltip name="blue_circle3" class="ui-tooltip">
+            <html>
+                Blue Circle 3
+            </html>
+        </tooltip>
+        <tooltip name="yellow_circle3" class="ui-tooltip">
+            <html>
+                Yellow Circle 3
+            </html>
+        </tooltip>
+        <tooltip name="green_circle3" class="ui-tooltip">
+            <html>
+                Green Circle 3
+            </html>
+        </tooltip>
+        <tooltip name="blue_check" class="ui-tooltip">
+            <html>
+                Blue Check Mark
+            </html>
+        </tooltip>
+        <tooltip name="yellow_check" class="ui-tooltip">
+            <html>
+                Yellow Check Mark
+            </html>
+        </tooltip>
+        <tooltip name="green_check" class="ui-tooltip">
+            <html>
+                Green Check Mark
+            </html>
+        </tooltip>
+        <tooltip name="blue_umbrella" class="ui-tooltip">
+            <html>
+                Blue Umbrella
+            </html>
+        </tooltip>
+        <tooltip name="yellow_umbrella" class="ui-tooltip">
+            <html>
+                Yellow Umbrella
+            </html>
+        </tooltip>
+        <tooltip name="green_umbrella" class="ui-tooltip">
+            <html>
+                Green Umbrella
+            </html>
+        </tooltip>
+        <tooltip name="blue_check_box" class="ui-tooltip">
+            <html>Blue Check Box</html>
+        </tooltip>
+        <tooltip name="yellow_check_box" class="ui-tooltip">
+            <html>Yellow Check Box</html>
+        </tooltip>
+        <tooltip name="green_check_box" class="ui-tooltip">
+            <html>Green Check Box</html>
+        </tooltip>
+        <tooltip name="blue_star_check_box" class="ui-tooltip">
+            <html>Blue Star Check Box</html>
+        </tooltip>
+        <tooltip name="yellow_star_check_box" class="ui-tooltip">
+            <html>Yellow Star Check Box</html>
+        </tooltip>
+        <tooltip name="green_star_check_box" class="ui-tooltip">
+            <html>Green Star Check Box</html>
+        </tooltip>
+        <tooltip name="blue_!_check_box" class="ui-tooltip">
+            <html>Blue Exclamation Check Box</html>
+        </tooltip>
+        <tooltip name="yellow_!_check_box" class="ui-tooltip">
+            <html>Yellow Exclamation Check Box</html>
+        </tooltip>
+        <tooltip name="green_!_check_box" class="ui-tooltip">
+            <html>Green Exclamation Check Box</html>
+        </tooltip>
+        <tooltip name="blue_arrow_check_box" class="ui-tooltip">
+            <html>Blue Arrow Check Box</html>
+        </tooltip>
+        <tooltip name="yellow_arrow_check_box" class="ui-tooltip">
+            <html>Yellow Arrow Check Box</html>
+        </tooltip>
+        <tooltip name="green_arrow_check_box" class="ui-tooltip">
+            <html>Green Arrow Check Box</html>
+        </tooltip>
+        <tooltip name="blue_check_box1" class="ui-tooltip">
+            <html>Blue Check Box 1</html>
+        </tooltip>
+        <tooltip name="yellow_check_box1" class="ui-tooltip">
+            <html>Yellow Check Box 1</html>
+        </tooltip>
+        <tooltip name="green_check_box1" class="ui-tooltip">
+            <html>Green Check Box 1</html>
+        </tooltip>
+        <tooltip name="blue_check_box2" class="ui-tooltip">
+            <html>Blue Check Box 2</html>
+        </tooltip>
+        <tooltip name="yellow_check_box2" class="ui-tooltip">
+            <html>Yellow Check Box 2</html>
+        </tooltip>
+        <tooltip name="green_check_box2" class="ui-tooltip">
+            <html>Green Check Box 2</html>
+        </tooltip>
+        <tooltip name="blue_check_box3" class="ui-tooltip">
+            <html>Blue Check Box 3</html>
+        </tooltip>
+        <tooltip name="yellow_check_box3" class="ui-tooltip">
+            <html>Yellow Check Box 3</html>
+        </tooltip>
+        <tooltip name="green_check_box3" class="ui-tooltip">
+            <html>Green Check Box 3</html>
+        </tooltip>
+        <tooltip name="todo_blue_person" class="ui-tooltip">
+            <html>To Do Blue Person</html>
+        </tooltip>
+        <tooltip name="todo_yellow_person" class="ui-tooltip">
+            <html>To Do Yellow Person</html>
+        </tooltip>
+        <tooltip name="todo_green_person" class="ui-tooltip">
+            <html>To Do Green Person</html>
+        </tooltip>
+        <tooltip name="todo_blue_flag" class="ui-tooltip">
+            <html>To Do Blue Flag</html>
+        </tooltip>
+        <tooltip name="todo_yellow_flag" class="ui-tooltip">
+            <html>To Do Yellow Flag</html>
+        </tooltip>
+        <tooltip name="todo_green_flag" class="ui-tooltip">
+            <html>To Do Green Flag</html>
+        </tooltip>
+        <tooltip name="none" class="ui-tooltip">
+            <html>None</html>
+        </tooltip>
+        <tooltip name="blue_sun" class="ui-tooltip">
+            <html>Blue Sun</html>
+        </tooltip>
+        <tooltip name="yellow_sun" class="ui-tooltip">
+            <html>Yellow Sun</html>
+        </tooltip>
+        <tooltip name="green_sun" class="ui-tooltip">
+            <html>Green Sun</html>
+        </tooltip>
+        <tooltip name="blue_8_star" class="ui-tooltip">
+            <html>Blue 8-Point Star</html>
+        </tooltip>
+        <tooltip name="yellow_8_star" class="ui-tooltip">
+            <html>Yellow 8-Point Star</html>
+        </tooltip>
+        <tooltip name="green_8_star" class="ui-tooltip">
+            <html>Green 8-Point Star</html>
+        </tooltip>
+        <tooltip name="blue_x_dots" class="ui-tooltip">
+            <html>Blue X with Dots</html>
+        </tooltip>
+        <tooltip name="yellow_x_dots" class="ui-tooltip">
+            <html>Yellow X with Dots</html>
+        </tooltip>
+        <tooltip name="green_x_dots" class="ui-tooltip">
+            <html>Green X with Dots</html>
+        </tooltip>
+        <tooltip name="blue_x" class="ui-tooltip">
+            <html>Blue X</html>
+        </tooltip>
+        <tooltip name="yellow_x" class="ui-tooltip">
+            <html>Yellow X</html>
+        </tooltip>
+        <tooltip name="green_x" class="ui-tooltip">
+            <html>Green X</html>
+        </tooltip>
+        <tooltip name="blue_left" class="ui-tooltip">
+            <html>Blue Left Arrow</html>
+        </tooltip>
+        <tooltip name="yellow_left" class="ui-tooltip">
+            <html>Yellow Left Arrow</html>
+        </tooltip>
+        <tooltip name="green_left" class="ui-tooltip">
+            <html>Green Left Arrow</html>
+        </tooltip>
+        <tooltip name="blue_right" class="ui-tooltip">
+            <html>Blue Right Arrow</html>
+        </tooltip>
+        <tooltip name="yellow_right" class="ui-tooltip">
+            <html>Yellow Right Arrow</html>
+        </tooltip>
+        <tooltip name="green_right" class="ui-tooltip">
+            <html>Green Right Arrow</html>
+        </tooltip>
+        <tooltip name="blue_up" class="ui-tooltip">
+            <html>Blue Up Arrow</html>
+        </tooltip>
+        <tooltip name="yellow_up" class="ui-tooltip">
+            <html>Yellow Up Arrow</html>
+        </tooltip>
+        <tooltip name="green_up" class="ui-tooltip">
+            <html>Green Up Arrow</html>
+        </tooltip>
+        <tooltip name="blue_down" class="ui-tooltip">
+            <html>Blue Down Arrow</html>
+        </tooltip>
+        <tooltip name="yellow_down" class="ui-tooltip">
+            <html>Yellow Down Arrow</html>
+        </tooltip>
+        <tooltip name="green_down" class="ui-tooltip">
+            <html>Green Down Arrow</html>
+        </tooltip>
+        <tooltip name="red_square" class="ui-tooltip">
+            <html>Red Square (Project A)</html>
+        </tooltip>
+        <tooltip name="yellow_square" class="ui-tooltip">
+            <html>Yellow Square (Project B)</html>
+        </tooltip>
+        <tooltip name="blue_square" class="ui-tooltip">
+            <html>Blue Square (Project C)</html>
+        </tooltip>
+        <tooltip name="green_square" class="ui-tooltip">
+            <html>Green Square</html>
+        </tooltip>
+        <tooltip name="orange_square" class="ui-tooltip">
+            <html>Orange Square</html>
+        </tooltip>
+        <tooltip name="pink_square" class="ui-tooltip">
+            <html>Pink Square</html>
+        </tooltip>
+        <tooltip name="email" class="ui-tooltip">
+            <html>Email</html>
+        </tooltip>
+        <tooltip name="envelope_open" class="ui-tooltip">
+            <html>Envelope (Opened)</html>
+        </tooltip>
+        <tooltip name="envelope_closed" class="ui-tooltip">
+            <html>Envelope (Closed)</html>
+        </tooltip>
+        <tooltip name="mobile_phone" class="ui-tooltip">
+            <html>Mobile Phone</html>
+        </tooltip>
+        <tooltip name="phone" class="ui-tooltip">
+            <html>Telephone</html>
+        </tooltip>
+        <tooltip name="phone_clock" class="ui-tooltip">
+            <html>Telephone with Clock</html>
+        </tooltip>
+        <tooltip name="follow_up" class="ui-tooltip">
+            <html>Follow up Flag</html>
+        </tooltip>
+        <tooltip name="question" class="ui-tooltip">
+            <html>Question</html>
+        </tooltip>
+        <tooltip name="high_priority" class="ui-tooltip">
+            <html>High Priority</html>
+        </tooltip>
+        <tooltip name="lightbulb" class="ui-tooltip">
+            <html>Light Bulb</html>
+        </tooltip>
+        <tooltip name="comment" class="ui-tooltip">
+            <html>Comment</html>
+        </tooltip>
+        <tooltip name="question_balloon" class="ui-tooltip">
+            <html>Question Balloon</html>
+        </tooltip>
+        <tooltip name="paperclip" class="ui-tooltip">
+            <html>Paperclip</html>
+        </tooltip>
+        <tooltip name="pushpin" class="ui-tooltip">
+            <html>Pushpin</html>
+        </tooltip>
+        <tooltip name="home" class="ui-tooltip">
+            <html>Home</html>
+        </tooltip>
+        <tooltip name="frowning" class="ui-tooltip">
+            <html>Frowning</html>
+        </tooltip>
+        <tooltip name="smiley" class="ui-tooltip">
+            <html>Smiley</html>
+        </tooltip>
+        <tooltip name="award" class="ui-tooltip">
+            <html>Award Ribbon</html>
+        </tooltip>
+        <tooltip name="im_contact" class="ui-tooltip">
+            <html>IM contact</html>
+        </tooltip>
+        <tooltip name="person" class="ui-tooltip">
+            <html>Person</html>
+        </tooltip>
+        <tooltip name="two_people" class="ui-tooltip">
+            <html>Two People</html>
+        </tooltip>
+        <tooltip name="reminder" class="ui-tooltip">
+            <html>Reminder Bell</html>
+        </tooltip>
+        <tooltip name="contact" class="ui-tooltip">
+            <html>Contact (like Outlook's)</html>
+        </tooltip>
+        <tooltip name="flowers" class="ui-tooltip">
+            <html>Flowers Bouquet</html>
+        </tooltip>
+        <tooltip name="date" class="ui-tooltip">
+            <html>Date</html>
+        </tooltip>
+        <tooltip name="calendar" class="ui-tooltip">
+            <html>Calendar</html>
+        </tooltip>
+        <tooltip name="clock" class="ui-tooltip">
+            <html>Clock</html>
+        </tooltip>
+        <tooltip name="music" class="ui-tooltip">
+            <html>Music Note</html>
+        </tooltip>
+        <tooltip name="movie" class="ui-tooltip">
+            <html>Movie Clip</html>
+        </tooltip>
+        <tooltip name="quote" class="ui-tooltip">
+            <html>Quote Mark</html>
+        </tooltip>
+        <tooltip name="globe" class="ui-tooltip">
+            <html>Globe</html>
+        </tooltip>
+        <tooltip name="link_globe" class="ui-tooltip">
+            <html>Link Globe</html>
+        </tooltip>
+        <tooltip name="laptop" class="ui-tooltip">
+            <html>Laptop</html>
+        </tooltip>
+        <tooltip name="plane" class="ui-tooltip">
+            <html>Plane</html>
+        </tooltip>
+        <tooltip name="car" class="ui-tooltip">
+            <html>Car</html>
+        </tooltip>
+        <tooltip name="key" class="ui-tooltip">
+            <html>Key</html>
+        </tooltip>
+        <tooltip name="binoculars" class="ui-tooltip">
+            <html>Binoculars</html>
+        </tooltip>
+        <tooltip name="presentation" class="ui-tooltip">
+            <html>Presentation</html>
+        </tooltip>
+        <tooltip name="padlock" class="ui-tooltip">
+            <html>Padlock</html>
+        </tooltip>
+        <tooltip name="book" class="ui-tooltip">
+            <html>Book (Open)</html>
+        </tooltip>
+        <tooltip name="notebook" class="ui-tooltip">
+            <html>Notebook Icon</html>
+        </tooltip>
+        <tooltip name="paper" class="ui-tooltip">
+            <html>Paper (blank with lines)</html>
+        </tooltip>
+        <tooltip name="research" class="ui-tooltip">
+            <html>Research</html>
+        </tooltip>
+        <tooltip name="marker" class="ui-tooltip">
+            <html>Marker</html>
+        </tooltip>
+        <tooltip name="dollar_sign" class="ui-tooltip">
+            <html>Dollar sign $</html>
+        </tooltip>
+        <tooltip name="coins" class="ui-tooltip">
+            <html>Coins with window behind it</html>
+        </tooltip>
+        <tooltip name="task" class="ui-tooltip">
+            <html>Schedule Task</html>
+        </tooltip>
+        <tooltip name="lightning" class="ui-tooltip">
+            <html>Lightning Bolt</html>
+        </tooltip>
+        <tooltip name="cloud" class="ui-tooltip">
+            <html>Cloud</html>
+        </tooltip>
+        <tooltip name="heart" class="ui-tooltip">
+            <html>Heart</html>
+        </tooltip>
+        <tooltip name="flower" class="ui-tooltip">
+            <html>Flower</html>
+        </tooltip>
+    </tooltips>
+    <commands></commands>
+</root>

@@ -1,0 +1,10 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="doc_spreadsheet_inserted">
+    <view image="#images/documents/doc_spreadsheet_inserted.jpg" width="748" height="408">
+        <label x="105" y="55" class="document-label" width="529" height="24" model="page_title">
+            <events></events>
+        </label>
+    </view>
+    <model persist="true"></model>
+    <commands></commands>
+</root>

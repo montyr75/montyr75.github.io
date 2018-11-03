@@ -1,0 +1,67 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="highlighter">
+    <view image="#images/dialogs/color_and_thickness/highlighter_slide.jpg" width="477" height="30">
+        <button x="0" y="0" class="hotspot color-thickness-button" width="45" height="21" model="pen.thickness" value="1" toggle="true" tooltip="1.5mm"></button>
+        <button x="53" y="0" class="hotspot color-thickness-button" width="45" height="21" model="pen.thickness" value="2" toggle="true" tooltip="2mm"></button>
+        <button x="105" y="0" class="hotspot color-thickness-button" width="45" height="21" model="pen.thickness" value="3" toggle="true" tooltip="3mm"></button>
+        <button x="157" y="0" class="hotspot color-thickness-button" width="45" height="21" model="pen.thickness" value="4" toggle="true" tooltip="4mm"></button>
+        <button x="209" y="0" class="hotspot color-thickness-button" width="45" height="21" model="pen.thickness" value="5" toggle="true" tooltip="5mm"></button>
+        <button x="262" y="0" class="hotspot color-thickness-button" width="45" height="21" model="pen.thickness" value="6" toggle="true" tooltip="6mm"></button>
+        <button x="314" y="0" class="hotspot color-thickness-button" width="45" height="21" model="pen.thickness" value="7" toggle="true" tooltip="7mm"></button>
+        <button x="367" y="0" class="hotspot color-thickness-button" width="45" height="21" model="pen.thickness" value="8" toggle="true" tooltip="8mm"></button>
+        <button x="419" y="0" class="hotspot color-thickness-button" width="45" height="21" model="pen.thickness" value="9" toggle="true" tooltip="10mm"></button>
+    </view>
+    <tooltips>
+        <tooltip name="1.5mm" class="ui-tooltip">
+            <html>
+                1.5 mm
+            </html>
+        </tooltip>
+        <tooltip name="2mm" class="ui-tooltip">
+            <html>
+                2.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="3mm" class="ui-tooltip">
+            <html>
+                3.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="4mm" class="ui-tooltip">
+            <html>
+                4.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="5mm" class="ui-tooltip">
+            <html>
+                5.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="6mm" class="ui-tooltip">
+            <html>
+                6.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="7mm" class="ui-tooltip">
+            <html>
+                7.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="8mm" class="ui-tooltip">
+            <html>
+                8.0 mm
+            </html>
+        </tooltip>
+        <tooltip name="10mm" class="ui-tooltip">
+            <html>
+                10.0 mm
+            </html>
+        </tooltip>
+    </tooltips>
+    <model persist="true">
+        <thickness>2</thickness>
+    </model>
+    <commands>
+
+    </commands>
+</root>

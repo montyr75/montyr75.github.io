@@ -1,0 +1,37 @@
+[
+    {
+        "id": "card1",
+        "title": "cat",
+        "imageFilename": "cat.jpg"
+    },
+    {
+        "id": "card2",
+        "title": "cow",
+        "imageFilename": "cow.jpg"
+    },
+    {
+        "id": "card3",
+        "title": "dog",
+        "imageFilename": "dog.jpg"
+    },
+    {
+        "id": "card4",
+        "title": "goat",
+        "imageFilename": "goat.jpg"
+    },
+    {
+        "id": "card5",
+        "title": "horse",
+        "imageFilename": "horse.jpg"
+    },
+    {
+        "id": "card6",
+        "title": "rabbit",
+        "imageFilename": "rabbit.jpg"
+    },
+    {
+        "id": "card7",
+        "title": "rooster",
+        "imageFilename": "rooster.jpg"
+    }
+]

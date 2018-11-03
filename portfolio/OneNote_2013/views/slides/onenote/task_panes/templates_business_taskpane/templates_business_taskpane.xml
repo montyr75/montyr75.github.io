@@ -1,0 +1,53 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="templates_pane">
+    <view image="#images/task_panes/templates_business_taskpane.jpg" width="260" height="452">
+        <button x="235" y="16" class="hotspot ribbon-button" width="14" height="16" id="close_btn">
+            <events click="close_panel"></events>
+        </button>
+        <button x="218" y="16" class="hotspot ribbon-button" width="14" height="16">
+            <events click="show_taskpane_close_menu"></events>
+        </button>
+        <button x="23" y="105" class="hotspot" width="197" height="16">
+            <events click="show_templates_taskpane"></events>
+        </button>
+        <button x="23" y="125" class="hotspot" width="213" height="17" id="blank_btn">
+            <events click="show_templates_blank_taskpane"></events>
+        </button>
+        <button x="23" y="148" class="hotspot" width="213" height="17" id="business_btn">
+            <events click="show_templates_taskpane"></events>
+        </button>
+        <label x="24" y="416" width="199" height="19" class="hotspot dialog-link hand" value="$save_page">
+            <events click="open_save_as_template"></events>
+        </label>
+        <label x="43" y="285" width="142" height="19" class="hotspot dialog-link hand" value="$office">
+            <events click="not_implemented"></events>
+        </label>
+        <label x="21" y="365" width="225" height="19" class="hotspot dialog-link hand">
+            <events click="not_implemented"></events>
+        </label>
+        <label x="36" y="165" width="142" height="19" class="hotspot dialog-link hand" value="Project Overview">
+            <events click="not_implemented"></events>
+        </label>
+        <label x="36" y="189" width="142" height="19" class="hotspot dialog-link hand" value="Simple Meeting Notes 1">
+            <events click="not_implemented"></events>
+        </label>
+        <label x="36" y="212" width="142" height="19" class="hotspot dialog-link hand" value="Simple Meeting Notes 2">
+            <events click="not_implemented"></events>
+        </label>
+        <label x="36" y="236" width="142" height="19" class="hotspot dialog-link hand" value="Informal Meeting Notes">
+            <events click="not_implemented"></events>
+        </label>
+        <label x="36" y="260" width="142" height="19" class="hotspot dialog-link hand" value="Personal Meeting Notes">
+            <events click="not_implemented"></events>
+        </label>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="open_save_as_template">
+            <dialog id="template" src="#views/slides/onenote/dialogs/save_as_template/save_as_template.xml" modal="false" top="220" left="200"></dialog>
+        </command>
+        <command name="show_taskpane_close_menu">
+            <menu src="#views/slides/onenote/menus/taskpane_close_menu.xml" modal="true" group="menu" depth="1" direction="bottom"></menu>
+        </command>
+    </commands>
+</root>

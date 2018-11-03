@@ -1,0 +1,10 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/tabs/tabs_no_notebook.jpg" width="958" height="44">
+        <button x="10" y="10" class="hotspot" width="200" height="32">
+            <events></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands></commands>
+</root>

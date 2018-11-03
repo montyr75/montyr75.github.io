@@ -1,0 +1,32 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="merge_warning">
+    <view image="#images/dialogs/merge_warning/merge_warning.jpg" width="621" height="121">
+        <button x="191" y="85" class="hotspot dialog-button" width="110" height="20" id="merge_btn">
+            <events click="show_merge_successful"></events>
+        </button>
+        <button x="321" y="85" class="hotspot dialog-button" width="110" height="20" id="cancel_btn">
+            <events click="close"></events>
+        </button>
+        <button x="581" y="11" class="hotspot close-button" width="28" height="14" id="close_btn">
+            <events click="close"></events>
+        </button>
+        <label x="64" y="50" width="547" height="24" id="3_lbl" class="message-label" model="merge_warning.warning">
+            <events></events>
+        </label>
+    </view>
+    <model persist="true">
+        <warning></warning>
+    </model>
+    <commands>
+        <command name="show_merge_successful">
+            <dialog src="#views/slides/onenote/dialogs/merge_successful/merge_successful.xml" modal="true" top="300" left="240"></dialog>
+            <model target="merge_successful">
+                <success>The merge was successful. Do you want to delete the original section "{onenote.label}"?</success>
+            </model>
+            <close target="*"></close>
+        </command>
+        <command name="close">
+            <close target="*"></close>
+        </command>
+    </commands>
+</root>

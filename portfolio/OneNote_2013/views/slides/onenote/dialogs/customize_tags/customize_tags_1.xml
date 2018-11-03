@@ -1,0 +1,100 @@
+<root
+    xmlns="http://certiport.com/hammer/trunk/custom" type="slide" id="custom_tags_1">
+    <events show="set_todo_tag"/>
+    <view image="#images/dialogs/customize_tags/customize_tags.jpg" width="300" height="305">
+        <button x="17" y="56" class="hotspot custom-tags-button" width="214" model="custom_tags_1.tag" value="todo" height="22" id="todo_btn">
+            <events click="set_todo_tag"></events>
+        </button>
+        <button x="17" y="78" class="hotspot custom-tags-button" width="215" height="22" model="custom_tags_1.tag" value="important" id="important_btn">
+            <events click="set_important_tag"></events>
+        </button>
+        <button x="17" y="101" class="hotspot custom-tags-button" width="215" height="22" model="custom_tags_1.tag" value="question" id="question_btn">
+            <events click="set_question_tag"></events>
+        </button>
+        <button x="17" y="124" class="hotspot custom-tags-button" width="215" height="22" model="custom_tags_1.tag" value="remember" id="remember_btn">
+            <events click="set_remember_tag"></events>
+        </button>
+        <button x="17" y="147" class="hotspot custom-tags-button" width="215" height="22" model="custom_tags_1.tag" value="definition" id="definition_btn">
+            <events click="set_definition_tag"></events>
+        </button>
+        <button x="17" y="171" class="hotspot custom-tags-button" width="215" height="22" model="custom_tags_1.tag" value="highlight" id="highlight_btn">
+            <events click="set_highlight_tag"></events>
+        </button>
+        <button x="17" y="194" class="hotspot custom-tags-button" width="215" height="22" model="custom_tags_1.tag" value="contact" id="contact_btn">
+            <events click="set_contact_tag"></events>
+        </button>
+        <button x="17" y="218" class="hotspot custom-tags-button" width="215" height="14" model="custom_tags_1.tag" value="address" id="address_btn">
+            <events click="set_address_tag"></events>
+        </button>
+    </view>
+    <model persist="true">
+        <tag>todo</tag>
+    </model>
+    <commands>
+        <command name="set_todo_tag">
+                <model target="question">
+                    <display_name>To Do</display_name>
+                    <symbol>#views/slides/onenote/symbols/blue_checkbox.xml</symbol>
+                    <label_color></label_color>
+                    <selected_tag>todo</selected_tag>
+                </model>
+        </command>
+        <command name="set_important_tag">
+            <model target="question">
+                <display_name>Important</display_name>
+                <symbol>#views/slides/onenote/symbols/yellow_star.xml</symbol>
+                <label_color></label_color>
+                <selected_tag>important</selected_tag>
+            </model>
+        </command>
+        <command name="set_question_tag">
+            <model target="question">
+                <display_name>Question</display_name>
+                <symbol>#views/slides/onenote/symbols/question.xml</symbol>
+                <label_color></label_color>
+                <selected_tag>question</selected_tag>
+            </model>
+        </command>
+        <command name="set_remember_tag">
+            <model target="question">
+                <display_name>Remember for later</display_name>
+                <symbol>#views/slides/onenote/symbols/none_symbol.xml</symbol>
+                <label_color>yellow-label</label_color>
+                <selected_tag>remember</selected_tag>
+            </model>
+        </command>
+        <command name="set_definition_tag">
+            <model target="question">
+                <display_name>Definition</display_name>
+                <symbol>#views/slides/onenote/symbols/none.xml</symbol>
+                <label_color>bright-green-label</label_color>
+                <selected_tag>definition</selected_tag>
+            </model>
+        </command>
+        <command name="set_highlight_tag">
+            <model target="question">
+                <display_name>Highlight</display_name>
+                <symbol>#views/slides/onenote/symbols/highlight.xml</symbol>
+                <label_color></label_color>
+                <selected_tag>highlight</selected_tag>
+            </model>
+        </command>
+        <command name="set_contact_tag">
+            <model target="question">
+                <display_name>Contact</display_name>
+                <symbol>#views/slides/onenote/symbols/contact.xml</symbol>
+                <label_color></label_color>
+                <selected_tag>highlight</selected_tag>
+            </model>
+        </command>
+        <command name="set_address_tag">
+            <model target="question">
+                <display_name>Address</display_name>
+                <symbol>#views/slides/onenote/symbols/address.xml</symbol>
+                <label_color></label_color>
+                <selected_tag>address</selected_tag>
+            </model>
+        </command>
+
+    </commands>
+</root>

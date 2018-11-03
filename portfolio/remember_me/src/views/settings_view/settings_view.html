@@ -1,0 +1,112 @@
+<link rel="import" href="../../components/polymer_selector/polymer_selector.html">
+
+<polymer-element name="settings-view">
+  <template>
+    <link rel="stylesheet" href="../../../resources/css/app.css">
+
+    <style>
+      * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .selector-list > *.polymer-selected {
+        box-shadow: 0 0 7px blue;
+        border-radius: 4px;
+      }
+
+      .thumb {
+        display: inline-block;
+        text-align: center;
+        margin: 5px;
+      }
+
+      .img-thumbnail, .diff-thumbnail {
+        width: 160px;
+        height: 200px;
+      }
+
+      .diff-thumbnail {
+        font-size: 36px;
+        line-height: 42px;
+        height: 30px;
+      }
+
+      .title {
+        font-weight: bold;
+      }
+
+      .button-bar {
+        margin-top: 40px;
+      }
+
+      p {
+        cursor: default;
+        text-align: center;
+      }
+
+      h3 {
+        background: blue;
+        color: white;
+        padding: 3px;
+      }
+
+      #start_btn {
+        font-size: 34px;
+      }
+
+      #deck-selector-box, #difficulty-selector-box {
+        height: 260px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+      }
+
+      #difficulty-selector-box {
+        height: 80px;
+      }
+
+      #difficulty-selector .thumb {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+    </style>
+
+    <h3>Card Deck:</h3>
+
+    <div id="deck-selector-box">
+      <polymer-selector id="deck-selector" class="selector-list" on-polymer-activate="{{deckSelected}}" activateEvent="mousedown">
+        <template repeat="{{deck in model.decks}}">
+          <div class="thumb">
+            <img src="{{deck.backImageURL}}" alt="{{deck.title}}" class="img-thumbnail">
+            <p class="title">{{deck.title}}</p>
+          </div>
+        </template>
+      </polymer-selector>
+    </div>
+
+    <h3>Number of Cards:</h3>
+
+    <div id="difficulty-selector-box">
+      <polymer-selector id="difficulty-selector" class="selector-list" on-polymer-activate="{{difficultySelected}}" activateEvent="mousedown">
+        <template repeat="{{diff in model.difficulties}}">
+          <div class="thumb" data-value="{{diff}}">
+            <p class="diff-thumbnail">{{diff}}</p>
+          </div>
+        </template>
+      </polymer-selector>
+    </div>
+
+    <template if="{{model.currentDeck != null && model.numCards != null}}">
+      <div class="flexbox-row-nowrap flex-justify-center button-bar animated bounceIn">
+        <button id="start_btn" class="btn btn-primary btn-lg" on-mousedown="{{start}}">Start Game</button>
+      </div>
+    </template>
+  </template>
+
+  <script type="application/dart" src="settings_view.dart"></script>
+</polymer-element>

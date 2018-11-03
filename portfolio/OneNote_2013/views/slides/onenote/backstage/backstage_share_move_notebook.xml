@@ -1,0 +1,31 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="move_notebook">
+    <view image="#images/backstage/backstage_share_move_notebook.jpg" width="836" height="598">
+        <button x="356" y="344" class="hotspot ribbon-button" width="80" height="85" id="move_btn">
+            <events click="move_notebook"></events>
+        </button>
+        <button x="36" y="227" class="hotspot ribbon-button" width="267" height="34" id="skydrive_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="36" y="263" class="hotspot ribbon-button" width="267" height="35" id="add_place_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <label x="400" y="240" width="395" height="24" model="move_notebook.skydrive" class="backstage-label">
+
+        </label>
+        <label x="356" y="301" width="185" height="19" model="move_notebook.classnotes"></label>
+    </view>
+    <model persist="true">
+        <skydrive>Andrea Lee's OneDrive</skydrive>
+        <classnotes>Class Notes</classnotes>
+    </model>
+    <commands>
+        <command name="move_notebook">
+            <dialog src="#views/slides/onenote/dialogs/notebook_syncing_msg/notebook_syncing_msg.xml" modal="true" top="160" left="300"></dialog>
+            <model target="question">
+                <notebook_name>{share_notebook.notebook_name}</notebook_name>
+            </model>
+            <!--<close></close>-->
+        </command>
+    </commands>
+</root>

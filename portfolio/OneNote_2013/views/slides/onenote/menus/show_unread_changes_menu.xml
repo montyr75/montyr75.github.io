@@ -1,0 +1,16 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/show_unread_changes_menu.jpg" width="271" height="54">
+        <button x="2" y="28" class="hotspot ribbon-button" width="267" height="23" id="unread_btn">
+            <events click="enable_unread_changes"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="enable_unread_changes">
+            <model target="question">
+                <show_unread_changes>true</show_unread_changes>
+            </model>
+        </command>
+    </commands>
+</root>

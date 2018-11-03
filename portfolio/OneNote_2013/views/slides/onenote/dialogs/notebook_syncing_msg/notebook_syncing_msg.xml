@@ -1,0 +1,24 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/dialogs/notebook_syncing_msg/notebook_syncing_msg.jpg" width="357" height="121">
+        <button x="147" y="86" class="hotspot dialog-button" width="65" height="19" id="ok_btn">
+            <events click="ok_handler"></events>
+        </button>
+        <button x="318" y="11" class="hotspot close-button" width="28" height="15" id="close_btn">
+            <events click="close_dialog"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands>
+        <command name="ok_handler">
+            <model target="backstage_share">
+                <invite_people>#views/slides/onenote/backstage/backstage_share_invite_people.xml</invite_people>
+                <move_notebook>#views/slides/onenote/symbols/none.xml</move_notebook>
+            </model>
+            <model target="question">
+                <moved>true</moved>
+            </model>
+            <close/>
+        </command>
+    </commands>
+</root>

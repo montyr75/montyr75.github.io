@@ -1,0 +1,93 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="password_pane">
+    <view image="#images/task_panes/proofing_language_taskpane.jpg" width="260" height="448">
+        <text x="14" y="66" class="" width="230" height="18" model="language"/>
+
+        <button x="235" y="16" class="hotspot ribbon-button" width="15" height="16" tooltip="close">
+            <events click="onenote.close_panel"></events>
+        </button>
+        <button x="217" y="16" class="hotspot ribbon-button" width="15" height="16">
+            <events click="show_taskpane_close_menu"></events>
+        </button>
+
+        <button x="15" y="178" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$uk_english" toggle="true">
+        </button>
+        <button x="15" y="165" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$ta_english" toggle="true">
+            
+        </button>
+        <button x="15" y="152" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$sa_english" toggle="true">
+            
+        </button>
+        <button x="15" y="191" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$us_english" toggle="true">
+            
+        </button>
+        <button x="15" y="204" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$z_english" toggle="true">
+            
+        </button>
+        <button x="15" y="217" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$estonian" toggle="true">
+            
+        </button>
+        <button x="15" y="230" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$faroese" toggle="true">
+            
+        </button>
+        <button x="15" y="243" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$filipino" toggle="true">
+            
+        </button>
+        <button x="15" y="256" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$finnish" toggle="true">
+            
+        </button>
+        <button x="15" y="269" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$bel_french" toggle="true">
+            
+        </button>
+        <button x="15" y="282" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$cam_french" toggle="true">
+            
+        </button>
+        <button x="15" y="295" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$can_french" toggle="true">
+            
+        </button>
+
+        <button x="15" y="308" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$car_french" toggle="true">
+            
+        </button>
+        <button x="15" y="321" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$con_french" toggle="true">
+            
+        </button>
+        <button x="15" y="334" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$cot_french" toggle="true">
+            
+        </button>
+        <button x="15" y="347" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$fra_french" toggle="true">
+            
+        </button>
+        <button x="15" y="360" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$hai_french" toggle="true">
+            
+        </button>
+        <button x="15" y="373" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$lux_french" toggle="true">
+            
+        </button>
+        <button x="15" y="386" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$mal_french" toggle="true">
+            
+        </button>
+        <button x="15" y="399" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$mon_french" toggle="true">
+            
+        </button>
+        <button x="15" y="412" class="hotspot dropdown-blue-button" width="212" height="12" model="language" value="$mor_french" toggle="true">
+            
+        </button>
+
+    </view>
+    <model persist="true">
+        <language>$us_english</language>
+    </model>
+    <tooltips>
+        <tooltip name="close" class="ui-ribbon-tooltip">
+            <html>
+                <![CDATA[<img src="#images/tooltips/misc/close_tt.jpg" width="35" height="19" >]]>
+            </html>
+        </tooltip>
+    </tooltips>
+    <commands>
+        <command name="show_taskpane_close_menu">
+            <menu src="#views/slides/onenote/menus/taskpane_close_menu.xml" modal="true" group="menu" depth="1" direction="bottom" />
+        </command>
+    </commands>
+</root>

@@ -1,0 +1,22 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/text_rc_bottom_menu.jpg" width="282" height="231">
+        <button x="2" y="107" class="hotspot ribbon-button" width="178" height="21" id="link_btn">
+            <events click="onenote.show_link_dialog"></events>
+        </button>
+        <button x="2" y="131" class="hotspot ribbon-button" width="178" height="21">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="156" class="hotspot ribbon-button" width="178" height="21">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="2" y="180" class="hotspot ribbon-button" width="178" height="21">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="29" y="74" class="hotspot ribbon-button" width="28" height="28">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands></commands>
+</root>

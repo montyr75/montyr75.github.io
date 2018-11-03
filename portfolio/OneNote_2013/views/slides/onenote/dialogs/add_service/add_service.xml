@@ -1,0 +1,38 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="add_service">
+    <view image="#images/dialogs/add_service/add_service.jpg" width="465" height="570">
+        <button x="440" y="6" class="hotspot ribbon-button" width="18" height="18" id="close_btn">
+            <events click="close_dialog"></events>
+        </button>
+        <button x="47" y="248" class="hotspot" width="103" height="44" id="next_btn">
+            <events click="next_handler"></events>
+        </button>
+        <text x="45" y="188" width="376" height="28" focus="all" model="add_service.email_txt">
+            <events></events>
+        </text>
+    </view>
+    <hotkeys>
+        <hotkey combo="ENTER" command="next_handler" />
+    </hotkeys>
+    <model persist="true">
+        <email_txt>Type your email address</email_txt>
+    </model>
+    <commands>
+        <command name="next_handler">
+            <condition>
+                <if property="add_service.email_txt" neq="Type your email address">
+
+                    <dialog id="sign_in_dialog" src="#views/slides/onenote/dialogs/add_service/sign_in_dialog.xml" modal="true" top="10" left="445"></dialog>
+                    <model target="add_service_dialog">
+                        <sign_in>#views/slides/onenote/dialogs/add_service/sign_in_dialog.xml</sign_in>
+                    </model>
+                    <close />
+                </if>
+                <else>
+                    <close />
+                </else>
+            </condition>
+
+        </command>
+    </commands>
+</root>

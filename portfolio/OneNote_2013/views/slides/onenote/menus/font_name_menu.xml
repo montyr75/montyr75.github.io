@@ -1,0 +1,53 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="font_name_menu">
+    <view image="#images/menus/font_name_menu.jpg" width="202" height="210">
+        <button x="2" y="2" class="hotspot ribbon-button" width="198" height="15" id="arial_btn" toggle="true" model="fontname" value="$arial">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="18" class="hotspot ribbon-button" width="198" height="15" id="arial_black_btn" toggle="true" model="fontname" value="$blackarial">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="33" class="hotspot ribbon-button" width="198" height="15" id="arial_narrow_btn" toggle="true" model="fontname" value="$narrowarial">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="49" class="hotspot ribbon-button" width="198" height="15" id="batang_btn" toggle="true" model="fontname" value="$batang">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="65" class="hotspot ribbon-button" width="198" height="15" id="book_btn" toggle="true" model="fontname" value="$book_antiqua">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="81" class="hotspot ribbon-button" width="198" height="15" id="bookman_btn" toggle="true" model="fontname" value="$bookman">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="97" class="hotspot ribbon-button" width="198" height="15" id="calibri_btn" toggle="true" model="fontname" value="$calibri">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="113" class="hotspot ribbon-button" width="198" height="15" id="century_btn" toggle="true" model="fontname" value="$century">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="129" class="hotspot ribbon-button" width="198" height="15" id="comic_btn" toggle="true" model="fontname" value="$comic">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="145" class="hotspot ribbon-button" width="198" height="15" id="lucida_btn" toggle="true" model="fontname" value="$lucida">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="161" class="hotspot ribbon-button" width="198" height="15" id="tohoma_btn" toggle="true" model="fontname" value="$tahoma">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="177" class="hotspot ribbon-button" width="198" height="15" id="times_btn" toggle="true" model="fontname" value="$times">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+        <button x="2" y="193" class="hotspot ribbon-button" width="198" height="15" id="verdana_btn" toggle="true" model="fontname" value="$verdana">
+            <events mousedown="close_menu" click="not_implemented"></events>
+        </button>
+    </view>
+    <model persist="true">
+        <size>11</size>
+        <fontname>$calibri</fontname>
+    </model>
+    <commands>
+        <command name="close_menu">
+            <close></close>
+        </command>
+    </commands>
+</root>

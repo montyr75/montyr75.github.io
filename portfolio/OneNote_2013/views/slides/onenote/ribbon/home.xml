@@ -1,0 +1,268 @@
+<root xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="ribbon_home">
+    <view image="#images/ribbon/ribbon_home.jpg" width="958" height="118">
+        <slide id="tag_menu" x="500" y="31" width="160" height="61" src-model="ribbon_home.tags">
+            <events></events>
+        </slide>
+        <button x="5" y="30" width="42" height="35" class="hotspot ribbon-button" id="paste_btn" tooltip="paste">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="5" y="65" width="42" height="35" class="hotspot ribbon-button" id="paste_special_btn" tooltip="paste_special">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="47" y="74" width="104" height="22" class="hotspot ribbon-button" id="format_painter_btn" tooltip="format_painter">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="163" y="67" width="20" height="22" class="hotspot ribbon-button" id="bold_btn" tooltip="bold">
+            <events click="dispatch('bold')"></events>
+        </button>
+        <button x="185" y="67" width="20" height="22" class="hotspot ribbon-button" id="Italic_btn" tooltip="italic">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="207" y="67" width="20" height="22" class="hotspot ribbon-button" id="underline_btn" tooltip="underline">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="230" y="67" width="20" height="22" class="hotspot ribbon-button" id="strikethrough_btn" tooltip="strikethrough">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="252" y="67" width="20" height="22" class="hotspot ribbon-button" id="subscript_btn" tooltip="subscript">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="272" y="67" width="11" height="22" class="hotspot ribbon-button" id="subscript_down_btn" tooltip="subscript">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="273" y="36" width="13" height="22" class="hotspot ribbon-button" id="font_size_menu_btn" tooltip="font_size">
+            <events click="show_font_size_menu"></events>
+        </button>
+        <button x="233" y="36" width="13" height="22" class="hotspot ribbon-button" id="font_btn" tooltip="font">
+            <events click="show_font_name_menu"></events>
+        </button>
+        <text x="162" y="36" width="66" height="21" model="font_name_menu.fontname" placeholder="Calibri" class="font-size">
+            <events></events>
+        </text>
+        <text x="246" y="36" width="22" height="21" model="font_size_menu.size" placeholder="11" class="font-size">
+            <events></events>
+        </text>
+        <button x="294" y="67" width="20" height="22" class="hotspot ribbon-button" id="highlight_btn" tooltip="highlight">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="314" y="67" width="11" height="22" class="hotspot ribbon-button" id="highlight_down_btn" tooltip="highlight">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="328" y="67" width="20" height="22" class="hotspot ribbon-button" id="fontcolor_btn" tooltip="fontcolor">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="371" y="67" width="32" height="22" class="hotspot ribbon-button" id="paragrpah_align_btn" tooltip="paragraph_align">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="348" y="67" width="11" height="22" class="hotspot ribbon-button" id="fontcolor_down_btn" tooltip="fontcolor">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="388" y="36" width="20" height="22" class="hotspot ribbon-button" id="increase_indent_btn" tooltip="increase_indent">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="289" y="36" width="20" height="22" class="hotspot ribbon-button" id="bullets_btn" tooltip="bullets">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="309" y="36" width="12" height="22" class="hotspot ribbon-button" id="bullets_down_btn" tooltip="bullets">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="322" y="36" width="20" height="22" class="hotspot ribbon-button" id="numbering_btn" tooltip="numbering">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="342" y="36" width="12" height="22" class="hotspot ribbon-button" id="numbering_down_btn" tooltip="numbering">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="419" y="36" width="20" height="22" class="hotspot ribbon-button" id="clear_formatting_btn" tooltip="clear_formatting">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="449" y="30" width="40" height="70" class="hotspot ribbon-button" id="styles_btn" tooltip="styles">
+            <events click="show_styles_menu"></events>
+        </button>
+        <button x="786" y="30" width="40" height="70" class="hotspot ribbon-button" id="email_btn" tooltip="email_page">
+            <events click="show_outlook_email"></events>
+        </button>
+        <button x="663" y="29" width="88" height="20" class="hotspot ribbon-button" id="to_do_btn" tooltip="to_do">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="501" y="31" width="139" height="15" class="hotspot ribbon-tags-button" id="todo_tag_btn">
+            <events click="onenote.add_todo_tag"></events>
+        </button>
+        <button x="501" y="52" width="139" height="15" class="hotspot ribbon-tags-button" id="important_tag_btn">
+            <events click="onenote.add_important_tag"></events>
+        </button>
+        <button x="501" y="72" width="139" height="15" class="hotspot ribbon-tags-button" id="question_tag_btn">
+            <events click="onenote.add_question_tag"></events>
+        </button>
+        <button x="663" y="52" width="80" height="20" class="hotspot ribbon-button" id="find_tags_btn" tooltip="find_tags">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="663" y="76" width="110" height="20" class="hotspot ribbon-button" id="outlook_tasks_btn" tooltip="outlook_tasks">
+            <events click="show_outlook_tasks_menu"></events>
+        </button>
+        <button x="646" y="72" width="13" height="19" class="hotspot ribbon-button" tooltip="more">
+            <events click="show_tags_menu"></events>
+        </button>
+        <button x="646" y="53" width="13" height="18" class="hotspot ribbon-button" id="outlook_tasks_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="835" y="30" width="50" height="70" class="hotspot ribbon-button" id="meeting_btn" tooltip="meeting_details">
+            <events click="not_implemented"></events>
+        </button>
+    </view>
+
+    <tooltips>
+        <tooltip name="paste" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/paste_tt.jpg" width="215" height="69" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="paste_special" class="ui-ribbon-tooltip ribbon-tooltip-offset2">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/paste_special_tt.jpg" width="215" height="69" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="format_painter" class="ui-ribbon-tooltip ribbon-tooltip-offset4">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/format_painter_tt.jpg" width="215" height="279" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="bold" class="ui-ribbon-tooltip ribbon-tooltip-offset3">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/bold_tt.jpg" width="215" height="54" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="italic" class="ui-ribbon-tooltip ribbon-tooltip-offset3">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/italic_tt.jpg" width="215" height="54" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="underline" class="ui-ribbon-tooltip ribbon-tooltip-offset3">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/underline_tt.jpg" width="215" height="54" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="strikethrough" class="ui-ribbon-tooltip ribbon-tooltip-offset3">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/strikethrough_tt.jpg" width="215" height="69" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="subscript" class="ui-ribbon-tooltip ribbon-tooltip-offset3">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/subscript_tt.jpg" width="215" height="69" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="highlight" class="ui-ribbon-tooltip ribbon-tooltip-offset3">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/text_highlight_color_tt.jpg" width="215" height="69" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="fontcolor" class="ui-ribbon-tooltip ribbon-tooltip-offset3">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/font_color_tt.jpg" width="215" height="84" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="paragraph_align" class="ui-ribbon-tooltip ribbon-tooltip-offset3">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/paragraph_align_tt.jpg" width="215" height="69" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="clear_formatting" class="ui-ribbon-tooltip ribbon-tooltip-offset1">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/clear_formatting_tt.jpg" width="215" height="114" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="bullets" class="ui-ribbon-tooltip ribbon-tooltip-offset1">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/bullets_tt.jpg" width="215" height="99" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="numbering" class="ui-ribbon-tooltip ribbon-tooltip-offset1">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/numbering_tt.jpg" width="215" height="99" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="increase_indent" class="ui-ribbon-tooltip ribbon-tooltip-offset1">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/increase_indent_tt.jpg" width="215" height="69" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="styles" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/styles_tt.jpg" width="215" height="189" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="to_do" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/to_do_tt.jpg" width="79" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="find_tags" class="ui-ribbon-tooltip ribbon-tooltip-offset6">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/find_tags_tt.jpg" width="215" height="54" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="outlook_tasks" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/outlook_tasks_tt.jpg" width="215" height="114" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="email_page" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/email_page_tt.jpg" width="215" height="54" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="meeting_details" class="ui-ribbon-tooltip ribbon-tooltip-offset">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/meeting_details_tt.jpg" width="215" height="114" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="more" class="ui-ribbon-tooltip ribbon-tooltip-offset5">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/more_tt.jpg" width="38" height="25" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="font_size" class="ui-ribbon-tooltip ribbon-tooltip-offset1">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/font_size_tt.jpg" width="215" height="54" >]]>
+            </html>
+        </tooltip>
+        <tooltip name="font" class="ui-ribbon-tooltip ribbon-tooltip-offset1">
+            <html>
+                <![CDATA[<img src="#images/tooltips/ribbon/font_tt.jpg" width="215" height="54" >]]>
+            </html>
+        </tooltip>
+    </tooltips>
+
+    <model persist="true">
+        <tags>#views/slides/onenote/menus/home_tags_menu.xml</tags>
+    </model>
+
+
+    <commands>
+        <!--<command name="show_tags_menu">-->
+        <!--<menu src="#views/slides/onenote/menus/tags_menu.xml" modal="true" group="menu" scroll="true" depth="1" direction="bottom"></menu>-->
+        <!--</command>-->
+        <command name="show_tags_menu">
+            <menu src="#views/slides/onenote/menus/tags_menu.xml" modal="true" class="scroll" group="menu" depth="1" left="501" top="57"></menu>
+            <condition>
+                <if property="question.item" eq="B352">
+                    <model target="tags_menu">
+                        <symbol>{question.symbol}</symbol>
+                        <display_name>{question.display_name}</display_name>
+                        <label_color>{question.label_color}</label_color>
+                    </model>
+                </if>
+            </condition>
+
+        </command>
+        <command name="show_font_size_menu">
+            <menu src="#views/slides/onenote/menus/font_size_menu.xml" modal="true" group="menu" depth="1" left="248" top="87"></menu>
+        </command>
+        <command name="show_styles_menu">
+            <menu src="#views/slides/onenote/menus/styles_menu.xml" modal="true" group="menu" depth="1" direction="bottom"></menu>
+        </command>
+        <command name="show_font_name_menu">
+            <menu src="#views/slides/onenote/menus/font_name_menu.xml" modal="true" group="menu" depth="1" left="164" top="87"></menu>
+        </command>
+    </commands>
+</root>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root id="multiple_choice_slide" xmlns="http://certiport.com/hammer/1.1/slide" type="slide">
+    <view image="" width="960" height="600">
+
+        <multichoice x="20" y="20" width="600" height="480"
+                     settings="question.multi1"
+                     points="question.total_points"
+                     selectedOptions="question.selectedOptions"
+                     class="default multichoice"
+                     itemRenderer="choiceItemRenderer"
+                     itemRendererClass="multichoiceStandardOption">
+        </multichoice>
+    </view>
+
+    <model persist="true">
+    </model>
+
+    <commands>
+    </commands>
+
+</root>

@@ -1,0 +1,52 @@
+<root
+    xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/menus/link_rc_menu.jpg" width="221" height="379">
+        <button x="3" y="2" class="hotspot ribbon-button" width="216" height="23" id="cut_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="26" class="hotspot ribbon-button" width="216" height="23" id="copy_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="51" class="hotspot ribbon-button" width="216" height="23" id="copy_text_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="131" class="hotspot ribbon-button" width="216" height="23" id="saveas_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="31" y="102" class="hotspot ribbon-button" width="24" height="25" id="paste1_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="60" y="102" class="hotspot ribbon-button" width="24" height="25" id="paste2_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="91" y="102" class="hotspot ribbon-button" width="24" height="25" id="paste3_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="120" y="102" class="hotspot ribbon-button" width="24" height="25" id="paste4_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="182" class="hotspot ribbon-button" width="216" height="23" id="copy_link_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="208" class="hotspot ribbon-button" width="216" height="23" id="order_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="232" class="hotspot ribbon-button" width="216" height="23" id="rotate_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="304" class="hotspot ribbon-button" width="216" height="23" id="restore_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="330" class="hotspot ribbon-button" width="216" height="23" id="alt_text_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="354" class="hotspot ribbon-button" width="216" height="23" id="searchable_btn">
+            <events click="not_implemented"></events>
+        </button>
+        <button x="3" y="157" class="hotspot ribbon-button" width="216" height="23" id="link_btn">
+            <events click="onenote.show_link_dialog"></events>
+        </button>
+    </view>
+    <model persist="true"></model>
+    <commands></commands>
+</root>

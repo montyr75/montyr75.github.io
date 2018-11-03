@@ -1,0 +1,6 @@
+<root
+        xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
+    <view image="#images/symbols/Calendar.png" width="16" height="18"/>
+    <model persist="true"></model>
+    <commands></commands>
+</root>
