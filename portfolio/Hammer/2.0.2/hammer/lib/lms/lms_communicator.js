@@ -66,7 +66,7 @@ function LMSCommunicator(localMode) {
 
     // if there is no host domain, or if hostDomain is local, set localMode
 //    if (!this.hostDomain || this.hostDomain.search(/localhost/) != -1  || this.hostDomain.search(/127.0.0.1/) != -1)
-        this.localMode = localMode || false;
+        this.localMode = localMode || true;
 }
 
 /**
