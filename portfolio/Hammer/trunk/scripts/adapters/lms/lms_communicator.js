@@ -57,9 +57,9 @@ function LMSCommunicator(localMode) {
     this.preferences = {};
 
     // if "http" or "https" is found in the URL, we have a host domain and might be running remotely
-    if (window.location.href.search(/https*:/) != -1)
+    /*if (window.location.href.search(/https*:/) != -1)
         this.hostDomain = window.location.href.split("//")[1].split("/")[0];
-    else
+    else*/
         this.hostDomain = null;
 
     // if there is no host domain, or if hostDomain is local, set localMode
