@@ -1,0 +1,66 @@
+<style>
+  .completed {
+    text-decoration: line-through;
+  }
+
+  .quest {
+    cursor: pointer;
+  }
+</style>
+
+<h5>Hero</h5>
+<table class="table table-bordered table-sm">
+  <tbody>
+    <!--<tr>-->
+      <!--<th scope="row">Name</th>-->
+      <!--<td>{{player?.name}}</td>-->
+    <!--</tr>-->
+    <tr>
+      <th scope="row">AC</th>
+      <td>{{player.ac}}</td>
+    </tr>
+    <tr>
+      <th scope="row">HP</th>
+      <td>{{player.hp}} / {{player.maxHP}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Gold</th>
+      <td>{{player.gold}}</td>
+    </tr>
+    <tr>
+      <th scope="row">XP</th>
+      <td>{{player.xp}} / {{Player.levelTable[player.level]}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Level</th>
+      <td>{{player.level}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="layout vertical">
+  <div *ngIf="player.inventory != null && player.inventory.isNotEmpty">
+    <h5>Inventory</h5>
+    <ul class="list-group">
+      <li *ngFor="let item of player.inventory" class="list-group-item d-flex justify-content-between align-items-center">
+        {{item.qty}} {{item.name}}
+        <div class="d-flex">
+          <button *ngIf="item.type == 'potion'" type="button" class="btn btn-outline-secondary btn-sm" (click)="drink(item)">Drink</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="player.quests != null && player.quests.isNotEmpty">
+    <h5 style="margin-top: 15px;">Quests</h5>
+    <ul class="list-group" #questPopupSource="popupSource" popupSource>
+      <li *ngFor="let quest of player.quests" class="list-group-item d-flex align-items-center quest" [class.completed]="quest.isCompleted" (click)="questSelected(quest)">
+        {{quest.name}}
+      </li>
+    </ul>
+
+    <material-popup [source]="questPopupSource" [(visible)]="questPopupVisible">
+      <div [safeInnerHtml]="selectedQuestText" style="padding: 5px; max-width: 400px;" (click)="questPopupVisible = false"></div>
+    </material-popup>
+  </div>
+</div>

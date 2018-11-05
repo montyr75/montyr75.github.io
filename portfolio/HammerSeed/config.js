@@ -20,8 +20,8 @@ define('config', function () {
         // edit - if true, shows the edit button
         whitelist: [
             {host: "localhost", secure: false, local: true, edit: true},
-            {host: "googledrive.com", secure: false, local: true, debug: true, edit: true},
-            {host: "www.googledrive.com", secure: false, local: true, debug: true, edit: true}
+            {host: "montyr75.github.io", secure: false, local: true, debug: true, edit: true},
+            {host: "github.io", secure: false, local: true, debug: true, edit: true}
         ],
 
         // additional resources used by exam (CSS, HTML, JS)

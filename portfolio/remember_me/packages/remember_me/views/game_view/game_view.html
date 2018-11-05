@@ -1,0 +1,81 @@
+<dom-module id="game-view">
+  <template>
+    <style include="animate-css">
+      :host {
+        display: block;
+        @apply(--layout-vertical);
+        @apply(--layout-center);
+      }
+
+      #wrapper {
+        position: relative;
+        height: 100%;
+      }
+
+      #win-popup {
+        position: absolute;
+        width: 300px;
+        height: 150px;
+        background: green;
+        border-radius: 20px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 42px;
+        background: radial-gradient(ellipse at center, rgba(126,192,238,1) 0%, rgba(219,219,219,1) 46%, rgba(126,192,238,1) 66%, rgba(254,254,254,1) 100%);
+      }
+
+      #board {
+        width: 100%;
+      }
+
+      footer {
+        height: 30px;
+        border-radius: 20px;
+        background: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgb(190, 234, 255) 47%, rgba(126,192,238,1) 100%);
+        width: 100%;
+      }
+
+      [row4] {
+        width: 720px;
+      }
+
+      [row3] {
+        width: 540px;
+      }
+
+      [row2] {
+        width: 360px;
+      }
+
+      .user-select-none {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    </style>
+
+    <div id="wrapper" class="layout vertical center" hidden$="[[hideBoard]]">
+      <div id="board" class="layout horizontal center-justified wrap animated fadeInDown">
+        <template is="dom-repeat" items="[[gameCards]]">
+          <card-view class="card" card="{{item}}" interface-enabled="[[interfaceEnabled]]" on-card-revealed="cardRevealed"></card-view>
+        </template>
+      </div>
+
+      <template is="dom-if" if="[[win]]">
+        <div id="win-popup" class="layout horizontal center center-justified animated tada">
+          <span style="background: rgba(255, 255, 255, 0.5); padding: 2px 15px 2px 15px; border-radius: 8px;">You Win!</span>
+        </div>
+      </template>
+
+      <footer id="footer" class="layout horizontal center around-justified user-select-none animated fadeInDown">
+        <div>Matches Left: [[unmatchedPairs]]</div>
+        <div>Guesses: [[attempts]]</div>
+      </footer>
+    </div>
+  </template>
+</dom-module>

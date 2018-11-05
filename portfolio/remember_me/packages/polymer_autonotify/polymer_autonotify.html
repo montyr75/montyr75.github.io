@@ -1,0 +1,72 @@
+<script>
+    (function () {
+
+        var orig_propertyChanged = Polymer.Dart.InteropBehavior._propertyChanged;
+        /*
+        Polymer.Dart.InteropBehavior._propertyChanged = function (path, newValue, oldValue) {
+            if (this.isAutonotify) {
+                return;
+            }
+            orig_propertyChanged.call(this,path,newValue,oldValue);
+        };
+*/
+        Polymer.Dart.AutoNotify = {
+            updateJsVersion: function(js) {
+                // Placeholder for readability : real one defined in dart
+                throw new Error("NOT IMPLEMENTED");
+            },
+            collectNotified: function(el) {
+                // Placeholder for readability : real one defined in dart
+                throw new Error("NOT IMPLEMENTED");
+            },
+            createAutonotifier: function(el) {
+                // Placeholder for readability : real one defined in dart
+                throw new Error("NOT IMPLEMENTED");
+            },
+            destroyAutonotifier: function(el) {
+                // Placeholder for readability : real one defined in dart
+                throw new Error("NOT IMPLEMENTED");
+            },
+            Behavior: {
+
+                _resolveModel: function(path) {
+                    var parts = this._getPathParts(path);
+                    var prop = parts.splice(parts.length - 1, 1)[0];
+
+                    // Get the model which is being updated.
+                    return this.get(parts);
+                },
+
+                created: function() {
+                    Polymer.Dart.AutoNotify.createAutonotifier(this);
+
+                },
+
+                attached: function() {
+                    //console.log("CREATING FOR :"+this);
+                    Polymer.Dart.AutoNotify.createAutonotifier(this);
+                    //console.log("DONE ");
+                },
+
+                detached: function() {
+                    Polymer.Dart.AutoNotify.destroyAutonotifier(this);
+                },
+
+                _propertyChanged: function (path, newValue, oldValue) {
+                    if (path.length>8 && path.indexOf(".splices",path.length-8) == path.length - 8) {
+                        //console.log("CH:"+path+" NEW VL: "+newValue+" OLD: "+oldValue);
+
+                        // Inform DART that polymer already notified that.
+
+                        if (!Polymer.Dart.AutoNotify.collectNotified(this,path)) {
+                            //console.log("UPDATING JS VERSION OF "+path);
+                            Polymer.Dart.AutoNotify.updateJsVersion(this._resolveModel(path));
+                        }
+                    }
+                    Polymer.Dart.InteropBehavior._propertyChanged.call(
+                            this, path, newValue, oldValue);
+                }
+            }
+        };
+    })();
+</script>

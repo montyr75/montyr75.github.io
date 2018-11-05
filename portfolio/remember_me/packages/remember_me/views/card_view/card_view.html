@@ -1,0 +1,92 @@
+<dom-module id="card-view">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      #card-container {
+        text-align: justify;
+        width: 160px;
+        height: 200px;
+        margin: 10px;
+      }
+
+      #card-container[matched] {
+        opacity: 0.3;
+      }
+
+      #card {
+        transform-style: preserve-3d;
+        width: 95%;
+        height: 95%;
+        position: relative;
+      }
+
+      #face, #back {
+        position: absolute;
+        backface-visibility: hidden;
+        transition: transform 0.5s ease-in;
+        width: 100%;
+        height: 100%;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+        background-size: 92% 160px;
+        background-repeat: no-repeat;
+      }
+
+      #face {
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        overflow: hidden;
+        background-position: top center;
+      }
+
+      #back {
+        background-position: center;
+      }
+
+      #card[flipped] #face {
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+      }
+
+      #card[flipped] #back {
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(-180deg);
+      }
+
+      .card-title {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 10px;
+        cursor: default;
+      }
+
+      .user-select-none {
+        user-select: none;
+      }
+    </style>
+
+    <div id="card-container" matched$="[[card.matched]]" on-tap="reveal">
+      <div id="card" flipped$="[[card.flipped]]">
+        <div id="face" style$="background-image: url('[[card.imageURL]]');">
+          <div class="card-title user-select-none">{{card.title}}</div>
+        </div>
+        <div id="back" style$="background-image: url('[[card.backImageURL]]');"></div>
+      </div>
+    </div>
+  </template>
+</dom-module>

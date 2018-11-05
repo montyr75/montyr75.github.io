@@ -1,0 +1,39 @@
+<style>
+  :host {
+    padding: 0 10px;
+  }
+
+  button.loc {
+    width: 40px;
+    height: 38px;
+  }
+
+  button.explore {
+    margin: 5px;
+  }
+
+  .location {
+    height: 300px;
+    padding: .5em;
+    margin-bottom: 1em;
+  }
+</style>
+
+<div class="layout vertical">
+  <div class="location table-bordered">
+    <h4 [safeInnerHtml]="location?.name"></h4>
+    <p>{{location?.description}}</p>
+  </div>
+
+  <div class="layout vertical center">
+    <button type="button" class="btn btn-dark loc" [disabled]="worldMap.north(location) == null" (click)="move(Direction.north)">N</button>
+
+    <div class="layout horizontal center">
+      <button type="button" class="btn btn-dark loc" [disabled]="worldMap.west(location) == null" (click)="move(Direction.west)">W</button>
+      <button type="button" class="btn btn-dark explore" [disabled]="game.monster != null" (click)="explore()">Explore</button>
+      <button type="button" class="btn btn-dark loc" [disabled]="worldMap.east(location) == null" (click)="move(Direction.east)">E</button>
+    </div>
+
+    <button type="button" class="btn btn-dark loc" [disabled]="worldMap.south(location) == null" (click)="move(Direction.south)">S</button>
+  </div>
+</div>

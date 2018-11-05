@@ -1,0 +1,132 @@
+<style>
+  .announcement {
+    font-size: 2em;
+  }
+
+  .monster-preview {
+    max-height: 300px;
+  }
+
+  .combat-image {
+    height: 200px;
+  }
+
+  .weapon-image {
+    max-height: 75px;
+  }
+
+  .top-space {
+    margin-top: 1em;
+  }
+
+  messages-view {
+    overflow-y: hidden;
+    height: 80vh;
+  }
+
+  .outer-box {
+    position: relative;
+  }
+
+  .outer-box .inner-box {
+    background: red;
+    opacity: 0;
+    padding: 0;
+    transition: opacity .5s;
+  }
+
+  .outer-box .inner-box p {
+    color: #fff;
+    line-height: 150px;
+    text-align: center;
+  }
+
+  .inner-box.showoverlay {
+    opacity: .6 !important;
+    transition: opacity .5s !important;
+  }
+
+  material-progress ::ng-deep .active-progress {
+    background-color: red;
+  }
+</style>
+
+<div *ngIf="!inCombat" class="layout vertical center">
+  <p class="announcement">You see a <span [safeInnerHtml]="game.monster.htmlName"></span>!</p>
+
+  <img [src]="monsterImgPath" class="rounded monster-preview">
+
+  <div class="layout horizontal top-space">
+    <button type="button" class="btn btn-danger loc" style="margin-right: 3em;" (click)="startCombat()">Fight</button>
+    <button type="button" class="btn btn-warning loc" (click)="game.playerFlee()">Flee</button>
+  </div>
+</div>
+
+<div *ngIf="inCombat" class="flex layout horizontal">
+  <div class="flex layout vertical center">
+    <div class="announcement">{{game.player.name ?? 'Hero'}}</div>
+
+    <div class="layout vertical center">
+      <div class="outer-box">
+        <img [src]="heroImgPath" class="combat-image">
+        <div class="inner-box fit" [class.showoverlay]="game.player.isDead">
+          <p>Dead</p>
+        </div>
+      </div>
+      <material-progress class="flex" [activeProgress]="percent(game.player.hp, game.player.maxHP)"></material-progress>
+    </div>
+
+    <div class="layout horizontal top-space"><i class="ra ra-shield ra-lg"></i> {{game.player.ac}}</div>
+
+    <div class="layout vertical top-space">
+      <button *ngFor="let weapon of game.player.weapons" type="button" class="layout vertical center btn btn-outline-danger" style="margin-bottom: .3em"
+              (click)="game.playerAttack(weapon)"
+              [disabled]="game.monster.isDead || game.player.isDead">
+        <img [src]="weapon.imgPath" class="weapon-image">
+        <div style="margin-top: .5em;">{{weapon.name}}</div>
+        <small>+{{game.player.attackBonus}} / {{weapon.dmgFormula}}</small>
+      </button>
+    </div>
+
+    <div class="layout vertical top-space">
+      <button *ngFor="let potion of game.player.potions" type="button" class="layout vertical center btn btn-outline-secondary"
+              (click)="game.playerDrinkHealingPotion(potion)"
+              [disabled]="game.player.isDead">
+        <div style="margin-top: .5em;">{{potion.name}}</div>
+        <small>{{potion.details.hpToHealFormula}}</small>
+      </button>
+    </div>
+
+    <div class="top-space">
+      <button *ngIf="!game.monster.isDead && !game.player.isDead" type="button" class="btn btn-warning loc" (click)="game.playerFlee()">Flee</button>
+      <button *ngIf="game.monster.isDead" type="button" class="btn btn-success loc" (click)="endCombat()">Return to {{game.location.name}}</button>
+      <button *ngIf="game.player.isDead" type="button" class="btn btn-secondary loc" (click)="game.playerDies()">Start Again</button>
+    </div>
+  </div>
+
+  <messages-view class="flex layout vertical" [messages]="game.messages"></messages-view>
+
+  <div class="flex layout vertical center">
+    <div class="announcement" [safeInnerHtml]="game.monster.htmlName"></div>
+
+    <div class="layout vertical center">
+      <div class="outer-box">
+        <img [src]="monsterImgPath" class="combat-image">
+        <div class="inner-box fit" [class.showoverlay]="game.monster.isDead">
+          <p>Dead</p>
+        </div>
+      </div>
+
+      <material-progress class="flex" [activeProgress]="percent(game.monster.hp, game.monster.maxHP)"></material-progress>
+    </div>
+
+    <div class="layout horizontal top-space"><i class="ra ra-shield ra-lg"></i> {{game.monster.details.ac}}</div>
+
+    <ul class="list-group top-space">
+      <li class="list-group-item layout vertical center">
+        <div style="margin-top: .5em;">{{game.monster.details.attack.name}}</div>
+        <small>+{{game.monster.details.attack.mod}} / {{game.monster.details.attack.dmgFormula}}</small>
+      </li>
+    </ul>
+  </div>
+</div>

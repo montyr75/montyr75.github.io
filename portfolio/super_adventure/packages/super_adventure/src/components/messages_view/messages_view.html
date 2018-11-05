@@ -1,0 +1,9 @@
+<style>
+  .list-group > * {
+    flex-shrink: 0;
+  }
+</style>
+
+<ul class="flex list-group list-group-flush" style="overflow-y: auto;" vuScrollDown>
+  <li class="list-group-item" *ngFor="let msg of messages" [safeInnerHtml]="msg.htmlText"></li>
+</ul>

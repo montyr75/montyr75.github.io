@@ -1,0 +1,28 @@
+<style>
+  messages-view {
+    overflow-y: hidden;
+    height: 80vh;
+  }
+</style>
+
+<material-content class="fit layout vertical">
+  <header class="material-header shadow">
+    <div class="material-header-row">
+      <span class="material-header-title">Super Adventure</span>
+      <div class="material-spacer"></div>
+      <!--<nav class="material-navigation">-->
+        <!--<material-button>New</material-button>-->
+      <!--</nav>-->
+    </div>
+  </header>
+
+  <div *ngIf="game != null && game.player != null" class="flex layout vertical" style="padding: 10px;">
+    <div [hidden]="game.monster != null" class="flex layout horizontal">
+      <player-view class="flex layout vertical" [player]="game.player" (onAttack)="game.playerAttack($event)" (onDrink)="game.playerDrinkHealingPotion($event)"></player-view>
+      <location-view class="flex" [location]="game.location" (onMove)="game.movePlayer($event)" (onExplore)="game.explore()"></location-view>
+      <messages-view class="flex layout vertical" [messages]="game.messages"></messages-view>
+    </div>
+
+    <combat-view *ngIf="game.monster != null" class="flex"></combat-view>
+  </div>
+</material-content>

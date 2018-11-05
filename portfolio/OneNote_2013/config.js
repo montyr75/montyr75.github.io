@@ -10,11 +10,11 @@ define('config', function () {
         // secure - whether or not to require an access key code when viewing exam
         // local - use to determine if LMS is enabled
         // edit - enables edit mode features
-        "whitelist":[
-            {"host": "localhost", "secure": false, "local": true, "edit": false},
-            {"host": "googledrive.com", "secure": false, "local": true, "edit": false},
-            {"host": "www.googledrive.com", "secure": false, "local": true, "edit": false}
-        ],
+      whitelist: [
+        {host: "localhost", secure: false, local: true, edit: true},
+        {host: "montyr75.github.io", secure: false, local: true, debug: true, edit: true},
+        {host: "github.io", secure: false, local: true, debug: true, edit: true}
+      ],
         // this determines if the native context menu will be displayed
         "enableContextMenu":false,
         // preloads these binary resources (i.e. images) before initialization
