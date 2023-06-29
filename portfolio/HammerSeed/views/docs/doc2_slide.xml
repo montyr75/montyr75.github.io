@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<root xmlns="http://certiport.com/hammer/sdk/view">
-    <view background-image="assets/images/docs/slide_960x1000.gif" width="960" height="1000">
-        <label x="10" y="10" class="doc-label doc2" text="$doc2_header" />
-        <label x="400" y="700" text="Below the fold on Doc2 slide!" />
-	</view>
-</root>

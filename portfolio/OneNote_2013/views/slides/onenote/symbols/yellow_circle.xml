@@ -1,6 +1,0 @@
-<root
-        xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
-    <view image="#images/symbols/tagYellowCircle.png" width="15" height="15"/>
-    <model persist="true"></model>
-    <commands></commands>
-</root>

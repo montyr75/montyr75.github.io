@@ -1,9 +1,0 @@
-<root
-        xmlns="http://certiport.com/hammer/2.x/slide" type="slide" id="doc_math">
-    <view image="#images/documents/doc_math_narrow.jpg" width="748" height="406">
-    </view>
-    <model persist="true">
-        <cursor></cursor>
-    </model>
-    <commands></commands>
-</root>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<root xmlns="http://certiport.com/hammer/sdk/model">
-    <!-- currentDoc will default to this value if question <init> doesn't set it -->
-    <currentDoc>$DOC1_PATH</currentDoc>
-
-    <exhibitShowing>no</exhibitShowing>
-</root>

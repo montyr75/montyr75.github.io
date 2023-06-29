@@ -356,7 +356,7 @@ width: 85%;
 /*-webkit-animation: angularjs 2s ease;*/
 }
 .dart {
-  	width: 95%;
+  	width: 100%;
   	/*-moz-animation: dart 2s ease;*/
   	/*-webkit-animation: dart 2s ease;*/
 }
@@ -366,7 +366,7 @@ width: 85%;
 }
 
 .flutter {
-  width: 90%;
+  width: 95%;
 }
 
 .c-sharp {

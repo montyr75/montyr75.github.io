@@ -1,6 +1,0 @@
-<root
-        xmlns="http://certiport.com/hammer/2.x/slide" type="slide">
-    <view image="#images/symbols/checkbox.png" width="11" height="11"/>
-    <model persist="true"></model>
-    <commands></commands>
-</root>
