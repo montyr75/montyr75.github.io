@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Date Calc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glow {
+            box-shadow: 0 10px 40px -10px rgba(6, 182, 212, 0.4);
+        }
+
+        /* Customizing date picker icon color in webkit for darker backgrounds */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.8) sepia(1) saturate(5) hue-rotate(180deg);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4">
+
+    <!-- Back Button -->
+    <a href="index.html"
+        class="absolute top-4 left-4 sm:top-8 sm:left-8 flex items-center text-slate-400 hover:text-cyan-400 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        <span class="font-medium">Back</span>
+    </a>
+
+    <!-- Main Card Container -->
+    <div
+        class="bg-slate-800 p-8 rounded-2xl shadow-xl w-full max-w-md border border-slate-700 glow transition-all duration-300 hover:border-cyan-500/50">
+
+        <!-- Header -->
+        <h1
+            class="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">
+            Date Calculator
+        </h1>
+
+        <div class="space-y-8">
+            <!-- Input Section -->
+            <div class="group">
+                <label for="dateInput"
+                    class="block text-sm font-medium text-slate-400 mb-2 transition-colors group-focus-within:text-cyan-400">
+                    Starting Date
+                </label>
+                <div class="relative">
+                    <input type="date" id="dateInput"
+                        class="block w-full bg-slate-900 border border-slate-700 rounded-xl py-3 px-4 text-slate-50 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200">
+                </div>
+            </div>
+
+            <!-- Output Section / Table -->
+            <div class="pt-6 border-t border-slate-700/80">
+                <div class="bg-slate-900/50 rounded-xl border border-slate-700/50 shadow-inner">
+                    <table class="w-full text-left border-separate" style="border-spacing: 0;">
+                        <tbody>
+                            <tr class="group">
+                                <td class="py-4 px-5 text-slate-400 font-medium whitespace-nowrap border-b border-slate-700/50 rounded-tl-xl group-hover:bg-slate-800/50 transition-colors">2 Weeks</td>
+                                <td class="py-4 px-5 text-slate-200 font-semibold text-right border-b border-slate-700/50 rounded-tr-xl group-hover:bg-slate-800/50 transition-colors">
+                                    <div class="flex items-center justify-end gap-3">
+                                        <span id="res2Weeks">--</span>
+                                        <button onclick="copyDate('res2Weeks', this)" aria-label="Copy Date"
+                                            class="relative p-1.5 text-slate-500 hover:text-cyan-400 hover:bg-slate-700 rounded-md transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500/50 group/btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                            </svg>
+                                            <span
+                                                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-800 border border-slate-600 text-xs rounded text-slate-200 opacity-0 group-hover/btn:opacity-100 hover:opacity-100 pointer-events-none transition-all whitespace-nowrap shadow-lg shadow-black/50 z-10">Copy</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="group">
+                                <td class="py-4 px-5 text-slate-400 font-medium whitespace-nowrap border-b border-slate-700/50 group-hover:bg-slate-800/50 transition-colors">4 Weeks</td>
+                                <td class="py-4 px-5 text-slate-200 font-semibold text-right border-b border-slate-700/50 group-hover:bg-slate-800/50 transition-colors">
+                                    <div class="flex items-center justify-end gap-3">
+                                        <span id="res4Weeks">--</span>
+                                        <button onclick="copyDate('res4Weeks', this)" aria-label="Copy Date"
+                                            class="relative p-1.5 text-slate-500 hover:text-cyan-400 hover:bg-slate-700 rounded-md transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500/50 group/btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                            </svg>
+                                            <span
+                                                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-800 border border-slate-600 text-xs rounded text-slate-200 opacity-0 group-hover/btn:opacity-100 hover:opacity-100 pointer-events-none transition-all whitespace-nowrap shadow-lg shadow-black/50 z-10">Copy</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="group">
+                                <td class="py-4 px-5 text-slate-400 font-medium whitespace-nowrap border-b border-slate-700/50 group-hover:bg-slate-800/50 transition-colors">6 Weeks</td>
+                                <td class="py-4 px-5 text-slate-200 font-semibold text-right border-b border-slate-700/50 group-hover:bg-slate-800/50 transition-colors">
+                                    <div class="flex items-center justify-end gap-3">
+                                        <span id="res6Weeks">--</span>
+                                        <button onclick="copyDate('res6Weeks', this)" aria-label="Copy Date"
+                                            class="relative p-1.5 text-slate-500 hover:text-cyan-400 hover:bg-slate-700 rounded-md transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500/50 group/btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                            </svg>
+                                            <span
+                                                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-800 border border-slate-600 text-xs rounded text-slate-200 opacity-0 group-hover/btn:opacity-100 hover:opacity-100 pointer-events-none transition-all whitespace-nowrap shadow-lg shadow-black/50 z-10">Copy</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="group">
+                                <td class="py-4 px-5 text-slate-400 font-medium whitespace-nowrap border-b border-slate-700/50 group-hover:bg-slate-800/50 transition-colors">8 Weeks</td>
+                                <td class="py-4 px-5 text-slate-200 font-semibold text-right border-b border-slate-700/50 group-hover:bg-slate-800/50 transition-colors">
+                                    <div class="flex items-center justify-end gap-3">
+                                        <span id="res8Weeks">--</span>
+                                        <button onclick="copyDate('res8Weeks', this)" aria-label="Copy Date"
+                                            class="relative p-1.5 text-slate-500 hover:text-cyan-400 hover:bg-slate-700 rounded-md transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500/50 group/btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                            </svg>
+                                            <span
+                                                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-800 border border-slate-600 text-xs rounded text-slate-200 opacity-0 group-hover/btn:opacity-100 hover:opacity-100 pointer-events-none transition-all whitespace-nowrap shadow-lg shadow-black/50 z-10">Copy</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="group">
+                                <td class="py-4 px-5 text-slate-400 font-medium whitespace-nowrap rounded-bl-xl group-hover:bg-slate-800/50 transition-colors">12 Weeks</td>
+                                <td class="py-4 px-5 text-slate-200 font-semibold text-right rounded-br-xl group-hover:bg-slate-800/50 transition-colors">
+                                    <div class="flex items-center justify-end gap-3">
+                                        <span id="res12Weeks">--</span>
+                                        <button onclick="copyDate('res12Weeks', this)" aria-label="Copy Date"
+                                            class="relative p-1.5 text-slate-500 hover:text-cyan-400 hover:bg-slate-700 rounded-md transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500/50 group/btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                            </svg>
+                                            <span
+                                                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-800 border border-slate-600 text-xs rounded text-slate-200 opacity-0 group-hover/btn:opacity-100 hover:opacity-100 pointer-events-none transition-all whitespace-nowrap shadow-lg shadow-black/50 z-10">Copy</span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculation Logic -->
+    <script>
+        const dateInput = document.getElementById('dateInput');
+        const res2Weeks = document.getElementById('res2Weeks');
+        const res4Weeks = document.getElementById('res4Weeks');
+        const res6Weeks = document.getElementById('res6Weeks');
+        const res8Weeks = document.getElementById('res8Weeks');
+        const res12Weeks = document.getElementById('res12Weeks');
+
+        // Set default date to today using local timezone
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        dateInput.value = `${year}-${month}-${day}`;
+
+        // Setup date formatting to MM/DD/YYYY to match standard input display
+        function formatDate(date) {
+            const y = date.getFullYear();
+            const m = String(date.getMonth() + 1).padStart(2, '0');
+            const d = String(date.getDate()).padStart(2, '0');
+            return `${m}/${d}/${y}`;
+        }
+
+        function copyDate(id, btnElement) {
+            const textToCopy = document.getElementById(id).textContent;
+            if (textToCopy === '--') return;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const tooltipInfo = btnElement.querySelector('span');
+                const originalText = tooltipInfo.textContent;
+                tooltipInfo.textContent = 'Copied!';
+                btnElement.classList.add('text-teal-400');
+
+                setTimeout(() => {
+                    tooltipInfo.textContent = originalText;
+                    btnElement.classList.remove('text-teal-400');
+                }, 2000);
+            });
+        }
+
+        function updateDates() {
+            const inputVal = dateInput.value;
+            if (!inputVal) {
+                res2Weeks.textContent = '--';
+                res4Weeks.textContent = '--';
+                res6Weeks.textContent = '--';
+                res8Weeks.textContent = '--';
+                res12Weeks.textContent = '--';
+                return;
+            }
+
+            // Using local time manually to avoid timezone shift on the date components
+            const [y, m, d] = inputVal.split('-').map(Number);
+            const baseDate = new Date(y, m - 1, d);
+
+            function addWeeks(date, weeks) {
+                const result = new Date(date);
+                result.setDate(result.getDate() + (weeks * 7));
+                return result;
+            }
+
+            res2Weeks.textContent = formatDate(addWeeks(baseDate, 2));
+            res4Weeks.textContent = formatDate(addWeeks(baseDate, 4));
+            res6Weeks.textContent = formatDate(addWeeks(baseDate, 6));
+            res8Weeks.textContent = formatDate(addWeeks(baseDate, 8));
+            res12Weeks.textContent = formatDate(addWeeks(baseDate, 12));
+
+            // Subtle animation for table cells
+            [res2Weeks, res4Weeks, res6Weeks, res8Weeks, res12Weeks].forEach(el => {
+                el.style.opacity = '0.5';
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                }, 100);
+            });
+        }
+
+        // Initialize and listen
+        updateDates();
+        dateInput.addEventListener('input', updateDates);
+    </script>
+</body>
+
+</html>

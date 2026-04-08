@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Weight Converter</title>
+    <title>Baby Tools</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,106 +14,108 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Custom indigo glow effect for the card */
-        .glow {
+        .glow-card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .glow-card:hover {
             box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
         }
 
-        /* Remove spinner from number input */
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            appearance: none;
-            margin: 0;
-        }
-
-        input[type=number] {
-            -moz-appearance: textfield;
-            appearance: textfield;
+        .glow-card.cyan:hover {
+            box-shadow: 0 10px 40px -10px rgba(6, 182, 212, 0.4);
         }
     </style>
 </head>
 
-<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4">
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-center p-6">
 
-    <!-- Main Card Container -->
-    <div
-        class="bg-slate-800 p-8 rounded-2xl shadow-xl w-full max-w-md border border-slate-700 glow transition-all duration-300 hover:border-indigo-500/50">
-
-        <!-- Header -->
-        <h1
-            class="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
-            Baby Weight Converter
-        </h1>
-
-        <div class="space-y-8">
-            <!-- Input Section -->
-            <div class="group">
-                <label for="gramsInput"
-                    class="block text-sm font-medium text-slate-400 mb-2 transition-colors group-focus-within:text-indigo-400">
-                    Weight in Grams
-                </label>
-                <div class="relative">
-                    <input type="number" id="gramsInput"
-                        class="block w-full bg-slate-900 border border-slate-700 rounded-xl py-3 px-4 text-slate-50 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
-                        placeholder="e.g., 3515.34" min="0" step="any">
-                    <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                        <span class="text-slate-500 font-medium tracking-wide">g</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Output Section -->
-            <div class="pt-6 border-t border-slate-700/80">
-                <label class="block text-sm font-medium text-slate-400 mb-3 text-center">
-                    Equivalent Weight
-                </label>
-                <div class="bg-slate-900/50 rounded-xl py-6 px-4 text-center border border-slate-700/50 shadow-inner">
-                    <span id="resultText" class="text-4xl font-semibold text-slate-200 tracking-tight">
-                        0 lbs 0 oz
-                    </span>
-                </div>
-            </div>
+    <!-- Header / Logo -->
+    <div class="mb-14 text-center">
+        <!-- SVG Logo Container -->
+        <div
+            class="inline-flex items-center justify-center w-24 h-24 bg-slate-800 rounded-full border border-indigo-500/30 shadow-[0_0_30px_rgba(99,102,241,0.2)] mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-400" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <!-- A simple abstract stroller or parent/baby icon -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
         </div>
+        <h1
+            class="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400 tracking-tight">
+            Baby Tools
+        </h1>
     </div>
 
-    <!-- Conversion Logic -->
-    <script>
-        const gramsInput = document.getElementById('gramsInput');
-        const resultText = document.getElementById('resultText');
+    <!-- Actions Container -->
+    <div class="w-full max-w-lg space-y-5">
 
-        function updateConversion() {
-            const grams = parseFloat(gramsInput.value);
+        <!-- Weight Converter Button -->
+        <a href="weight_converter.html" class="block group">
+            <div
+                class="bg-slate-800 rounded-2xl p-6 flex items-center border border-slate-700 glow-card relative overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
 
-            // Handle empty, invalid, or negative inputs
-            if (isNaN(grams) || grams < 0) {
-                resultText.textContent = "0 lbs 0 oz";
-                return;
-            }
+                <div
+                    class="bg-indigo-500/10 p-4 rounded-xl mr-6 border border-indigo-500/20 group-hover:scale-110 transition-transform duration-300 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                    </svg>
+                </div>
+                <div class="z-10">
+                    <h2 class="text-xl font-bold text-slate-100 group-hover:text-indigo-300 transition-colors">Weight
+                        Converter</h2>
+                    <p class="text-slate-400 mt-1">Convert grams to pounds & ounces</p>
+                </div>
+                <div
+                    class="ml-auto opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:text-indigo-400 transition-all duration-300 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </div>
+        </a>
 
-            // Conversion logic: 1 ounce = 28.34952 grams
-            const totalOunces = grams / 28.34952;
+        <!-- Date Calculator Button -->
+        <a href="date_calc.html" class="block group">
+            <div
+                class="bg-slate-800 rounded-2xl p-6 flex items-center border border-slate-700 glow-card cyan relative overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
 
-            let pounds = Math.floor(totalOunces / 16);
-            let ounces = Math.round(totalOunces % 16);
+                <div
+                    class="bg-cyan-500/10 p-4 rounded-xl mr-6 border border-cyan-500/20 group-hover:scale-110 transition-transform duration-300 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div class="z-10">
+                    <h2 class="text-xl font-bold text-slate-100 group-hover:text-cyan-300 transition-colors">Date
+                        Calculator</h2>
+                    <p class="text-slate-400 mt-1">Calculate milestones from a date</p>
+                </div>
+                <div
+                    class="ml-auto opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:text-cyan-400 transition-all duration-300 z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </div>
+        </a>
 
-            // Handle edge case where rounding pushes ounces to 16
-            if (ounces === 16) {
-                pounds += 1;
-                ounces = 0;
-            }
+    </div>
 
-            resultText.textContent = `${pounds} lbs ${ounces} oz`;
-
-            // Optional: Add a subtle animation effect on text update
-            resultText.style.opacity = '0.5';
-            setTimeout(() => {
-                resultText.style.opacity = '1';
-            }, 50);
-        }
-
-        gramsInput.addEventListener('input', updateConversion);
-    </script>
 </body>
 
 </html>
